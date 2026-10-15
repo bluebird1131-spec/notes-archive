@@ -29,7 +29,9 @@ jobs:
         run: |
           mkdir -p scripts/out
           cp data/raw_notices.json scripts/out/ 2>/dev/null || true
-          python scripts/crawler.py --attach
+          cp data/raw_notices.json /tmp/prev_raw.json 2>/dev/null || echo '[]' > /tmp/prev_raw.json
+          python scripts/crawler.py --attach || echo "some sources failed"
+          python tools/keep_failed.py /tmp/prev_raw.json
           python scripts/extract_rules.py
           cp scripts/out/raw_notices.json scripts/out/rules.json data/
           [ -f scripts/out/crawl_log.json ] && cp scripts/out/crawl_log.json data/ || true
