@@ -797,6 +797,11 @@ def load_org_file(path):
             # 새올을 쓰지 않는 누리집 게시판 (scripts/web_board.py)
             board = {"name": "누리집 게시판", "board_url": e["web"].get("board_url") or e["web"]["list_url"], "web": e["web"]}
             WEB_BOARDS[e["name"]] = board
+            if legacy:  # 첨부를 다른 서버(새올 FileDown 등)에서 받는 경우도 같은 옛 TLS 로
+                for u in (e["web"]["list_url"], e["web"].get("file_url", "")):
+                    h = up.urlparse(u).hostname
+                    if h and h not in ATTACH_LEGACY_HOSTS:
+                        ATTACH_LEGACY_HOSTS.append(h)
             out.append({"key": e["name"], "source_org": e["name"], "region_sigungu": f'{e["sido"]} {e["sigungu"]}',
                         "host": up.urlparse(e["web"]["list_url"]).hostname, "kind": "web", "legacy_tls": legacy,
                         "boards": [board]})

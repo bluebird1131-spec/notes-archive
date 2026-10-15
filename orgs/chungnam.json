@@ -11,7 +11,7 @@
 {"sido": "충청남도", "sigungu": "부여군", "name": "충청남도 부여군청", "homepage": "https://www.buyeo.go.kr", "host": "eminwon.buyeo.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
 {"sido": "충청남도", "sigungu": "서천군", "name": "충청남도 서천군청", "homepage": "https://www.seocheon.go.kr", "host": "eminwon.seocheon.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
 {"sido": "충청남도", "sigungu": "청양군", "name": "충청남도 청양군청", "homepage": "https://www.cheongyang.go.kr", "host": "eminwon.cheongyang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
-{"sido": "충청남도", "sigungu": "홍성군", "name": "충청남도 홍성군청", "homepage": "https://www.hongseong.go.kr", "host": "eminwon.hongseong.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건 (응답 약 32초)"},
+{"sido": "충청남도", "sigungu": "홍성군", "name": "충청남도 홍성군청", "homepage": "https://www.hongseong.go.kr", "host": "eminwon.hongseong.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "채용(05) 게시판 대신 고시/공고(01~04·06)에서 키워드로 수집 (10-16 확인). 채용(05) 목록 0건 (응답 약 32초)", "codes": "01,02,03,04,06"},
 {"sido": "충청남도", "sigungu": "예산군", "name": "충청남도 예산군청", "homepage": "https://www.yesan.go.kr", "host": "eminwon.yesan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
 {"sido": "충청남도", "sigungu": "태안군", "name": "충청남도 태안군청", "homepage": "https://www.taean.go.kr", "host": "eminwon.taean.go.kr", "legacy": false, "status": "fail", "listed": 0, "matched": 0, "note": "eminwon.taean.go.kr 맞는 주소(누리집에 있음)이나 목록 요청에 2회 모두 500 오류"}
 ]

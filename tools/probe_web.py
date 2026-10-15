@@ -16,6 +16,8 @@ if hasattr(sys.stdout, 'reconfigure'):
 path, name = sys.argv[1], sys.argv[2]
 entry = next(e for e in json.loads(Path(path).read_text(encoding='utf-8')) if e['name'] == name)
 entry = {**entry, 'status': 'ok', 'note': ''}
+if 'legacy' in sys.argv[4:]:
+    entry['legacy'] = True
 if len(sys.argv) > 3:
     entry['web'] = json.loads(sys.argv[3])
 tmp = Path(c.OUT_DIR) / '_probe_org.json'
