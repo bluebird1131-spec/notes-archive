@@ -1,0 +1,303 @@
+{
+  "started_at": "2026-10-16T01:19:52+09:00",
+  "finished_at": "2026-10-16T01:27:53+09:00",
+  "options": {
+    "orgs": [
+      "중구",
+      "남구",
+      "동구",
+      "북구",
+      "울주군",
+      "울산시",
+      "해운대구",
+      "광주북구",
+      "대전서구",
+      "세종시",
+      "수원시",
+      "춘천시"
+    ],
+    "pages": 1,
+    "page_size": 10,
+    "detail": true,
+    "attach": true
+  },
+  "total_kept": 82,
+  "total_excluded": 17,
+  "orgs": [
+    {
+      "org": "중구",
+      "source_org": "울산광역시 중구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 10,
+          "excluded": 0,
+          "error": null
+        },
+        {
+          "board": "새올 고시공고",
+          "listed": 10,
+          "matched": 2,
+          "excluded": 2,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 15,
+      "detail_ok": 8,
+      "detail_fail": 2,
+      "kept": 12,
+      "excluded": 2
+    },
+    {
+      "org": "남구",
+      "source_org": "울산광역시 남구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 6,
+          "excluded": 1,
+          "error": null
+        },
+        {
+          "board": "새올 고시공고",
+          "listed": 10,
+          "matched": 0,
+          "excluded": 0,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 5,
+      "detail_ok": 3,
+      "detail_fail": 0,
+      "kept": 6,
+      "excluded": 1
+    },
+    {
+      "org": "동구",
+      "source_org": "울산광역시 동구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 9,
+          "excluded": 1,
+          "error": null
+        },
+        {
+          "board": "새올 고시공고",
+          "listed": 10,
+          "matched": 3,
+          "excluded": 3,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 10,
+      "detail_ok": 5,
+      "detail_fail": 0,
+      "kept": 12,
+      "excluded": 4
+    },
+    {
+      "org": "북구",
+      "source_org": "울산광역시 북구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 7,
+          "excluded": 1,
+          "error": null
+        },
+        {
+          "board": "새올 고시공고",
+          "listed": 10,
+          "matched": 2,
+          "excluded": 2,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 5,
+      "detail_ok": 2,
+      "detail_fail": 0,
+      "kept": 9,
+      "excluded": 3
+    },
+    {
+      "org": "울주군",
+      "source_org": "울산광역시 울주군청",
+      "boards": [
+        {
+          "board": "울주군 채용공고",
+          "listed": 10,
+          "matched": 10,
+          "excluded": 1,
+          "error": null
+        },
+        {
+          "board": "울주군 일반공고",
+          "listed": 10,
+          "matched": 1,
+          "excluded": 1,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 11,
+      "detail_ok": 9,
+      "detail_fail": 0,
+      "kept": 11,
+      "excluded": 2
+    },
+    {
+      "org": "울산시",
+      "source_org": "울산광역시청",
+      "boards": [
+        {
+          "board": "울산시 고시공고",
+          "listed": 10,
+          "matched": 0,
+          "excluded": 0,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 1,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
+    },
+    {
+      "org": "해운대구",
+      "source_org": "부산광역시 해운대구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.haeundae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NameResolutionError(\"HTTPSConnection(host='eminwon.haeundae.go.kr', port=443): Failed to resolve 'eminwon.haeundae.go.kr' ([Errno"
+        }
+      ],
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
+    },
+    {
+      "org": "광주북구",
+      "source_org": "광주광역시 북구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 7,
+          "excluded": 1,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
+      "detail_fail": 0,
+      "kept": 7,
+      "excluded": 1
+    },
+    {
+      "org": "대전서구",
+      "source_org": "대전광역시 서구청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 10,
+          "excluded": 3,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 6,
+      "detail_fail": 0,
+      "kept": 10,
+      "excluded": 3
+    },
+    {
+      "org": "세종시",
+      "source_org": "세종특별자치시청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 10,
+          "excluded": 0,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 14,
+      "detail_ok": 9,
+      "detail_fail": 1,
+      "kept": 10,
+      "excluded": 0
+    },
+    {
+      "org": "수원시",
+      "source_org": "경기도 수원시청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NewConnectionError(\"HTTPSConnection(host='eminwon.suwon.go.kr', port=443): Failed to establish a new connection: [Errno 111] Connect"
+        }
+      ],
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
+    },
+    {
+      "org": "춘천시",
+      "source_org": "강원특별자치도 춘천시청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 10,
+          "matched": 5,
+          "excluded": 1,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 4,
+      "detail_fail": 0,
+      "kept": 5,
+      "excluded": 1
+    }
+  ],
+  "attach": {
+    "targets": 46,
+    "reused": 44,
+    "notices_ok": 46,
+    "notices_partial": 0,
+    "notices_failed": 0,
+    "notices_skipped": 0,
+    "files_ok": 56,
+    "files_error": 0,
+    "files_skipped": 2,
+    "requests": 2
+  }
+}

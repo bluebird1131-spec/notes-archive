@@ -71,18 +71,8 @@
     "title": "입화산 자연휴양림 산림휴양관 기간제근로자 채용계획 공고"
   },
   {
-    "apply_start": "2026-10-12",
-    "apply_end": "2026-10-14",
-    "daily_pay": 85440,
-    "required_docs": "개별공시지가 기간제근로자 채용신청서, 개인정보수집·이용 동의서, 주민등록초본, 자격·경력증명서 사본, 취업지원대상자인 경우 취업지원대상자 증명서",
-    "qualification": "공고일 현재 울산광역시에 주민등록이 등재된 자 / (※ 만 19세 이상 ~ 60세 이하, 중구 거주자 우대)",
     "target_groups": [],
-    "evidence": {
-      "period": "가. 접수기간: 10. 12. ~ 10. 14.",
-      "pay": " 5일이내 지급한다. ○ 외근근무: 85,440원/일 ○ 유급(토요)휴",
-      "docs": "5. 제출서류",
-      "qualification": "2. 지원자격"
-    },
+    "evidence": {},
     "source_url": "https://eminwon.junggu.ulsan.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=37052&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "개별공시지가 기간제 근로자 채용 공고(수정)"
   },
@@ -331,6 +321,45 @@
     "title": "양정동 행정복지센터 환경정비 기간제근로자 채용 공고"
   },
   {
+    "apply_start": "2026-10-16",
+    "apply_end": "2026-10-23",
+    "headcount": 3,
+    "apply_place": "웅촌면 행정복지센터 산업팀(☎ 052-204-4733)",
+    "apply_type": "동사무소 방문접수",
+    "target_groups": [
+      "무주택/취약계층"
+    ],
+    "evidence": {
+      "period": "가. 접수기간 : 2026. 10.16.(금) ~ 10. 23.(금)",
+      "target": "우대 우대요건 우대요건만 2. 기타 취업지원대상자, 북한이탈주민, 업무추진에 지장이 없는 장애인 등은 추가점수 부여 마. 경력증명서 또는 재직증명서, 우대요건 증빙자료(해당자에 한함)"
+    },
+    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67955&mId=0403030100",
+    "title": "2026년 하반기 폐비닐 및 농약빈병 수거 지원사업 기간제근로자 채용공고"
+  },
+  {
+    "apply_start": "2026-10-21",
+    "apply_end": "2026-10-23",
+    "work_start": "2026-11-03",
+    "work_end": "2026-12-31",
+    "headcount": 2,
+    "apply_place": "울산옹기박물관 2층 사무실 담당자 최상영",
+    "apply_type": "구청 방문/우편",
+    "required_docs": "응시 지원서, 주민등록초본",
+    "qualification": "공고일 현재 주민등록법상 울산광역시 거주자(주민등록 기준)로 만 18세 이상인 자 / 토·일요일 등 공휴일 근무 가능한 자",
+    "target_groups": [
+      "무주택/취약계층"
+    ],
+    "evidence": {
+      "period": "5. 접수기간 : 2026. 10. 21.(수) ~ 2026. 10. 23.(금)/3일간",
+      "work": "3. 근무기간",
+      "docs": "❍ 제출서류",
+      "qualification": "3. 응시자격 요건",
+      "target": "공고일 현재 주민등록법상 울산광역시 거주자(주민등록 기준)로 만 18세 이상인 자 토·일요일 등 공휴일 근무 가능한 자 ❍ 경력 및 자격증 우대 경력 및 자격증 우대 범위 6. 응시자격 우대에 대한 가산점 적용 ※ 증명서류 제출 시 인정되며 동일 항목에서 둘 이상 해당하는 경우에는 중복 가점은 불가함. 8. 저소득층, 국가유공자, 장애인 등 우대요건에 해당"
+    },
+    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67963&mId=0403030100",
+    "title": "2026년 옹기마을 아카데미관 기간제근로자 채용공고"
+  },
+  {
     "apply_start": "2026-10-20",
     "apply_end": "2026-10-22",
     "work_start": "2026-10-26",
@@ -349,25 +378,6 @@
     },
     "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67954&mId=0403030100",
     "title": "농지대장 일제정비 기간제근로자 채용공고"
-  },
-  {
-    "apply_start": "2026-10-19",
-    "apply_end": "2026-10-21",
-    "daily_pay": 82560,
-    "headcount": 1,
-    "apply_place": "울주군청 5층 교통정책과 교통지도팀(☎052-204-2524)",
-    "apply_type": "구청 방문/우편",
-    "required_docs": "❍ 이력서 및 자기소개서, ❍ 개인정보 제공·이용 동의서, ❍ 주민등록초본(공고일 이후 발급분), ❍ 관련 경력증명서 또는 재직증명서(해당자에 한함), ❍ 전산 관련 자격증 사본(해당자에 한함), ❍ 우대요건 증빙 서류 사본(해당자에 한함)",
-    "qualification": "공고일 기준 「주민등록법」상 울산광역시에 주소를 두고 있는 자",
-    "target_groups": [],
-    "evidence": {
-      "period": "5. 접수기간 : 2026. 10. 19.(월) ~ 10. 21.(수) / 09:00 ~ 18:00(점심시간 제외)",
-      "pay": "민원 응대 및 전산 업무 보조 급여 1일 단가 82,560원 기타수당 휴일수당",
-      "docs": "6. 제출서류",
-      "qualification": "3. 자격요건"
-    },
-    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67940&mId=0403030100",
-    "title": "2026년 무인단속카메라 단속자료관리 기간제근로자 채용 공고"
   },
   {
     "apply_start": "2026-10-19",
@@ -414,43 +424,21 @@
   {
     "apply_start": "2026-10-19",
     "apply_end": "2026-10-21",
-    "work_start": "2026-11-02",
-    "work_end": "2026-12-30",
     "daily_pay": 82560,
     "headcount": 1,
-    "apply_place": "삼남읍행정복지센터 산업팀(☎052-204-4942)",
-    "apply_type": "동사무소 방문접수",
-    "required_docs": "이력서, 주민등록초본",
+    "apply_place": "울주군청 5층 교통정책과 교통지도팀(☎052-204-2524)",
+    "apply_type": "구청 방문/우편",
+    "required_docs": "❍ 이력서 및 자기소개서, ❍ 개인정보 제공·이용 동의서, ❍ 주민등록초본(공고일 이후 발급분), ❍ 관련 경력증명서 또는 재직증명서(해당자에 한함), ❍ 전산 관련 자격증 사본(해당자에 한함), ❍ 우대요건 증빙 서류 사본(해당자에 한함)",
+    "qualification": "공고일 기준 「주민등록법」상 울산광역시에 주소를 두고 있는 자",
     "target_groups": [],
     "evidence": {
-      "period": "나. 접수기간: 2026. 10. 19.(월) ~ 10. 21.(수), 09:00~18:00 ※ 점심시간 12~13시 제외",
-      "work": "나. 근무기간 : 2026. 11. 2.(화) ~ 2026. 12. 30.(수) ※ 예산범위 내 기간 조정 가능",
-      "pay": ":00~18:00 나. 임금조건 : 82,560원/일(내근직) ※ 휴일",
-      "docs": "6. 제출서류"
+      "period": "5. 접수기간 : 2026. 10. 19.(월) ~ 10. 21.(수) / 09:00 ~ 18:00(점심시간 제외)",
+      "pay": "민원 응대 및 전산 업무 보조 급여 1일 단가 82,560원 기타수당 휴일수당",
+      "docs": "6. 제출서류",
+      "qualification": "3. 자격요건"
     },
-    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67921&mId=0403030100",
-    "title": "2026년 농지대장 현행화 사업 및 농식품바우처 업무 기간제근로자 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-13",
-    "apply_end": "2026-10-16",
-    "work_start": "2026-11-02",
-    "work_end": "2026-12-31",
-    "daily_pay": 85440,
-    "headcount": 1,
-    "apply_place": "울주군치매안심센터 2층 사무실(☏052-204-2872)",
-    "apply_type": "구청 방문/우편",
-    "target_groups": [
-      "무주택/취약계층"
-    ],
-    "evidence": {
-      "period": "4. 접수기간 : 2026. 10. 13.(화) ~ 2026. 10. 16.(금)[점심시간(12:00 ~ 13:00) 제외]",
-      "work": "2. 근무기간 : 2026. 11. 2.(월) ~ 2026. 12. 31.(목) (2개월)",
-      "pay": "9:00 ~ 18:00) - 기본급(1일 단가) : 85,440원/일(실제 근무일)",
-      "target": "둘 이상의 우대요건이 있는 경우 하나의 우대요건만 반영함 ※ 동점자가 있는 경우 우대요건, 주요경력, 거주지, 자격증 점수순으로 선발 9. 기초생활수급자 등 우대요건 증명서(해당자에 한함)"
-    },
-    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67925&mId=0403030100",
-    "title": "2026년 치매안심센터 장기결원 대체인력 기간제근로자 채용 공고"
+    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67940&mId=0403030100",
+    "title": "2026년 무인단속카메라 단속자료관리 기간제근로자 채용 공고"
   },
   {
     "apply_start": "2026-10-16",
@@ -485,110 +473,24 @@
     "title": "2026년 하반기 청량읍 폐비닐 및 농약빈병 수거 지원사업 기간제 근로자 채용 공고"
   },
   {
-    "apply_start": "2026-10-16",
-    "apply_end": "2026-10-20",
-    "work_start": "2026-10-26",
-    "work_end": "2026-12-31",
+    "apply_start": "2026-10-19",
+    "apply_end": "2026-10-21",
+    "work_start": "2026-11-02",
+    "work_end": "2026-12-30",
     "daily_pay": 82560,
     "headcount": 1,
-    "apply_place": "언양읍행정복지센터 산업팀(☎ 204-4452)",
+    "apply_place": "삼남읍행정복지센터 산업팀(☎052-204-4942)",
     "apply_type": "동사무소 방문접수",
     "required_docs": "이력서, 주민등록초본",
-    "qualification": "주민등록법상 공고일 현재 울산시 관내에 주소를 두고 있는 자 / 컴퓨터 및 전산 활용이 능숙한 자",
     "target_groups": [],
     "evidence": {
-      "period": "가. 접수기간 : 2026. 10. 16.(금) ~ 10. 20.(화) 9시~18시 (점심시간 12~13시 제외)",
-      "work": "나. 근무기간 : 2026. 10. 26. ~ 2026. 12. 31.(예산범위 내 기간 조정 가능)",
+      "period": "나. 접수기간: 2026. 10. 19.(월) ~ 10. 21.(수), 09:00~18:00 ※ 점심시간 12~13시 제외",
+      "work": "나. 근무기간 : 2026. 11. 2.(화) ~ 2026. 12. 30.(수) ※ 예산범위 내 기간 조정 가능",
       "pay": ":00~18:00 나. 임금조건 : 82,560원/일(내근직) ※ 휴일",
-      "docs": "6. 제출서류",
-      "qualification": "3. 응시자격"
+      "docs": "6. 제출서류"
     },
-    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67905&mId=0403030100",
-    "title": "2026년 농지대장 일제정비 기간제근로자 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-15",
-    "apply_end": "2026-10-19",
-    "daily_pay": 85440,
-    "headcount": 3,
-    "apply_place": "울주군청 농업정책과 농정기획팀(052-204-1512)",
-    "apply_type": "구청 방문/우편",
-    "target_groups": [],
-    "evidence": {
-      "period": "5. 접수기간 : 2026. 10. 15.(목) ~ 10. 19.(월) 09:00~18:00",
-      "pay": "협의하여 정함 - 급 여: 급여 : 85,440원/일(외근직) - 교통"
-    },
-    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67903&mId=0403030100",
-    "title": "불법농지 순찰 기간제근로자 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-28",
-    "apply_end": "2026-10-29",
-    "headcount": 1,
-    "apply_place": "",
-    "apply_type": "구청 방문/우편",
-    "required_docs": "응시원서, 자기소개서, 부패방지권익위법상 비위면직자등 취업제한 관련 확인서, 개인정보 수집·이용 동의서, 행정정보 공동이용 사전동의서, 주민등록초본, 자격·면허증 사본 또는 자격취득확인서, 경력증명서, 국가유공자 등 취업지원대상자 증명서",
-    "qualification": "공고일 전일(2026.10.13.) 현재 부산광역시에 주민등록이 되어 있고 사실상 거주하는 사람 / 20세 이상(2006.10.14. 이전 출생자), 60세(정년) 미만 ※ 2006.10.14. 출생자 포함 / 현장 업무를 감당할 수 있는 신체적·정신적으로 건강한 사람",
-    "target_groups": [],
-    "evidence": {
-      "period": "① 접수기간: 2026.10.28.(수)~10.29.(목) 09시~18시 ※ 점심시간(12~13시) 제외",
-      "docs": "나. 원서접수 구비서류[붙임3] – 응시자 전원",
-      "qualification": "응시자격"
-    },
-    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=54016&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
-    "title": "2026년 해운대구 관광시설사업소 공무직근로자(녹지관리원) 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-14",
-    "apply_end": "2026-10-21",
-    "daily_pay": 94776,
-    "headcount": 1,
-    "apply_place": "해운대구 치매안심센터 4층 방문보건팀(해운대구 양운로37번길59)",
-    "apply_type": "구청 방문/우편",
-    "qualification": "간호사 면허 소지자",
-    "target_groups": [],
-    "evidence": {
-      "period": "3. 접수기간: 2026. 10. 14.(수) ~ 10.21.(수), 17:00",
-      "pay": "경가능) 3. 근로조건 가. 임금: 일급 94,776원(주5일 근무) 나",
-      "qualification": "2. 응시자격"
-    },
-    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=54041&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
-    "title": "2026년 AI-IoT 기반 어르신건강관리 사업 기간제근로자 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-16",
-    "apply_end": "2026-10-20",
-    "daily_pay": 94776,
-    "headcount": 1,
-    "required_docs": "시표, 신분증을 지참하여, 기소개서 10점 • 상 10점 • 중 8점 • 하 6점",
-    "qualification": "한글속기 3급 이상인 자",
-    "target_groups": [],
-    "evidence": {
-      "period": "m 접수기간: 2026. 10. 16.(금) ~ 10. 20.(화)",
-      "pay": " 8시간) 09:00~18:00 - 일급 94,776원 (주, 연차수당 ",
-      "docs": "• 응시원서 및 구비서류 제출",
-      "qualification": "m 응시자격: 한글속기 3급 이상인 자"
-    },
-    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=53964&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
-    "title": "2026년 해운대구의회 속기 기간제근로자 채용 공고"
-  },
-  {
-    "apply_start": "2026-10-12",
-    "apply_end": "2026-10-16",
-    "work_start": "2026-11-01",
-    "work_end": "2027-04-30",
-    "headcount": 2,
-    "apply_place": "해운대구청 4층 경제진흥과 동물정책팀",
-    "apply_type": "구청 방문/우편",
-    "required_docs": "▷ 관련 자격증 및 경력증명서 사본, ▷ 취업보호대상자 증명서",
-    "target_groups": [],
-    "evidence": {
-      "period": "※ 접수기간: 2026. 10. 12.(월)~10. 16.(금) 09시~18시",
-      "work": "- 근무기간: 2026. 11. 1.~2027. 4. 30.",
-      "docs": "〇 제출서류"
-    },
-    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=53982&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
-    "title": "2026년 하반기 해운대구 직영 동물복지시설 기간제근로자 채용 공고"
+    "source_url": "https://www.ulju.ulsan.kr/ulju/unit/employ/view.do?notAncmtMgtNo=67921&mId=0403030100",
+    "title": "2026년 농지대장 현행화 사업 및 농식품바우처 업무 기간제근로자 채용 공고"
   },
   {
     "apply_start": "2026-10-19",
@@ -874,23 +776,8 @@
     "title": "2026년 연기면 가을철 산불 감시원 기간제근로자 채용(모집) 공고"
   },
   {
-    "apply_start": "2026-10-01",
-    "apply_end": "2026-10-12",
-    "work_start": "2026-11-01",
-    "work_end": "2026-12-15",
-    "daily_pay": 97088,
-    "headcount": 2,
-    "apply_type": "동사무소 방문접수",
-    "required_docs": "여신청서(별지 제1호 서식), 인정보 제공 및 고유식별정보 처리 동의서(별지 제2호 서식), 불위치관리시스템 활용동의서(별지 제3호 서식), 민등록초본(과거 전체 주소이력, 병역사항 포함), 전 면허증 사본, 용결격사유 부존재 확인서, 불관련교육 이수증, 산림관련 자격증 사본, 산림(산불)분야 근무 경력 입증 증명서",
-    "qualification": "공통자격요건 (기준 : 공고일 )",
     "target_groups": [],
-    "evidence": {
-      "period": "❍ 접수기간 : 2026. 10. 1.(목) ~ 10. 12.(월)",
-      "work": "가. 근무기간 : 2026. 11. 1. ~ 12. 15.(예산에 따라 근로기간 조정가능)",
-      "pay": "연장근무 하여야 함 ❍ 보수기준 : 일급 97,088원(부대비용·교통비·",
-      "docs": "제출서류",
-      "qualification": "응시자격"
-    },
+    "evidence": {},
     "source_url": "https://eminwon.sejong.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=71793&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "2026년 조치원읍 가을철 산불 감시원 기간제근로자 채용(모집) 공고"
   },
@@ -1013,5 +900,74 @@
     },
     "source_url": "https://eminwon.chuncheon.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=76151&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "춘천시 기간제 근로자 채용 공고(2026-1802)"
+  },
+  {
+    "apply_start": "2026-10-28",
+    "apply_end": "2026-10-29",
+    "headcount": 1,
+    "apply_place": "",
+    "apply_type": "구청 방문/우편",
+    "required_docs": "응시원서, 자기소개서, 부패방지권익위법상 비위면직자등 취업제한 관련 확인서, 개인정보 수집·이용 동의서, 행정정보 공동이용 사전동의서, 주민등록초본, 자격·면허증 사본 또는 자격취득확인서, 경력증명서, 국가유공자 등 취업지원대상자 증명서",
+    "qualification": "공고일 전일(2026.10.13.) 현재 부산광역시에 주민등록이 되어 있고 사실상 거주하는 사람 / 20세 이상(2006.10.14. 이전 출생자), 60세(정년) 미만 ※ 2006.10.14. 출생자 포함 / 현장 업무를 감당할 수 있는 신체적·정신적으로 건강한 사람",
+    "target_groups": [],
+    "evidence": {
+      "period": "① 접수기간: 2026.10.28.(수)~10.29.(목) 09시~18시 ※ 점심시간(12~13시) 제외",
+      "docs": "나. 원서접수 구비서류[붙임3] – 응시자 전원",
+      "qualification": "응시자격"
+    },
+    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=54016&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
+    "title": "2026년 해운대구 관광시설사업소 공무직근로자(녹지관리원) 채용 공고"
+  },
+  {
+    "apply_start": "2026-10-14",
+    "apply_end": "2026-10-21",
+    "daily_pay": 94776,
+    "headcount": 1,
+    "apply_place": "해운대구 치매안심센터 4층 방문보건팀(해운대구 양운로37번길59)",
+    "apply_type": "구청 방문/우편",
+    "qualification": "간호사 면허 소지자",
+    "target_groups": [],
+    "evidence": {
+      "period": "3. 접수기간: 2026. 10. 14.(수) ~ 10.21.(수), 17:00",
+      "pay": "경가능) 3. 근로조건 가. 임금: 일급 94,776원(주5일 근무) 나",
+      "qualification": "2. 응시자격"
+    },
+    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=54041&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
+    "title": "2026년 AI-IoT 기반 어르신건강관리 사업 기간제근로자 채용 공고"
+  },
+  {
+    "apply_start": "2026-10-16",
+    "apply_end": "2026-10-20",
+    "daily_pay": 94776,
+    "headcount": 1,
+    "required_docs": "시표, 신분증을 지참하여, 기소개서 10점 • 상 10점 • 중 8점 • 하 6점",
+    "qualification": "한글속기 3급 이상인 자",
+    "target_groups": [],
+    "evidence": {
+      "period": "m 접수기간: 2026. 10. 16.(금) ~ 10. 20.(화)",
+      "pay": " 8시간) 09:00~18:00 - 일급 94,776원 (주, 연차수당 ",
+      "docs": "• 응시원서 및 구비서류 제출",
+      "qualification": "m 응시자격: 한글속기 3급 이상인 자"
+    },
+    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=53964&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
+    "title": "2026년 해운대구의회 속기 기간제근로자 채용 공고"
+  },
+  {
+    "apply_start": "2026-10-12",
+    "apply_end": "2026-10-16",
+    "work_start": "2026-11-01",
+    "work_end": "2027-04-30",
+    "headcount": 2,
+    "apply_place": "해운대구청 4층 경제진흥과 동물정책팀",
+    "apply_type": "구청 방문/우편",
+    "required_docs": "▷ 관련 자격증 및 경력증명서 사본, ▷ 취업보호대상자 증명서",
+    "target_groups": [],
+    "evidence": {
+      "period": "※ 접수기간: 2026. 10. 12.(월)~10. 16.(금) 09시~18시",
+      "work": "- 근무기간: 2026. 11. 1.~2027. 4. 30.",
+      "docs": "〇 제출서류"
+    },
+    "source_url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=53982&subCheck=Y&not_ancmt_se_code=05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
+    "title": "2026년 하반기 해운대구 직영 동물복지시설 기간제근로자 채용 공고"
   }
 ]
