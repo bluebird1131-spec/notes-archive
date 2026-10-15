@@ -1,0 +1,52 @@
+name: sync
+
+on:
+  schedule:
+    - cron: '7 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -q requests beautifulsoup4 pypdf
+
+      - name: collect
+        run: |
+          mkdir -p scripts/out
+          cp data/raw_notices.json scripts/out/ 2>/dev/null || true
+          python scripts/crawler.py --attach
+          python scripts/extract_rules.py
+          cp scripts/out/raw_notices.json scripts/out/rules.json data/
+          [ -f scripts/out/crawl_log.json ] && cp scripts/out/crawl_log.json data/ || true
+
+      - name: commit
+        run: |
+          git config user.name "bluebird1131-spec"
+          git config user.email "260314975+bluebird1131-spec@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "no change"; else
+            git commit -m "sync $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M')"
+            git pull --rebase && git push
+          fi
+
+      - name: notify
+        if: ${{ env.DOWNSTREAM_TOKEN != '' }}
+        env:
+          DOWNSTREAM_TOKEN: ${{ secrets.DOWNSTREAM_TOKEN }}
+          DOWNSTREAM_REPO: ${{ secrets.DOWNSTREAM_REPO }}
+        run: GH_TOKEN="$DOWNSTREAM_TOKEN" gh workflow run update.yml -R "$DOWNSTREAM_REPO"
