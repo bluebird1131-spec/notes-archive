@@ -1,0 +1,18 @@
+[
+{"sido": "부산광역시", "sigungu": "중구", "name": "부산광역시 중구청", "homepage": "https://www.bsjunggu.go.kr", "host": "eminwon.bsjunggu.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 0, "note": ""},
+{"sido": "부산광역시", "sigungu": "서구", "name": "부산광역시 서구청", "homepage": "https://www.bsseogu.go.kr", "host": "eminwon.bsseogu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "부산광역시", "sigungu": "동구", "name": "부산광역시 동구청", "homepage": "https://www.bsdonggu.go.kr", "host": "eminwon.bsdonggu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "부산광역시", "sigungu": "영도구", "name": "부산광역시 영도구청", "homepage": "https://www.yeongdo.go.kr", "host": "eminwon.yeongdo.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "부산광역시", "sigungu": "부산진구", "name": "부산광역시 부산진구청", "homepage": "https://www.busanjin.go.kr", "host": "eminwon.busanjin.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "부산광역시", "sigungu": "동래구", "name": "부산광역시 동래구청", "homepage": "https://www.dongnae.go.kr", "host": "eminwon.dongnae.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
+{"sido": "부산광역시", "sigungu": "남구", "name": "부산광역시 남구청", "homepage": "https://www.bsnamgu.go.kr", "host": "eminwon.bsnamgu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
+{"sido": "부산광역시", "sigungu": "북구", "name": "부산광역시 북구청", "homepage": "https://www.bsbukgu.go.kr", "host": "eminwon.bsbukgu.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": ""},
+{"sido": "부산광역시", "sigungu": "해운대구", "name": "부산광역시 해운대구청", "homepage": "https://www.haeundae.go.kr", "host": "eminwon.haeundae.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "기존"},
+{"sido": "부산광역시", "sigungu": "사하구", "name": "부산광역시 사하구청", "homepage": "https://www.saha.go.kr", "host": "eminwon.saha.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "부산광역시", "sigungu": "금정구", "name": "부산광역시 금정구청", "homepage": "https://www.geumjeong.go.kr", "host": "eminwon.geumjeong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "부산광역시", "sigungu": "강서구", "name": "부산광역시 강서구청", "homepage": "https://www.bsgangseo.go.kr", "host": "eminwon.bsgangseo.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": ""},
+{"sido": "부산광역시", "sigungu": "연제구", "name": "부산광역시 연제구청", "homepage": "https://www.yeonje.go.kr", "host": "eminwon.yeonje.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "부산광역시", "sigungu": "수영구", "name": "부산광역시 수영구청", "homepage": "https://www.suyeong.go.kr", "host": "eminwon.suyeong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "부산광역시", "sigungu": "사상구", "name": "부산광역시 사상구청", "homepage": "https://www.sasang.go.kr", "host": "eminwon.sasang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
+{"sido": "부산광역시", "sigungu": "기장군", "name": "부산광역시 기장군청", "homepage": "https://www.gijang.go.kr", "host": "eminwon.gijang.go.kr", "legacy": false, "status": "ok", "listed": 2, "matched": 1, "note": ""}
+]

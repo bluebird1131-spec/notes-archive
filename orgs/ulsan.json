@@ -1,0 +1,7 @@
+[
+  {"sido": "울산광역시", "sigungu": "중구", "name": "울산광역시 중구청", "homepage": "https://www.junggu.ulsan.kr", "host": "eminwon.junggu.ulsan.kr", "legacy": false, "status": "ok", "listed": null, "matched": null, "note": "기존"},
+  {"sido": "울산광역시", "sigungu": "남구", "name": "울산광역시 남구청", "homepage": "https://www.ulsannamgu.go.kr", "host": "eminwon.ulsannamgu.go.kr", "legacy": false, "status": "ok", "listed": null, "matched": null, "note": "기존"},
+  {"sido": "울산광역시", "sigungu": "동구", "name": "울산광역시 동구청", "homepage": "https://www.donggu.ulsan.kr", "host": "eminwon.donggu.ulsan.kr", "legacy": true, "status": "ok", "listed": null, "matched": null, "note": "기존"},
+  {"sido": "울산광역시", "sigungu": "북구", "name": "울산광역시 북구청", "homepage": "https://www.bukgu.ulsan.kr", "host": "eminwon.bukgu.ulsan.kr", "legacy": false, "status": "ok", "listed": null, "matched": null, "note": "기존"},
+  {"sido": "울산광역시", "sigungu": "울주군", "name": "울산광역시 울주군청", "homepage": "https://www.ulju.ulsan.kr", "host": "www.ulju.ulsan.kr", "legacy": false, "status": "ok", "listed": null, "matched": null, "note": "자체 게시판 — 수집기 별도 처리"}
+]

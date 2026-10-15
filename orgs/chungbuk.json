@@ -1,0 +1,13 @@
+[
+{"sido": "충청북도", "sigungu": "청주시", "name": "충청북도 청주시청", "homepage": "https://www.cheongju.go.kr", "host": "eminwon.cheongju.go.kr", "legacy": false, "status": "fail", "listed": 0, "matched": 0, "note": "누리집에 eminwon.cheongju.go.kr 이 박혀 있으나 2회 모두 40초 읽기 시간초과. 누리집이 자체 화면(selectEminwonNoticeList.do)으로 새올 공고를 보여줌"},
+{"sido": "충청북도", "sigungu": "충주시", "name": "충청북도 충주시청", "homepage": "https://www.chungju.go.kr", "host": "eminwon.chungju.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청북도", "sigungu": "제천시", "name": "충청북도 제천시청", "homepage": "https://www.jecheon.go.kr", "host": "eminwon.jecheon.chungbuk.kr", "legacy": false, "status": "ok", "listed": 2, "matched": 2, "note": "eminwon.jecheon.go.kr 접속 실패, 누리집에 박힌 옛 주소로 성공. 다만 2건뿐이고 2015년 공고라 옛 서버로 보임(응답 약 70초)"},
+{"sido": "충청북도", "sigungu": "보은군", "name": "충청북도 보은군청", "homepage": "https://www.boeun.go.kr", "host": "eminwon.boeun.go.kr", "legacy": false, "status": "fail", "listed": 0, "matched": 0, "note": "eminwon.boeun.go.kr 맞는 주소(누리집에 있음)이나 목록 요청에 2회 모두 500 오류. 누리집 자체 채용공고 게시판(bbsNo=68) 있음"},
+{"sido": "충청북도", "sigungu": "옥천군", "name": "충청북도 옥천군청", "homepage": "https://www.oc.go.kr", "host": "eminwon.oc.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": ""},
+{"sido": "충청북도", "sigungu": "영동군", "name": "충청북도 영동군청", "homepage": "https://www.yd21.go.kr", "host": "eminwon.yd21.go.kr", "legacy": true, "status": "ok", "listed": 2, "matched": 2, "note": ""},
+{"sido": "충청북도", "sigungu": "증평군", "name": "충청북도 증평군청", "homepage": "https://www.jp.go.kr", "host": "eminwon.jp.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 0, "note": ""},
+{"sido": "충청북도", "sigungu": "진천군", "name": "충청북도 진천군청", "homepage": "https://www.jincheon.go.kr", "host": "eminwon.jincheon.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "충청북도", "sigungu": "괴산군", "name": "충청북도 괴산군청", "homepage": "https://www.goesan.go.kr", "host": "eminwon.goesan.go.kr", "legacy": false, "status": "ok", "listed": 4, "matched": 1, "note": "샘플 제목이 2015년 공고 — 최신 게시물 올라오는지 확인 필요"},
+{"sido": "충청북도", "sigungu": "음성군", "name": "충청북도 음성군청", "homepage": "https://www.eumseong.go.kr", "host": "eminwon.eumseong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청북도", "sigungu": "단양군", "name": "충청북도 단양군청", "homepage": "https://www.danyang.go.kr", "host": "eminwon.danyang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""}
+]

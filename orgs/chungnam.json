@@ -1,0 +1,17 @@
+[
+{"sido": "충청남도", "sigungu": "천안시", "name": "충청남도 천안시청", "homepage": "https://www.cheonan.go.kr", "host": "eminwon.cheonan.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "공주시", "name": "충청남도 공주시청", "homepage": "https://www.gongju.go.kr", "host": "eminwon.gongju.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "충청남도", "sigungu": "보령시", "name": "충청남도 보령시청", "homepage": "https://www.brcn.go.kr", "host": "eminwon.brcn.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "아산시", "name": "충청남도 아산시청", "homepage": "https://www.asan.go.kr", "host": "eminwon.asan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "서산시", "name": "충청남도 서산시청", "homepage": "https://www.seosan.go.kr", "host": "eminwon.seosan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "충청남도", "sigungu": "논산시", "name": "충청남도 논산시청", "homepage": "https://www.nonsan.go.kr", "host": "eminwon.nonsan21.net", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": "eminwon.nonsan.go.kr 접속 실패, 누리집 고시공고 화면의 eminwon.nonsan21.net 으로 성공"},
+{"sido": "충청남도", "sigungu": "계룡시", "name": "충청남도 계룡시청", "homepage": "https://www.gyeryong.go.kr", "host": "eminwon.gyeryong.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 0, "note": ""},
+{"sido": "충청남도", "sigungu": "당진시", "name": "충청남도 당진시청", "homepage": "https://www.dangjin.go.kr", "host": "eminwon.dangjin.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "금산군", "name": "충청남도 금산군청", "homepage": "https://www.geumsan.go.kr", "host": "eminwon.geumsan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": "샘플 제목이 2020년 공고 — 정렬·최신 여부 확인 필요"},
+{"sido": "충청남도", "sigungu": "부여군", "name": "충청남도 부여군청", "homepage": "https://www.buyeo.go.kr", "host": "eminwon.buyeo.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "서천군", "name": "충청남도 서천군청", "homepage": "https://www.seocheon.go.kr", "host": "eminwon.seocheon.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "청양군", "name": "충청남도 청양군청", "homepage": "https://www.cheongyang.go.kr", "host": "eminwon.cheongyang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "충청남도", "sigungu": "홍성군", "name": "충청남도 홍성군청", "homepage": "https://www.hongseong.go.kr", "host": "eminwon.hongseong.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건 (응답 약 32초)"},
+{"sido": "충청남도", "sigungu": "예산군", "name": "충청남도 예산군청", "homepage": "https://www.yesan.go.kr", "host": "eminwon.yesan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "충청남도", "sigungu": "태안군", "name": "충청남도 태안군청", "homepage": "https://www.taean.go.kr", "host": "eminwon.taean.go.kr", "legacy": false, "status": "fail", "listed": 0, "matched": 0, "note": "eminwon.taean.go.kr 맞는 주소(누리집에 있음)이나 목록 요청에 2회 모두 500 오류"}
+]

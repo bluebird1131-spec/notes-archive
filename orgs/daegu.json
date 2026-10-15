@@ -1,0 +1,11 @@
+[
+{"sido": "대구광역시", "sigungu": "중구", "name": "대구광역시 중구청", "homepage": "https://www.jung.daegu.kr", "host": "eminwon.jung.daegu.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "대구광역시", "sigungu": "동구", "name": "대구광역시 동구청", "homepage": "https://www.dong.daegu.kr", "host": "eminwon.dong.daegu.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "대구광역시", "sigungu": "서구", "name": "대구광역시 서구청", "homepage": "https://www.dgs.go.kr", "host": "eminwon.dgs.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
+{"sido": "대구광역시", "sigungu": "남구", "name": "대구광역시 남구청", "homepage": "https://www.nam.daegu.kr", "host": "eminwon.nam.daegu.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 4, "note": ""},
+{"sido": "대구광역시", "sigungu": "북구", "name": "대구광역시 북구청", "homepage": "https://www.buk.daegu.kr", "host": "eminwon.buk.daegu.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "대구광역시", "sigungu": "수성구", "name": "대구광역시 수성구청", "homepage": "https://www.suseong.kr", "host": "eminwon.suseong.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 게시판 0건 (지난 시험과 동일)"},
+{"sido": "대구광역시", "sigungu": "달서구", "name": "대구광역시 달서구청", "homepage": "https://www.dalseo.daegu.kr", "host": "eminwon.dalseo.daegu.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "대구광역시", "sigungu": "달성군", "name": "대구광역시 달성군청", "homepage": "https://www.dalseong.daegu.kr", "host": "eminwon.dalseong.daegu.kr", "legacy": false, "status": "ok", "listed": 3, "matched": 2, "note": ""},
+{"sido": "대구광역시", "sigungu": "군위군", "name": "대구광역시 군위군청", "homepage": "https://www.gunwi.go.kr", "host": "eminwon.gunwi.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 3, "note": "2023.7.1 경북에서 대구로 편입"}
+]

@@ -13,28 +13,88 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync:
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    outputs:
+      groups: ${{ steps.g.outputs.groups }}
+      list: ${{ steps.g.outputs.list }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - run: pip install -q requests beautifulsoup4 pypdf
-
-      - name: collect
+      - id: g
         run: |
-          mkdir -p scripts/out
+          python - <<'EOF' >> "$GITHUB_OUTPUT"
+          import glob, json, os, sys
+          sys.path.insert(0, 'scripts')
+          import crawler as c
+          gs = ['base'] + [os.path.basename(f)[:-5] for f in sorted(glob.glob('orgs/*.json')) if c.load_org_file(f)]
+          print('groups=' + json.dumps(gs))
+          print('list=' + ','.join(gs))
+          EOF
+
+  collect:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        group: ${{ fromJson(needs.plan.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests beautifulsoup4 pypdf
+      - name: collect
+        env:
+          G: ${{ matrix.group }}
+        run: |
+          mkdir -p scripts/out part
           cp data/raw_notices.json scripts/out/ 2>/dev/null || true
+          if [ "$G" = base ]; then
+            python scripts/crawler.py --attach || echo "some sources failed"
+          else
+            python scripts/crawler.py --org-file "orgs/$G.json" --attach || echo "some sources failed"
+          fi
+          cp scripts/out/raw_notices.json "part/raw_$G.json"
+          cp scripts/out/crawl_log.json "part/log_$G.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.group }}
+          path: part/
+          retention-days: 3
+
+  merge:
+    needs: [plan, collect]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests beautifulsoup4 pypdf
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: part-*
+          path: part
+          merge-multiple: true
+      - name: merge
+        run: |
+          mkdir -p part
           cp data/raw_notices.json /tmp/prev_raw.json 2>/dev/null || echo '[]' > /tmp/prev_raw.json
-          python scripts/crawler.py --attach || echo "some sources failed"
+          python tools/merge_parts.py part "${{ needs.plan.outputs.list }}"
           python tools/keep_failed.py /tmp/prev_raw.json
           python scripts/extract_rules.py
-          cp scripts/out/raw_notices.json scripts/out/rules.json data/
-          [ -f scripts/out/crawl_log.json ] && cp scripts/out/crawl_log.json data/ || true
+          python tools/org_index.py
+          cp scripts/out/raw_notices.json scripts/out/rules.json scripts/out/crawl_log.json data/
 
       - name: commit
         run: |

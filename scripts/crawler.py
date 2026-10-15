@@ -490,7 +490,7 @@ ATTACH_MAX_FILES = 2         # 공고당 내려받는 첨부 수
 ATTACH_MAX_BYTES = 30 * 1024 * 1024
 ATTACH_XML_MAX = 50 * 1024 * 1024   # hwpx 안 section XML 압축 해제 상한 (zip bomb 방지)
 # 첨부 다운로드에 레거시 TLS가 필요한 호스트 (동구 새올: 옛 암호군, 울주 새올: 짧은 DH 키)
-ATTACH_LEGACY_HOSTS = ("eminwon.donggu.ulsan.kr", "eminwon.ulju.ulsan.kr", "eminwon.suwon.go.kr", "eminwon.chuncheon.go.kr")
+ATTACH_LEGACY_HOSTS = ["eminwon.donggu.ulsan.kr", "eminwon.ulju.ulsan.kr", "eminwon.suwon.go.kr", "eminwon.chuncheon.go.kr"]
 # 합격자 명단 같은 결과 문서는 개인정보가 들어 있으므로 받지 않는다
 ATTACH_RESULT_RE = re.compile(RESULT_RE.pattern + r"|합격자|명단")
 # 응시원서·서식은 공고문보다 뒤로 미룬다
@@ -759,6 +759,23 @@ ORGS += [
     saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True),
     saeol_jobs_org("춘천시", "강원특별자치도 춘천시청", "강원특별자치도 춘천시", "eminwon.chuncheon.go.kr", legacy=True),
 ]
+ORGS_DIR = Path(__file__).resolve().parent.parent / "orgs"
+
+
+def load_org_file(path):
+    """전국 조사 결과(orgs/<시·도>.json)에서 status ok 이고 기본 목록(ORGS)에 없는 기관 → 새올 채용 게시판만 수집"""
+    have = {o["host"] for o in ORGS}
+    out = []
+    for e in json.loads(Path(path).read_text(encoding="utf-8")):
+        if e.get("status") != "ok" or e.get("note") == "기존" or e["host"] in have:
+            continue
+        legacy = bool(e.get("legacy"))
+        out.append(saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy))
+        if legacy and e["host"] not in ATTACH_LEGACY_HOSTS:
+            ATTACH_LEGACY_HOSTS.append(e["host"])
+    return out
+
+
 ALIASES = {"울산시청": "울산시", "울산광역시": "울산시", "시청": "울산시", "울주": "울주군"}
 
 LIST_FN = {"saeol": crawl_saeol, "ulju": crawl_ulju, "ulsan": crawl_ulsan}
@@ -827,6 +844,8 @@ def main(argv=None):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(description="울산 시·구·군 공공일자리 공고 크롤러 (raw 수집)")
     ap.add_argument("--orgs", default="", help="쉼표 구분: 중구,남구,동구,북구,울주군,울산시 (기본 전체)")
+    ap.add_argument("--org-file", default="",
+                    help="기본 목록 대신 전국 조사 결과 파일(orgs/<시·도>.json)의 기관을 수집")
     ap.add_argument("--pages", type=int, default=1, help="게시판별 목록 쪽수 (1~2 권장, 최대 3)")
     ap.add_argument("--page-size", type=int, default=10,
                     help="새올 목록 한 쪽 건수 (ofr_pageSize, 기본 10 = 홈페이지와 동일)")
@@ -881,9 +900,10 @@ def main(argv=None):
 
     pages = max(1, min(args.pages, 3))
     page_size = max(5, min(args.page_size, 30))
+    base = load_org_file(args.org_file) if args.org_file else ORGS
     wanted = [ALIASES.get(x.strip(), x.strip()) for x in args.orgs.split(",") if x.strip()]
-    orgs = [o for o in ORGS if not wanted or o["key"] in wanted]
-    unknown = set(wanted) - {o["key"] for o in ORGS}
+    orgs = [o for o in base if not wanted or o["key"] in wanted]
+    unknown = set(wanted) - {o["key"] for o in base}
     if unknown:
         ap.error(f"알 수 없는 기관: {', '.join(sorted(unknown))}")
     if args.insecure:

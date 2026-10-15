@@ -1,0 +1,4 @@
+[
+  {"sido": "제주특별자치도", "sigungu": "제주시", "name": "제주시청", "homepage": "https://www.jejusi.go.kr", "host": "eminwon.jejusi.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 10, "note": "행정시 자체 새올 사용(누리집 HTML로 확인). 도청 새올(eminwon.jeju.go.kr)은 DNS 없음"},
+  {"sido": "제주특별자치도", "sigungu": "서귀포시", "name": "서귀포시청", "homepage": "https://www.seogwipo.go.kr", "host": "eminwon.seogwipo.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "누리집 채용공고 메뉴(/info/news/job.htm)가 이 새올 05 목록을 iframe으로 띄우지만 전체기간(list_gubun=A)도 0건. 채용은 고시/공고 쪽에 섞여 올라오는 것으로 추정. 도청 새올(eminwon.jeju.go.kr)은 DNS 없음"}
+]

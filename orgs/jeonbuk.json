@@ -1,0 +1,16 @@
+[
+{"sido": "전북특별자치도", "sigungu": "전주시", "name": "전북특별자치도 전주시청", "homepage": "https://www.jeonju.go.kr", "host": "eminwon.jeonju.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 5, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "군산시", "name": "전북특별자치도 군산시청", "homepage": "https://www.gunsan.go.kr", "host": "eminwon.gunsan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "익산시", "name": "전북특별자치도 익산시청", "homepage": "https://www.iksan.go.kr", "host": "eminwon.iksan.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "정읍시", "name": "전북특별자치도 정읍시청", "homepage": "https://www.jeongeup.go.kr", "host": "eminwon.jeongeup.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "남원시", "name": "전북특별자치도 남원시청", "homepage": "https://www.namwon.go.kr", "host": "eminwon.namwon.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "김제시", "name": "전북특별자치도 김제시청", "homepage": "https://www.gimje.go.kr", "host": "eminwon.gimje.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건"},
+{"sido": "전북특별자치도", "sigungu": "완주군", "name": "전북특별자치도 완주군청", "homepage": "https://www.wanju.go.kr", "host": "eminwon.wanju.go.kr", "legacy": false, "status": "ok", "listed": 3, "matched": 1, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "진안군", "name": "전북특별자치도 진안군청", "homepage": "https://www.jinan.go.kr", "host": "eminwon.jinan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "무주군", "name": "전북특별자치도 무주군청", "homepage": "https://www.muju.go.kr", "host": "eminwon.muju.go.kr", "legacy": false, "status": "ok", "listed": 3, "matched": 2, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "장수군", "name": "전북특별자치도 장수군청", "homepage": "https://www.jangsu.go.kr", "host": "eminwon.jangsu.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건 (누리집에 eminwon.jangsu.go.kr 있음)"},
+{"sido": "전북특별자치도", "sigungu": "임실군", "name": "전북특별자치도 임실군청", "homepage": "https://www.imsil.go.kr", "host": "eminwon.imsil.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "순창군", "name": "전북특별자치도 순창군청", "homepage": "https://www.sunchang.go.kr", "host": "eminwon.sunchang.go.kr", "legacy": true, "status": "ok", "listed": 1, "matched": 1, "note": ""},
+{"sido": "전북특별자치도", "sigungu": "고창군", "name": "전북특별자치도 고창군청", "homepage": "https://www.gochang.go.kr", "host": "eminwon.gochang.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건"},
+{"sido": "전북특별자치도", "sigungu": "부안군", "name": "전북특별자치도 부안군청", "homepage": "https://www.buan.go.kr", "host": "eminwon.buan.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "채용(05) 목록 0건"}
+]

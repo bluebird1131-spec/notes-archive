@@ -1,0 +1,20 @@
+[
+  {"sido": "경상남도", "sigungu": "창원시", "name": "창원시청", "homepage": "https://www.changwon.go.kr", "host": "eminwon.changwon.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+  {"sido": "경상남도", "sigungu": "진주시", "name": "진주시청", "homepage": "https://www.jinju.go.kr", "host": "eminwon.jinju.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 5, "note": ""},
+  {"sido": "경상남도", "sigungu": "통영시", "name": "통영시청", "homepage": "https://www.tongyeong.go.kr", "host": "eminwon.tongyeong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "사천시", "name": "사천시청", "homepage": "https://www.sacheon.go.kr", "host": "eminwon.sacheon.go.kr", "legacy": false, "status": "fail", "listed": 0, "matched": 0, "note": "주소는 누리집 HTML로 확인됨. 서버가 중간 인증서(GlobalSign RSA OV SSL CA 2018)를 안 보내 Python 인증서 검증 실패(SSLError). 중간 인증서 번들 추가 시 사용 가능할 것"},
+  {"sido": "경상남도", "sigungu": "김해시", "name": "김해시청", "homepage": "https://www.gimhae.go.kr", "host": "eminwon.gimhae.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 6, "note": "응답 느림 — 첫 시험 ReadTimeout(40초), 두 번째 시험 성공"},
+  {"sido": "경상남도", "sigungu": "밀양시", "name": "밀양시청", "homepage": "https://www.miryang.go.kr", "host": "eminwon.miryang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+  {"sido": "경상남도", "sigungu": "거제시", "name": "거제시청", "homepage": "https://www.geoje.go.kr", "host": "eminwon.geoje.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "양산시", "name": "양산시청", "homepage": "https://www.yangsan.go.kr", "host": "eminwon.yangsan.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+  {"sido": "경상남도", "sigungu": "의령군", "name": "의령군청", "homepage": "https://www.uiryeong.go.kr", "host": "eminwon.uiryeong.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "새올은 열리나 채용(05) 게시판 0건. 누리집 자체 고시공고 게시판(boardId=BBS_0000070)에 새올 고시가 실림"},
+  {"sido": "경상남도", "sigungu": "함안군", "name": "함안군청", "homepage": "https://www.haman.go.kr", "host": "eminwon.haman.go.kr", "legacy": false, "status": "empty", "listed": 0, "matched": 0, "note": "새올은 열리나 채용(05) 게시판 0건. 채용은 누리집 고시/공고(/00059/06642/06644.web)에 섞여 올라오는 것으로 보임"},
+  {"sido": "경상남도", "sigungu": "창녕군", "name": "창녕군청", "homepage": "https://www.cng.go.kr", "host": "eminwon.cng.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+  {"sido": "경상남도", "sigungu": "고성군", "name": "고성군청", "homepage": "https://www.goseong.go.kr", "host": "eminwon.goseong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
+  {"sido": "경상남도", "sigungu": "남해군", "name": "남해군청", "homepage": "https://www.namhae.go.kr", "host": "eminwon.namhae.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "하동군", "name": "하동군청", "homepage": "https://www.hadong.go.kr", "host": "eminwon.hadong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "산청군", "name": "산청군청", "homepage": "https://www.sancheong.go.kr", "host": "eminwon.sancheong.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": "채용(05) 게시판 사용 적음(1건)"},
+  {"sido": "경상남도", "sigungu": "함양군", "name": "함양군청", "homepage": "https://www.hygn.go.kr", "host": "eminwon.hygn.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "거창군", "name": "거창군청", "homepage": "https://www.geochang.go.kr", "host": "eminwon.geochang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
+  {"sido": "경상남도", "sigungu": "합천군", "name": "합천군청", "homepage": "https://www.hc.go.kr", "host": "eminwon.hc.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""}
+]
