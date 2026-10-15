@@ -20,6 +20,7 @@
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import random
 import re
@@ -115,6 +116,7 @@ class LegacyTLSAdapter(HTTPAdapter):
 EXTRA_CA = Path(__file__).resolve().parent.parent / "certs" / "extra_ca.pem"
 
 
+@functools.lru_cache(maxsize=1)  # 한 번만 만듦 (여러 스레드가 동시에 쓰지 않게)
 def ca_bundle() -> str | bool:
     import certifi
     if not EXTRA_CA.exists():

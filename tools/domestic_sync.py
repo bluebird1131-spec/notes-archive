@@ -8,6 +8,7 @@
 """
 import json
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -31,17 +32,29 @@ for f in sorted((ROOT / 'orgs').glob('*.json')):
 targets = [o for o in orgs if o['source_org'] in failed]
 print(f'해외에서 실패한 기관 {len(failed)}곳 중 수집 대상 {len(targets)}곳')
 
+# 서로 다른 기관 서버를 동시에 WORKERS 곳씩 (기관 하나 안에서는 요청 사이 1.5~3초 쉬는 것 그대로라 기관 부담은 같음)
+WORKERS = 6
+started = datetime.now(c.KST)
+c.ca_bundle()  # 인증서 목록 파일을 스레드 시작 전에 한 번 만듦
+with ThreadPoolExecutor(WORKERS) as ex:
+    results = list(ex.map(lambda o: c.run_org(o, 1, 10, True, True), targets))
 notices, ok = [], []
-for org in targets:
-    print(f"[{org['key']}] 수집")
-    kept, lg = c.run_org(org, 1, 10, True, True)
+for org, (kept, lg) in zip(targets, results):
     if lg['ok']:
         notices += kept
         ok.append(org['source_org'])
 prev = ROOT / 'data/raw_notices.json'
 reuse = {n.get('detail_url'): n for n in json.loads(prev.read_text(encoding='utf-8')) if n.get('attachment_text')} if prev.exists() else {}
-st = c.run_attachments(notices, True, reuse=reuse)
-c.print_attach_summary(st)
+# 첨부도 기관별로 나눠 동시에
+groups = {}
+for n in notices:
+    groups.setdefault(n['source_org'], []).append(n)
+with ThreadPoolExecutor(WORKERS) as ex:
+    sts = list(ex.map(lambda g: c.run_attachments(g, True, reuse=reuse), groups.values()))
+st = {k: sum(s[k] for s in sts) for k in (sts[0] if sts else {})}
+if st:
+    c.print_attach_summary(st)
+print(f'걸린 시간: {(datetime.now(c.KST) - started).seconds // 60}분')
 
 out = ROOT / 'data/domestic_raw.json'
 out.write_text(json.dumps({'at': datetime.now(c.KST).isoformat(timespec='seconds'), 'orgs': ok, 'notices': notices},
@@ -51,5 +64,6 @@ if push:
     git('add', 'data/domestic_raw.json')
     if subprocess.run(['git', '-C', str(ROOT), 'diff', '--cached', '--quiet']).returncode:
         git('commit', '-q', '-m', f"local {datetime.now(c.KST):%Y-%m-%d %H:%M}")
+        git('pull', '-q', '--rebase')  # 수집하는 동안 Actions 가 올린 커밋이 있을 수 있음
         git('push', '-q')
         print('올림 완료')
