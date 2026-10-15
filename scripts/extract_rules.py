@@ -118,7 +118,8 @@ def extract(n):
     def pay_match(rx):
         for m in re.finditer(rx, text):
             before = text[max(0, m.start() - 25):m.start()]
-            if not re.search(r'경비|급식|교통|식비|급량', before + m.group(0)):
+            # 간식비·교통비 같은 실비나 시급(1만 원 안팎)을 일급으로 읽지 않게 2만 원 미만은 버림
+            if not re.search(r'경비|급식|교통|식비|급량|간식|실비|여비|시간당', before + m.group(0)) and won(m.group(1)) >= 20_000:
                 return m
         return None
     m = (pay_match(r'일\s*급\s*[:：]?\s*(?:[’‘\']?\d{2}\s*[:：]\s*)?([\d,]{5,})\s*원')
@@ -195,7 +196,9 @@ def extract(n):
             # 소제목('자격 기준', '(1) 응시자격')·규정 이름만 있는 줄·'붙임 참조'는 건너뜀
             if re.fullmatch(r'(응\s*시\s*)?자\s*격\s*(기\s*준|요\s*건)?\s*[:：]?', item) or re.fullmatch(r'「[^」]+」(\s*제\s*\d+\s*조.*)?', item)                     or re.search(r'붙임\s*참조|근로\s*조건', item):
                 continue
-            if 4 <= len(item) <= 120:
+            # 표 칸이 깨져 따옴표·빗금만 남은 줄('/'/'/)은 버림
+            item = re.sub(r"(\s*[-’‘'\"]*\s*/\s*[’‘'\"]+)+\s*", ' ', item).strip(" -/'’‘")
+            if 4 <= len(item) <= 120 and len(re.findall(r'[가-힣]', item)) >= 3:
                 qual_lines.append(item)
             if len(qual_lines) >= 3:
                 break
