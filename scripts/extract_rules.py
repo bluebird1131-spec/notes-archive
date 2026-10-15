@@ -205,7 +205,10 @@ def extract(n):
         return t.startswith('및') or (len(t) <= 9 and re.search(r'우대|선발|자격|공통|세부|구분|내용|요건|기준|사항', t))
     qual_lines = [q for q in qual_lines if not heading(q)]
     # 자격이 '붙임 참조'로만 적힌 공고는 엉뚱한 줄이 따라오므로 비워 둠('원문 확인')
-    if any(re.search(r'붙임\s*참조', q) for q in qual_lines):
+    if any(re.search(r'붙임\s*(공고문?\s*)?참조|공고문\s*참조', q) for q in qual_lines):
+        qual_lines = []
+    # 지원서·동의서 서식 안의 '자격' 칸을 잡은 경우(서명·귀하·이의 제기 문구)도 자격 문구가 아님
+    if any(re.search(r'서\s*명\)|귀\s*하$|\(성명\)|이의를|제기하지\s*않|합격을\s*취소|\d{4}\s*년\s+월\s+일|동의합니다|확인합니다', q) for q in qual_lines):
         qual_lines = []
     qual_lines = [q for q in qual_lines if not re.search(r'공고\s*제\s*\d', q)]
     if qual_lines:
