@@ -32,6 +32,9 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import web_board  # noqa: E402
 from requests.adapters import HTTPAdapter
 
 KST = timezone(timedelta(hours=9))
@@ -58,11 +61,11 @@ EXCLUDE_RULES = [
     (re.compile(r"공무원|임용시험|임기제|개방형\s*직위|필기시험|면접시험|임용\s*예정"),
      "공무원·공단 직원 임용시험 절차 (공공일자리 아님)"),
     (re.compile(r"위원|자문단|평가단|심사단|협의체"), "위원·자문단 모집 (일자리 아님)"),
-    (re.compile(r"통장|반장"), "통장·반장 위촉 모집 (일자리 아님)"),
+    (re.compile(r"통장|반장|(^|[\s(])이장"), "통장·반장·이장 위촉 모집 (일자리 아님)"),
     (re.compile(r"교육생|수강생|참가자|참가팀|체험단|입주자|입주기업|입점|사업자|업체|기업|단체|후원|봉사|"
                 r"서포터즈|기자단|모니터단|명예|공모|작품|선수|회원|임차인|분양|청약|감사인|회계법인|법무법인|감정평가"),
      "교육·참가자·사업자 모집 (일자리 아님)"),
-    (re.compile(r"수탁|위탁|지원\s*사업|보조금|무료\s*개방|참여\s*(가구|업소|기관|학교)"),
+    (re.compile(r"수탁|위탁|수행\s*기관|제공\s*기관|지원\s*사업|보조금|무료\s*개방|참여\s*(가구|업소|기관|학교)"),
      "사업 참여·위탁기관 모집 (일자리 아님)"),
 ]
 # 모집이 아닌 결과 발표 성격의 공고 (제외하지 않고 표시만 한다)
@@ -107,6 +110,22 @@ class LegacyTLSAdapter(HTTPAdapter):
         return super().init_poolmanager(*args, **kwargs)
 
 
+# 중간 인증서를 보내지 않는 기관 서버용: certifi 기본 목록 + 빠진 중간 인증서(certs/extra_ca.pem, 공개 인증서)
+# 인증서 검증은 끄지 않고, 검증에 쓸 목록만 넓힘
+EXTRA_CA = Path(__file__).resolve().parent.parent / "certs" / "extra_ca.pem"
+
+
+def ca_bundle() -> str | bool:
+    import certifi
+    if not EXTRA_CA.exists():
+        return True
+    out = OUT_DIR / "ca_bundle.pem"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out.write_text(Path(certifi.where()).read_text(encoding="utf-8") + "\n" + EXTRA_CA.read_text(encoding="utf-8"),
+                   encoding="utf-8")
+    return str(out)
+
+
 class Fetcher:
     def __init__(self, legacy_hosts=(), verify=True):
         self.s = requests.Session()
@@ -117,7 +136,7 @@ class Fetcher:
         })
         for host in legacy_hosts:
             self.s.mount(f"https://{host}", LegacyTLSAdapter())
-        self.verify = verify
+        self.verify = ca_bundle() if verify is True else verify
         self.count = 0
         self._last = 0.0
 
@@ -265,11 +284,14 @@ NOTICE_NO = re.compile(r"제\s*\d{4}\s*-\s*\d+\s*호")
 def parse_saeol_list(html, org, board):
     soup = BeautifulSoup(html, "html.parser")
     out = []
-    for tr in soup.find_all("tr"):
-        m = re.search(r"searchDetail\('(\d+)'\)", str(tr))
-        tds = tr.find_all("td", recursive=False)
+    # 행은 보통 표(tr·td)지만 광주 서·남·동구처럼 목록(ul·li)인 곳도 있음.
+    # 상세 번호는 searchDetail('번호') 또는 광산구처럼 링크의 not_ancmt_mgt_no=번호
+    for row in soup.find_all(["tr", "ul"]):
+        m = re.search(r"searchDetail\('(\d+)'\)|not_ancmt_mgt_no=(\d+)", str(row))
+        tds = row.find_all("td" if row.name == "tr" else "li", recursive=False)
         if not m or len(tds) < 4:
             continue
+        mgt_no = m.group(1) or m.group(2)
         texts = [clean(td.get_text(" ")) for td in tds]
         date_idx = next((i for i, t in enumerate(texts) if DATE_ONLY.match(t)), None)
         notice_no = next((t for t in texts if NOTICE_NO.search(t)), "")
@@ -286,8 +308,8 @@ def parse_saeol_list(html, org, board):
         rec = make_record(
             org, board, title=title, notice_no=notice_no,
             posted_at=texts[date_idx] if date_idx is not None else "", dept=dept,
-            detail_url=saeol_detail_url(org["host"], m.group(1), board["codes"]),
-            key=m.group(1),
+            detail_url=saeol_detail_url(org["host"], mgt_no, board["codes"]),
+            key=mgt_no,
         )
         rec["_truncated"] = truncated
         out.append(rec)
@@ -359,6 +381,7 @@ def crawl_saeol(f, org, board, pages, page_size):
     url = f"https://{org['host']}{SAEOL_ACTION}"
     recs = []
     for p in range(1, pages + 1):
+        page_size = board.get("page_size", page_size)
         html = f.post(url, saeol_list_params(board["codes"], p, page_size))
         got = parse_saeol_list(html, org, board)
         recs += got
@@ -770,16 +793,41 @@ def load_org_file(path):
         if e.get("status") != "ok" or e.get("note") == "기존" or e["host"] in have:
             continue
         legacy = bool(e.get("legacy"))
-        out.append(saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy))
+        if e.get("web"):
+            # 새올을 쓰지 않는 누리집 게시판 (scripts/web_board.py)
+            board = {"name": "누리집 게시판", "board_url": e["web"].get("board_url") or e["web"]["list_url"], "web": e["web"]}
+            WEB_BOARDS[e["name"]] = board
+            out.append({"key": e["name"], "source_org": e["name"], "region_sigungu": f'{e["sido"]} {e["sigungu"]}',
+                        "host": up.urlparse(e["web"]["list_url"]).hostname, "kind": "web", "legacy_tls": legacy,
+                        "boards": [board]})
+            continue
+        o = saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy)
+        if e.get("codes"):
+            # 채용(05) 게시판을 안 쓰고 고시/공고에 채용 공고를 섞어 올리는 기관: 그 구분으로 30건씩 보고 키워드로 거름
+            b = o["boards"][0]
+            b.update(name="새올 고시공고", codes=e["codes"], page_size=30,
+                     board_url=b["board_url"].replace("not_ancmt_se_code=05", "not_ancmt_se_code=" + e["codes"]))
+        out.append(o)
         if legacy and e["host"] not in ATTACH_LEGACY_HOSTS:
             ATTACH_LEGACY_HOSTS.append(e["host"])
     return out
 
 
+WEB_BOARDS: dict[str, dict] = {}  # 기관명 → 누리집 게시판 설정 (상세 파싱 때 씀)
+
+
+def crawl_web(f, org, board, pages, page_size):
+    return web_board.crawl_web(f, org, board, pages, page_size, make_record=make_record, strip_ellipsis=strip_ellipsis)
+
+
+def parse_web_detail(html, rec, host):
+    web_board.parse_web_detail(html, rec, host, board=WEB_BOARDS[rec["source_org"]], page_text=page_text, clean=clean)
+
+
 ALIASES = {"울산시청": "울산시", "울산광역시": "울산시", "시청": "울산시", "울주": "울주군"}
 
-LIST_FN = {"saeol": crawl_saeol, "ulju": crawl_ulju, "ulsan": crawl_ulsan}
-DETAIL_FN = {"saeol": parse_saeol_detail, "ulju": parse_ulju_detail, "ulsan": parse_ulsan_detail}
+LIST_FN = {"saeol": crawl_saeol, "ulju": crawl_ulju, "ulsan": crawl_ulsan, "web": crawl_web}
+DETAIL_FN = {"saeol": parse_saeol_detail, "ulju": parse_ulju_detail, "ulsan": parse_ulsan_detail, "web": parse_web_detail}
 
 
 # ---------------------------------------------------------------------------
