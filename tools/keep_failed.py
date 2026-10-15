@@ -11,6 +11,9 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'scripts'))
+import crawler as c  # noqa: E402
+
 KST = timezone(timedelta(hours=9))
 OUT = Path('scripts/out')
 now = datetime.now(KST)
@@ -38,6 +41,12 @@ for n in load(prev_path) or []:
         raw.append(n)
         have.add(n.get('detail_url'))
         kept_prev += 1
+# 이어 붙인 공고도 지금의 키워드·제외 규칙으로 다시 판정 (규칙을 고친 뒤에도 옛 판정이 남지 않게)
+for n in raw[len(raw) - kept_dom - kept_prev:]:
+    n['matched_keywords'] = c.match_keywords(n.get('title', ''))
+    n['excluded_reason'] = c.excluded_reason(n.get('title', ''), n['matched_keywords'])
+    n['is_result_notice'] = bool(c.RESULT_RE.search(n.get('title', '')))
+raw = [n for n in raw if n.get('matched_keywords')]
 (OUT / 'raw_notices.json').write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding='utf-8')
 
 summary = {'at': now.isoformat(timespec='seconds'), 'notices': len(raw), 'failed_orgs': sorted(x for x in failed if x),

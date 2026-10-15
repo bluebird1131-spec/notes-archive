@@ -5,6 +5,7 @@
     "list_url": "https://www.example.go.kr/board/list.do?bbsId=...",  # 목록 1쪽 (GET)
     "row": "tbody tr",                 # (선택) 행 CSS 선택자. 기본: tbody tr, 없으면 ul > li
     "title": "td.title a",             # (선택) 행 안 제목 링크 선택자. 기본: 행에서 글자가 가장 긴 링크
+    "title_skip": "포천|연천",          # (선택) 이 정규식에 걸리는 제목은 뺌 (다른 지역 소식이 섞이는 게시판)
     "date": "td.reg_date",             # (선택) 행 안 등록일 칸 선택자 (마감일 칸과 헷갈리는 게시판). 기본: 행 글자에서 첫 날짜
     "id_re": "fnView\\('(\\d+)'",      # (선택) 링크가 javascript 일 때 행 HTML 에서 글 번호 뽑는 정규식
     "detail_url": "https://.../view.do?nttId={id}",  # (선택) id_re 를 쓸 때 상세 주소 틀
@@ -85,7 +86,7 @@ def crawl_web(f, org, board, pages, page_size, *, make_record, strip_ellipsis):
             hit = (a, re.sub(r"\s+", " ", a.get("title") or a.get_text(" ")).strip()) if a else None
         else:
             hit = _title_link(row)
-        if not hit or not hit[1]:
+        if not hit or not hit[1] or (cfg.get("title_skip") and re.search(cfg["title_skip"], hit[1])):
             continue
         a, title_raw = hit
         href = (a.get("href") or "").strip()
