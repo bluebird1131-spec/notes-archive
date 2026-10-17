@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-10-17T07:11:38+09:00",
-  "finished_at": "2026-10-17T07:47:38+09:00",
+  "started_at": "2026-10-17T18:46:13+09:00",
+  "finished_at": "2026-10-17T19:18:03+09:00",
   "options": {
     "groups": [
       "base",
@@ -21,8 +21,8 @@
       "seoul"
     ]
   },
-  "total_kept": 1008,
-  "total_excluded": 119,
+  "total_kept": 1178,
+  "total_excluded": 151,
   "orgs": [
     {
       "org": "중구",
@@ -30,24 +30,24 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.junggu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.junggu.ulsan.kr', port=443) at 0x7fbb7c26b2c0>, 'Connection to eminwon.junggu."
+          "error": null
         },
         {
           "board": "새올 고시공고",
-          "listed": 0,
+          "listed": 10,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.junggu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.junggu.ulsan.kr', port=443) at 0x7fbb7c290110>, 'Connection to eminwon.junggu."
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 4,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -56,25 +56,25 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ulsannamgu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ulsannamgu.go.kr', port=443) at 0x7fbb7c290ec0>, 'Connection to eminwon.ulsan"
+          "listed": 10,
+          "matched": 6,
+          "excluded": 1,
+          "error": null
         },
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ulsannamgu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ulsannamgu.go.kr', port=443) at 0x7fbb7c2916d0>, 'Connection to eminwon.ulsan"
+          "listed": 10,
+          "matched": 1,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 4,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 7,
+      "excluded": 2
     },
     {
       "org": "동구",
@@ -82,25 +82,25 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.donggu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.donggu.ulsan.kr', port=443) at 0x7fbb7c26afc0>, 'Connection to eminwon.donggu."
+          "listed": 10,
+          "matched": 9,
+          "excluded": 1,
+          "error": null
         },
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.donggu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.donggu.ulsan.kr', port=443) at 0x7fbb7c2911f0>, 'Connection to eminwon.donggu."
+          "listed": 10,
+          "matched": 1,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 4,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 10,
+      "excluded": 2
     },
     {
       "org": "북구",
@@ -108,25 +108,25 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bukgu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bukgu.ulsan.kr', port=443) at 0x7fbb7c290500>, 'Connection to eminwon.bukgu.uls"
+          "listed": 10,
+          "matched": 7,
+          "excluded": 1,
+          "error": null
         },
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bukgu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bukgu.ulsan.kr', port=443) at 0x7fbb7c291f10>, 'Connection to eminwon.bukgu.uls"
+          "listed": 10,
+          "matched": 3,
+          "excluded": 3,
+          "error": null
         }
       ],
-      "ok": false,
+      "ok": true,
       "requests": 4,
-      "detail_ok": 0,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 10,
+      "excluded": 4
     },
     {
       "org": "울주군",
@@ -134,25 +134,25 @@
       "boards": [
         {
           "board": "울주군 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.ulju.ulsan.kr', port=443): Max retries exceeded with url: /ulju/unit/employ/list.do?mId=0403030100 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ulju.ulsan.kr', port=443) at 0x7fbb7c292b70>, 'Connection to www.ulju.ulsan.kr timed out. (connec"
+          "listed": 10,
+          "matched": 9,
+          "excluded": 1,
+          "error": null
         },
         {
           "board": "울주군 일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.ulju.ulsan.kr', port=443): Max retries exceeded with url: /ulju/saeol/gosi/list.do?seCode=04&mId=0403020000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ulju.ulsan.kr', port=443) at 0x7fbb7c26b4a0>, 'Connection to www.ulju.ulsan.kr timed out"
+          "listed": 10,
+          "matched": 1,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 4,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 10,
+      "excluded": 2
     },
     {
       "org": "울산시",
@@ -160,18 +160,18 @@
       "boards": [
         {
           "board": "울산시 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.ulsan.go.kr', port=443): Max retries exceeded with url: /u/rep/transfer/notice/list.ulsan?mId=001004002000000000&curPage=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ulsan.go.kr', port=443) at 0x7fbb7c2924e0>, 'Connection to www.ulsan.go.k"
+          "listed": 10,
+          "matched": 3,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
+      "ok": true,
       "requests": 2,
-      "detail_ok": 0,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 3,
+      "excluded": 1
     },
     {
       "org": "해운대구",
@@ -198,18 +198,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bukgu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bukgu.gwangju.kr', port=443) at 0x7fbb7c291490>, 'Connection to eminwon.bukgu"
+          "listed": 10,
+          "matched": 7,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 7,
+      "excluded": 1
     },
     {
       "org": "대전서구",
@@ -217,18 +217,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.seogu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.seogu.go.kr', port=443) at 0x7fbb7c26b0e0>, 'Connection to eminwon.seogu.go.kr tim"
+          "listed": 10,
+          "matched": 10,
+          "excluded": 3,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 10,
+      "excluded": 3
     },
     {
       "org": "세종시",
@@ -236,17 +236,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.sejong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.sejong.go.kr', port=443) at 0x7fbb7c2919d0>, 'Connection to eminwon.sejong.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
+      "ok": true,
+      "requests": 15,
+      "detail_ok": 8,
+      "detail_fail": 2,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -255,18 +255,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suwon.go.kr', port=443) at 0x7fbb7c291850>, 'Connection to eminwon.suwon.go.kr tim"
+          "listed": 10,
+          "matched": 2,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
+      "ok": true,
       "requests": 2,
-      "detail_ok": 0,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 2,
+      "excluded": 1
     },
     {
       "org": "춘천시",
@@ -274,18 +274,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.chuncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.chuncheon.go.kr', port=443) at 0x7fbb7c292000>, 'Connection to eminwon.chunche"
+          "listed": 10,
+          "matched": 5,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 4,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 5,
+      "excluded": 1
     },
     {
       "org": "부산광역시 중구청",
@@ -635,18 +635,18 @@
       "boards": [
         {
           "board": "누리집 게시판",
-          "listed": 10,
-          "matched": 10,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectionError: HTTPSConnectionPool(host='www.boeun.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=68&key=142 (Caused by NameResolutionError(\"HTTPSConnection(host='www.boeun.go.kr', port=443): Failed to resolve 'www.boeun.go.kr' ([Errno -3] Temporary failure in nam"
         }
       ],
-      "ok": true,
-      "requests": 10,
-      "detail_ok": 9,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
-      "excluded": 1
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "충청북도 옥천군청",
@@ -787,17 +787,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -828,7 +828,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.brcn.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.brcn.go.kr', port=443) at 0x7fa53b431400>, 'Connection to eminwon.brcn.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.brcn.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.brcn.go.kr', port=443) at 0x7f64fe9cd850>, 'Connection to eminwon.brcn.go.kr timed "
         }
       ],
       "ok": false,
@@ -851,7 +851,7 @@
         }
       ],
       "ok": true,
-      "requests": 11,
+      "requests": 12,
       "detail_ok": 10,
       "detail_fail": 0,
       "kept": 10,
@@ -870,7 +870,7 @@
         }
       ],
       "ok": true,
-      "requests": 11,
+      "requests": 10,
       "detail_ok": 9,
       "detail_fail": 0,
       "kept": 9,
@@ -889,9 +889,9 @@
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 9,
-      "detail_fail": 0,
+      "requests": 11,
+      "detail_ok": 8,
+      "detail_fail": 1,
       "kept": 9,
       "excluded": 0
     },
@@ -927,7 +927,7 @@
         }
       ],
       "ok": true,
-      "requests": 12,
+      "requests": 14,
       "detail_ok": 8,
       "detail_fail": 1,
       "kept": 10,
@@ -1075,7 +1075,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.dong.daegu.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.dong.daegu.kr', port=443) at 0x7f3d5465b650>, 'Connection to eminwon.dong.daegu."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.dong.daegu.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.dong.daegu.kr', port=443) at 0x7f9e137ef830>, 'Connection to eminwon.dong.daegu."
         }
       ],
       "ok": false,
@@ -1174,7 +1174,7 @@
         }
       ],
       "ok": true,
-      "requests": 5,
+      "requests": 6,
       "detail_ok": 4,
       "detail_fail": 0,
       "kept": 9,
@@ -1307,7 +1307,7 @@
         }
       ],
       "ok": true,
-      "requests": 8,
+      "requests": 9,
       "detail_ok": 7,
       "detail_fail": 0,
       "kept": 7,
@@ -1320,17 +1320,17 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 5,
-          "excluded": 2,
+          "matched": 4,
+          "excluded": 1,
           "error": null
         }
       ],
       "ok": true,
-      "requests": 6,
+      "requests": 5,
       "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 5,
-      "excluded": 2
+      "kept": 4,
+      "excluded": 1
     },
     {
       "org": "강원특별자치도 동해시청",
@@ -1452,17 +1452,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 4,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.yw.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NameResolutionError(\"HTTPSConnection(host='eminwon.yw.go.kr', port=443): Failed to resolve 'eminwon.yw.go.kr' ([Errno -2] Name or servi"
         }
       ],
-      "ok": true,
+      "ok": false,
       "requests": 2,
-      "detail_ok": 1,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 4,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -1478,9 +1478,9 @@
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 5,
-      "detail_fail": 1,
+      "requests": 8,
+      "detail_ok": 6,
+      "detail_fail": 0,
       "kept": 6,
       "excluded": 0
     },
@@ -1535,9 +1535,9 @@
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 4,
-      "detail_fail": 3,
+      "requests": 12,
+      "detail_ok": 3,
+      "detail_fail": 4,
       "kept": 7,
       "excluded": 0
     },
@@ -1623,18 +1623,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 8,
-          "excluded": 3,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.donggu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.donggu.gwangju.kr', port=443) at 0x7fadd851b440>, 'Connection to eminwon.don"
         }
       ],
-      "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 8,
-      "excluded": 3
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "광주광역시 서구청",
@@ -1642,17 +1642,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 5,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.seogu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.seogu.gwangju.kr', port=443) at 0x7fadd8344950>, 'Connection to eminwon.seogu"
         }
       ],
-      "ok": true,
-      "requests": 1,
+      "ok": false,
+      "requests": 2,
       "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 5,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -1661,17 +1661,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 6,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namgu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.namgu.gwangju.kr', port=443) at 0x7fadd8345460>, 'Connection to eminwon.namgu"
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 6,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -1680,17 +1680,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 7,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gwangsan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gwangsan.go.kr', port=443) at 0x7fadd851b7d0>, 'Connection to eminwon.gwangsan."
         }
       ],
-      "ok": true,
-      "requests": 6,
-      "detail_ok": 4,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 7,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -1699,18 +1699,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.pohang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "listed": 10,
+          "matched": 9,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 9,
+      "excluded": 1
     },
     {
       "org": "경상북도 경주시청",
@@ -1718,17 +1718,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 8,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gyeongju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gyeongju.go.kr', port=443) at 0x7f51d56451c0>, 'Connection to eminwon.gyeongju."
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 8,
       "excluded": 0
     },
     {
@@ -1778,7 +1778,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gumi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gumi.go.kr', port=443) at 0x7f51d5563080>, 'Connection to eminwon.gumi.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gumi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gumi.go.kr', port=443) at 0x7f89da673dd0>, 'Connection to eminwon.gumi.go.kr timed "
         }
       ],
       "ok": false,
@@ -1813,18 +1813,18 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 30,
-          "matched": 3,
-          "excluded": 2,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.yc.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
+      "ok": false,
       "requests": 2,
-      "detail_ok": 1,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 3,
-      "excluded": 2
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "경상북도 상주시청",
@@ -1858,7 +1858,7 @@
         }
       ],
       "ok": true,
-      "requests": 11,
+      "requests": 12,
       "detail_ok": 10,
       "detail_fail": 0,
       "kept": 10,
@@ -1878,8 +1878,8 @@
       ],
       "ok": true,
       "requests": 12,
-      "detail_ok": 9,
-      "detail_fail": 0,
+      "detail_ok": 8,
+      "detail_fail": 1,
       "kept": 9,
       "excluded": 0
     },
@@ -1911,7 +1911,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.cs.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.cs.go.kr', port=443) at 0x7f51d54a3da0>, 'Connection to eminwon.cs.go.kr timed out. ("
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.cs.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.cs.go.kr', port=443) at 0x7f89da631340>, 'Connection to eminwon.cs.go.kr timed out. ("
         }
       ],
       "ok": false,
@@ -2029,7 +2029,7 @@
         }
       ],
       "ok": true,
-      "requests": 10,
+      "requests": 11,
       "detail_ok": 9,
       "detail_fail": 0,
       "kept": 10,
@@ -2117,17 +2117,17 @@
       "boards": [
         {
           "board": "누리집 게시판",
-          "listed": 0,
-          "matched": 0,
+          "listed": 6,
+          "matched": 5,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.seongnam.go.kr', port=443): Max retries exceeded with url: /pm010401 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.seongnam.go.kr', port=443) at 0x7fdacbb17cb0>, 'Connection to www.seongnam.go.kr timed out. (connect timeout=40)'))"
+          "error": null
         }
       ],
-      "ok": false,
+      "ok": true,
       "requests": 2,
-      "detail_ok": 0,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 5,
       "excluded": 0
     },
     {
@@ -2139,7 +2139,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ui4u.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ui4u.go.kr', port=443) at 0x7fdacbb3cce0>, 'Connection to eminwon.ui4u.go.kr timed "
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.ui4u.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_s"
         }
       ],
       "ok": false,
@@ -2155,17 +2155,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 7,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.anyang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.anyang.go.kr', port=443) at 0x7fdacc867620>, 'Connection to eminwon.anyang.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 3,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 7,
       "excluded": 0
     },
     {
@@ -2174,18 +2174,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bucheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bucheon.go.kr', port=443) at 0x7fdacbb17d10>, 'Connection to eminwon.bucheon.go."
+          "listed": 8,
+          "matched": 7,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 7,
+      "excluded": 1
     },
     {
       "org": "경기도 광명시청",
@@ -2193,18 +2193,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gm.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gm.go.kr', port=443) at 0x7fdacbb3cfe0>, 'Connection to eminwon.gm.go.kr timed out. ("
+          "listed": 9,
+          "matched": 6,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 6,
+      "excluded": 1
     },
     {
       "org": "경기도 평택시청",
@@ -2212,17 +2212,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 9,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.pyeongtaek.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.pyeongtaek.go.kr', port=443) at 0x7fdacbb3e3f0>, 'Connection to eminwon.pyeon"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 9,
       "excluded": 0
     },
     {
@@ -2231,17 +2231,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ddc.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ddc.go.kr', port=443) at 0x7fdacbb3f260>, 'Connection to eminwon.ddc.go.kr timed out"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -2250,17 +2250,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ansan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ansan.go.kr', port=443) at 0x7fdacbb17c80>, 'Connection to eminwon.ansan.go.kr tim"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -2269,17 +2269,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.goyang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.goyang.go.kr', port=443) at 0x7fdacbb3e000>, 'Connection to eminwon.goyang.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
+      "ok": true,
       "requests": 2,
-      "detail_ok": 0,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -2288,18 +2288,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gccity.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gccity.go.kr', port=443) at 0x7fdacbb3d340>, 'Connection to eminwon.gccity.go.kr "
+          "listed": 10,
+          "matched": 10,
+          "excluded": 4,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 10,
+      "excluded": 4
     },
     {
       "org": "경기도 구리시청",
@@ -2307,17 +2307,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 3,
+          "matched": 1,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.guri.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.guri.go.kr', port=443) at 0x7fdacbb3f980>, 'Connection to eminwon.guri.go.kr timed "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
+      "ok": true,
+      "requests": 1,
       "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 1,
       "excluded": 0
     },
     {
@@ -2326,17 +2326,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.nyj.go.kr', port=443) at 0x7fdacbb179e0>, 'Connection to eminwon.nyj.go.kr timed out"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -2345,17 +2345,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 7,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.osan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.osan.go.kr', port=443) at 0x7fdacbb3ce90>, 'Connection to eminwon.osan.go.kr timed "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 4,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 7,
       "excluded": 0
     },
     {
@@ -2367,7 +2367,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.siheung.go.kr', port=443): Max retries exceeded with url: /main/contents.do?mId=0401070000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.siheung.go.kr', port=443) at 0x7fdacbb3e030>, 'Connection to www.siheung.go.kr timed out. (connect timeou"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.siheung.go.kr', port=443): Max retries exceeded with url: /main/contents.do?mId=0401070000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.siheung.go.kr', port=443) at 0x7fcf9cd21940>, 'Connection to www.siheung.go.kr timed out. (connect timeou"
         }
       ],
       "ok": false,
@@ -2383,18 +2383,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gunpo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gunpo.go.kr', port=443) at 0x7fdacbb3fd40>, 'Connection to eminwon.gunpo.go.kr tim"
+          "listed": 10,
+          "matched": 6,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 6,
+      "excluded": 1
     },
     {
       "org": "경기도 의왕시청",
@@ -2402,18 +2402,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.uiwang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.uiwang.go.kr', port=443) at 0x7fdacbb3ede0>, 'Connection to eminwon.uiwang.go.kr "
+          "listed": 10,
+          "matched": 8,
+          "excluded": 3,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 5,
+      "detail_ok": 4,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 8,
+      "excluded": 3
     },
     {
       "org": "경기도 하남시청",
@@ -2421,18 +2421,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.hanam.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.hanam.go.kr', port=443) at 0x7fdacbb3d5b0>, 'Connection to eminwon.hanam.go.kr tim"
+          "listed": 10,
+          "matched": 8,
+          "excluded": 3,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 8,
+      "excluded": 3
     },
     {
       "org": "경기도 용인시청",
@@ -2440,17 +2440,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 6,
+          "matched": 3,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yongin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yongin.go.kr', port=443) at 0x7fdacbb3d850>, 'Connection to eminwon.yongin.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 3,
       "excluded": 0
     },
     {
@@ -2459,17 +2459,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 9,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.paju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.paju.go.kr', port=443) at 0x7fdacbb177d0>, 'Connection to eminwon.paju.go.kr timed "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 9,
       "excluded": 0
     },
     {
@@ -2481,7 +2481,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.icheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.icheon.go.kr', port=443) at 0x7fdacc867680>, 'Connection to eminwon.icheon.go.kr "
+          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.icheon.go.kr', port=443): Read timed out. (read timeout=40)"
         }
       ],
       "ok": false,
@@ -2497,18 +2497,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.anseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.anseong.go.kr', port=443) at 0x7fdacbb3f920>, 'Connection to eminwon.anseong.go."
+          "listed": 10,
+          "matched": 9,
+          "excluded": 1,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 9,
+      "excluded": 1
     },
     {
       "org": "경기도 김포시청",
@@ -2519,7 +2519,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gimpo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gimpo.go.kr', port=443) at 0x7fdacbb3d070>, 'Connection to eminwon.gimpo.go.kr tim"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gimpo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gimpo.go.kr', port=443) at 0x7fcf9cdbafc0>, 'Connection to eminwon.gimpo.go.kr tim"
         }
       ],
       "ok": false,
@@ -2535,17 +2535,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 10,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.hscity.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.hscity.go.kr', port=443) at 0x7fdacbb3e2a0>, 'Connection to eminwon.hscity.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
+      "ok": true,
+      "requests": 12,
+      "detail_ok": 7,
+      "detail_fail": 1,
+      "kept": 10,
       "excluded": 0
     },
     {
@@ -2554,18 +2554,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gjcity.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gjcity.go.kr', port=443) at 0x7fdacbb3fd70>, 'Connection to eminwon.gjcity.go.kr "
+          "listed": 10,
+          "matched": 4,
+          "excluded": 2,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 3,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 4,
+      "excluded": 2
     },
     {
       "org": "경기도 양주시청",
@@ -2573,17 +2573,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 8,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangju.go.kr', port=443) at 0x7fdacbb3c620>, 'Connection to eminwon.yangju.go.kr "
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
+      "ok": true,
+      "requests": 12,
+      "detail_ok": 5,
+      "detail_fail": 2,
+      "kept": 8,
       "excluded": 0
     },
     {
@@ -2592,17 +2592,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 7,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.pcs21.net', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.pcs21.net', port=443) at 0x7fdacbb3d010>, 'Connection to eminwon.pcs21.net timed out"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 5,
+      "detail_ok": 4,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 7,
       "excluded": 0
     },
     {
@@ -2614,7 +2614,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeoju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeoju.go.kr', port=443) at 0x7fdacbb17da0>, 'Connection to eminwon.yeoju.go.kr tim"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeoju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeoju.go.kr', port=443) at 0x7fcf9c79bf20>, 'Connection to eminwon.yeoju.go.kr tim"
         }
       ],
       "ok": false,
@@ -2630,17 +2630,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 9,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeoncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeoncheon.go.kr', port=443) at 0x7fdacbade1e0>, 'Connection to eminwon.yeonche"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 10,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 9,
       "excluded": 0
     },
     {
@@ -2649,46 +2649,8 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gp.go.kr', port=443) at 0x7fdacbb3f9b0>, 'Connection to eminwon.gp.go.kr timed out. ("
-        }
-      ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
-    },
-    {
-      "org": "경기도 양평군청",
-      "source_org": "경기도 양평군청",
-      "boards": [
-        {
-          "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yp21.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yp21.go.kr', port=443) at 0x7fdacbb3e9f0>, 'Connection to eminwon.yp21.go.kr timed "
-        }
-      ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
-    },
-    {
-      "org": "창원시청",
-      "source_org": "창원시청",
-      "boards": [
-        {
-          "board": "새올 채용공고",
           "listed": 10,
-          "matched": 8,
+          "matched": 10,
           "excluded": 0,
           "error": null
         }
@@ -2697,7 +2659,45 @@
       "requests": 9,
       "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 8,
+      "kept": 10,
+      "excluded": 0
+    },
+    {
+      "org": "경기도 양평군청",
+      "source_org": "경기도 양평군청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 4,
+          "matched": 2,
+          "excluded": 0,
+          "error": null
+        }
+      ],
+      "ok": true,
+      "requests": 3,
+      "detail_ok": 2,
+      "detail_fail": 0,
+      "kept": 2,
+      "excluded": 0
+    },
+    {
+      "org": "창원시청",
+      "source_org": "창원시청",
+      "boards": [
+        {
+          "board": "새올 채용공고",
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.changwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+        }
+      ],
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -2709,7 +2709,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jinju.go.kr', port=443) at 0x7f4c8322dbb0>, 'Connection to eminwon.jinju.go.kr tim"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jinju.go.kr', port=443) at 0x7f1682ed09e0>, 'Connection to eminwon.jinju.go.kr tim"
         }
       ],
       "ok": false,
@@ -2732,7 +2732,7 @@
         }
       ],
       "ok": true,
-      "requests": 6,
+      "requests": 7,
       "detail_ok": 5,
       "detail_fail": 0,
       "kept": 9,
@@ -2785,7 +2785,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.miryang.go.kr', port=443) at 0x7f4c830e0b00>, 'Connection to eminwon.miryang.go."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.miryang.go.kr', port=443) at 0x7f1682f99af0>, 'Connection to eminwon.miryang.go."
         }
       ],
       "ok": false,
@@ -2820,17 +2820,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 8,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangsan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangsan.go.kr', port=443) at 0x7f4c8331c290>, 'Connection to eminwon.yangsan.go."
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
+      "kept": 8,
       "excluded": 0
     },
     {
@@ -2915,18 +2915,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 9,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
-      "requests": 9,
-      "detail_ok": 5,
-      "detail_fail": 1,
-      "kept": 9,
-      "excluded": 1
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "하동군청",
@@ -2956,7 +2956,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.sancheong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.sancheong.go.kr', port=443) at 0x7f4c831f60c0>, 'Connection to eminwon.sancheo"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.sancheong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.sancheong.go.kr', port=443) at 0x7f1682f9a810>, 'Connection to eminwon.sancheo"
         }
       ],
       "ok": false,
@@ -2975,7 +2975,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.hygn.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NameResolutionError(\"HTTPSConnection(host='eminwon.hygn.go.kr', port=443): Failed to resolve 'eminwon.hygn.go.kr' ([Errno -3] Tempora"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.hygn.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.hygn.go.kr', port=443) at 0x7f1682e984a0>, 'Connection to eminwon.hygn.go.kr timed "
         }
       ],
       "ok": false,
@@ -3018,8 +3018,8 @@
       ],
       "ok": true,
       "requests": 14,
-      "detail_ok": 9,
-      "detail_fail": 0,
+      "detail_ok": 8,
+      "detail_fail": 1,
       "kept": 9,
       "excluded": 0
     },
@@ -3074,7 +3074,7 @@
         }
       ],
       "ok": true,
-      "requests": 4,
+      "requests": 6,
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 9,
@@ -3087,16 +3087,16 @@
         {
           "board": "누리집 게시판",
           "listed": 15,
-          "matched": 11,
+          "matched": 10,
           "excluded": 2,
           "error": null
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 9,
+      "requests": 9,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 10,
       "excluded": 2
     },
     {
@@ -3127,7 +3127,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.icbp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.icbp.go.kr', port=443) at 0x7f308e5d33b0>, 'Connection to eminwon.icbp.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.icbp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.icbp.go.kr', port=443) at 0x7fde05532fc0>, 'Connection to eminwon.icbp.go.kr timed "
         }
       ],
       "ok": false,
@@ -3146,7 +3146,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.gyeyang.go.kr', port=443): Max retries exceeded with url: /open_content/main/open_info/admin/job.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gyeyang.go.kr', port=443) at 0x7f308e3f81d0>, 'Connection to www.gyeyang.go.kr timed out. (conn"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.gyeyang.go.kr', port=443): Max retries exceeded with url: /open_content/main/open_info/admin/job.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gyeyang.go.kr', port=443) at 0x7fde05a9d100>, 'Connection to www.gyeyang.go.kr timed out. (conn"
         }
       ],
       "ok": false,
@@ -3169,7 +3169,7 @@
         }
       ],
       "ok": true,
-      "requests": 5,
+      "requests": 4,
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 4,
@@ -3336,7 +3336,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.namwon.go.kr', port=443) at 0x7f44c2651400>, 'Connection to eminwon.namwon.go.kr "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.namwon.go.kr', port=443) at 0x7f75fae3d4f0>, 'Connection to eminwon.namwon.go.kr "
         }
       ],
       "ok": false,
@@ -3507,7 +3507,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.buan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.buan.go.kr', port=443) at 0x7f44c2697aa0>, 'Connection to eminwon.buan.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.buan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.buan.go.kr', port=443) at 0x7f75fae3eed0>, 'Connection to eminwon.buan.go.kr timed "
         }
       ],
       "ok": false,
@@ -3523,17 +3523,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.mokpo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.mokpo.go.kr', port=443) at 0x7f8a7bb877a0>, 'Connection to eminwon.mokpo.go.kr tim"
         }
       ],
-      "ok": true,
-      "requests": 8,
-      "detail_ok": 7,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3542,18 +3542,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeosu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeosu.go.kr', port=443) at 0x7f8a7bb90aa0>, 'Connection to eminwon.yeosu.go.kr tim"
         }
       ],
-      "ok": true,
-      "requests": 7,
-      "detail_ok": 6,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
-      "excluded": 1
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "전라남도 순천시청",
@@ -3564,7 +3564,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suncheon.go.kr', port=443) at 0x7f32b87bbd40>, 'Connection to eminwon.suncheon."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suncheon.go.kr', port=443) at 0x7f8a7bb915b0>, 'Connection to eminwon.suncheon."
         }
       ],
       "ok": false,
@@ -3583,7 +3583,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.naju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.naju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.naju.go.kr', port=443) at 0x7f8a7bb87d40>, 'Connection to eminwon.naju.go.kr timed "
         }
       ],
       "ok": false,
@@ -3599,17 +3599,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 5,
-          "matched": 3,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gwangyang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gwangyang.go.kr', port=443) at 0x7f8a7bb905f0>, 'Connection to eminwon.gwangya"
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 3,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3621,7 +3621,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.damyang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.damyang.jeonnam.kr', port=443) at 0x7f32b88c9100>, 'Connection to eminwon.d"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.damyang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.damyang.jeonnam.kr', port=443) at 0x7f8a7bb92450>, 'Connection to eminwon.d"
         }
       ],
       "ok": false,
@@ -3637,17 +3637,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 9,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gokseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gokseong.go.kr', port=443) at 0x7f8a7bb930b0>, 'Connection to eminwon.gokseong."
         }
       ],
-      "ok": true,
-      "requests": 9,
-      "detail_ok": 8,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3675,17 +3675,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 9,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.goheung.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.goheung.go.kr', port=443) at 0x7f8a7bb92870>, 'Connection to eminwon.goheung.go."
         }
       ],
-      "ok": true,
-      "requests": 12,
-      "detail_ok": 7,
-      "detail_fail": 1,
-      "kept": 9,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3694,17 +3694,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 1,
-          "matched": 1,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.boseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.boseong.go.kr', port=443) at 0x7f8a7bb919a0>, 'Connection to eminwon.boseong.go."
         }
       ],
-      "ok": true,
+      "ok": false,
       "requests": 2,
-      "detail_ok": 1,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 1,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3713,17 +3713,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.hwasun.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.hwasun.go.kr', port=443) at 0x7f8a7bb936b0>, 'Connection to eminwon.hwasun.go.kr "
         }
       ],
-      "ok": true,
-      "requests": 10,
-      "detail_ok": 7,
-      "detail_fail": 1,
-      "kept": 10,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3732,17 +3732,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jangheung.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jangheung.go.kr', port=443) at 0x7f8a7bb878f0>, 'Connection to eminwon.jangheu"
         }
       ],
-      "ok": true,
-      "requests": 7,
-      "detail_ok": 6,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3754,7 +3754,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gangjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gangjin.go.kr', port=443) at 0x7f32b88cd130>, 'Connection to eminwon.gangjin.go."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gangjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gangjin.go.kr', port=443) at 0x7f8a7bb90b90>, 'Connection to eminwon.gangjin.go."
         }
       ],
       "ok": false,
@@ -3770,17 +3770,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 2,
-          "matched": 2,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.haenam.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.haenam.go.kr', port=443) at 0x7f8a7bb92090>, 'Connection to eminwon.haenam.go.kr "
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 2,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3789,17 +3789,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 9,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeongam.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeongam.go.kr', port=443) at 0x7f8a7bb92ae0>, 'Connection to eminwon.yeongam.go."
         }
       ],
-      "ok": true,
-      "requests": 7,
-      "detail_ok": 6,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3808,17 +3808,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.muan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.muan.go.kr', port=443) at 0x7f8a7bb91d60>, 'Connection to eminwon.muan.go.kr timed "
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3827,18 +3827,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 9,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeonggwang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeonggwang.jeonnam.kr', port=443) at 0x7f8a7bb91c70>, 'Connection to emi"
         }
       ],
-      "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 1
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "전라남도 장성군청",
@@ -3846,17 +3846,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 7,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jangseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jangseong.go.kr', port=443) at 0x7f8a7bb908f0>, 'Connection to eminwon.jangseo"
         }
       ],
-      "ok": true,
-      "requests": 12,
-      "detail_ok": 5,
-      "detail_fail": 2,
-      "kept": 7,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3865,18 +3865,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 6,
-          "matched": 4,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.wando.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.wando.go.kr', port=443) at 0x7f8a7bb87440>, 'Connection to eminwon.wando.go.kr tim"
         }
       ],
-      "ok": true,
-      "requests": 5,
-      "detail_ok": 2,
-      "detail_fail": 1,
-      "kept": 4,
-      "excluded": 1
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "전라남도 진도군청",
@@ -3884,17 +3884,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 10,
-          "matched": 10,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jindo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jindo.go.kr', port=443) at 0x7f8a7ca9f5c0>, 'Connection to eminwon.jindo.go.kr tim"
         }
       ],
-      "ok": true,
-      "requests": 8,
-      "detail_ok": 7,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -3903,18 +3903,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 8,
-          "matched": 5,
-          "excluded": 1,
-          "error": null
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.shinan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.shinan.go.kr', port=443) at 0x7f8a7bb914f0>, 'Connection to eminwon.shinan.go.kr "
         }
       ],
-      "ok": true,
+      "ok": false,
       "requests": 2,
-      "detail_ok": 1,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 5,
-      "excluded": 1
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "서울특별시 종로구청",
@@ -4017,17 +4017,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 2,
-          "matched": 2,
+          "listed": 0,
+          "matched": 0,
           "excluded": 0,
-          "error": null
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ddm.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ddm.go.kr', port=443) at 0x7f9c2a883ec0>, 'Connection to eminwon.ddm.go.kr timed out"
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 2,
+      "kept": 0,
       "excluded": 0
     },
     {
@@ -4055,18 +4055,18 @@
       "boards": [
         {
           "board": "누리집 게시판",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.sb.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?key=6483&searchCnd=employment&pageUnit=30 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sb.go.kr', port=443) at 0x7f4713fe3050>, 'Connection to www.sb.go.kr timed "
+          "listed": 30,
+          "matched": 26,
+          "excluded": 5,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 26,
+      "excluded": 5
     },
     {
       "org": "서울특별시 강북구청",
@@ -4157,7 +4157,7 @@
         }
       ],
       "ok": true,
-      "requests": 4,
+      "requests": 5,
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 12,
@@ -4188,17 +4188,17 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
+          "listed": 10,
+          "matched": 6,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangcheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangcheon.go.kr', port=443) at 0x7f4714306b10>, 'Connection to eminwon.yangche"
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 2,
+      "detail_fail": 2,
+      "kept": 6,
       "excluded": 0
     },
     {
@@ -4214,7 +4214,7 @@
         }
       ],
       "ok": true,
-      "requests": 4,
+      "requests": 5,
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 10,
@@ -4233,7 +4233,7 @@
         }
       ],
       "ok": true,
-      "requests": 5,
+      "requests": 4,
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 6,
@@ -4264,18 +4264,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ydp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ydp.go.kr', port=443) at 0x7f471415e8a0>, 'Connection to eminwon.ydp.go.kr timed out"
+          "listed": 10,
+          "matched": 8,
+          "excluded": 2,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 8,
+      "excluded": 2
     },
     {
       "org": "서울특별시 동작구청",
@@ -4340,18 +4340,18 @@
       "boards": [
         {
           "board": "새올 채용공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "listed": 10,
+          "matched": 8,
+          "excluded": 3,
+          "error": null
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 8,
+      "excluded": 3
     },
     {
       "org": "서울특별시 송파구청",
@@ -4366,7 +4366,7 @@
         }
       ],
       "ok": true,
-      "requests": 4,
+      "requests": 3,
       "detail_ok": 2,
       "detail_fail": 0,
       "kept": 8,
@@ -4393,15 +4393,15 @@
     }
   ],
   "attach": {
-    "targets": 609,
-    "reused": 442,
-    "notices_ok": 492,
-    "notices_partial": 7,
-    "notices_failed": 22,
-    "notices_skipped": 88,
-    "files_ok": 601,
-    "files_error": 35,
-    "files_skipped": 163,
-    "requests": 113
+    "targets": 699,
+    "reused": 549,
+    "notices_ok": 571,
+    "notices_partial": 10,
+    "notices_failed": 23,
+    "notices_skipped": 95,
+    "files_ok": 720,
+    "files_error": 41,
+    "files_skipped": 192,
+    "requests": 83
   }
 }
