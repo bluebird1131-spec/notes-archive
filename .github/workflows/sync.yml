@@ -2,7 +2,7 @@ name: sync
 
 on:
   schedule:
-    - cron: '37 19 * * *' # 04:37 KST (시·도별 병렬 수집 약 40~50분)
+    - cron: '7 10 * * *' # 19:07 KST (daytime postings are done; ~30-50 min)
   workflow_dispatch:
 
 permissions:
