@@ -26,11 +26,20 @@ if push:
 
 log = json.loads((ROOT / 'data/crawl_log.json').read_text(encoding='utf-8'))
 failed = {o['source_org'] for o in log.get('orgs', []) if not o.get('ok')}
+# 해외에서 막히는 기관은 날마다 조금씩 달라짐(연속 두 번 겹치는 건 30곳 안팎) → 최근 4번 수집에서 한 번이라도 실패한 기관을 모두 모음
+hist = subprocess.run(['git', '-C', str(ROOT), 'log', '--format=%h', '-4', '--', 'data/last_sync.json'],
+                      capture_output=True, text=True).stdout.split()
+for h in hist:
+    shown = subprocess.run(['git', '-C', str(ROOT), 'show', f'{h}:data/last_sync.json'], capture_output=True, encoding='utf-8')
+    try:
+        failed |= set(json.loads(shown.stdout).get('failed_orgs', []))
+    except ValueError:
+        pass
 orgs = list(c.ORGS)
 for f in sorted((ROOT / 'orgs').glob('*.json')):
     orgs += c.load_org_file(f)
 targets = [o for o in orgs if o['source_org'] in failed]
-print(f'해외에서 실패한 기관 {len(failed)}곳 중 수집 대상 {len(targets)}곳')
+print(f'최근 4번 수집에서 해외 실패한 기관 {len(failed)}곳 중 수집 대상 {len(targets)}곳')
 
 # 서로 다른 기관 서버를 동시에 WORKERS 곳씩 (기관 하나 안에서는 요청 사이 1.5~3초 쉬는 것 그대로라 기관 부담은 같음)
 WORKERS = 6
