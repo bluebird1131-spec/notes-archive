@@ -18,6 +18,7 @@ if not KEY:
     sys.exit('DATA_GO_KR_KEY missing')
 URL = 'https://api.odcloud.kr/api/gov24/v3/serviceList'
 COND_URL = 'https://api.odcloud.kr/api/gov24/v3/supportConditions'
+DETAIL_URL = 'https://api.odcloud.kr/api/gov24/v3/serviceDetail'
 # supportConditions 코드 (공식 명세 infuser.odcloud.kr/api/stages/44436/api-docs 의 설명 그대로)
 PERSON = {'JA0301': '예비부모·난임', 'JA0302': '임산부', 'JA0303': '출산·입양', 'JA0313': '농업인', 'JA0314': '어업인',
           'JA0315': '축산업인', 'JA0316': '임업인', 'JA0317': '초등학생', 'JA0318': '중학생', 'JA0319': '고등학생',
@@ -87,15 +88,31 @@ def conditions(c):
     return age, income, tags
 
 
+def keep(v, n=800):
+    """상세 쪽용: 줄바꿈은 살리고 길이만 제한"""
+    v = str(v or '').replace('\r\n', '\n').replace('\r', '\n').strip()
+    v = '' if v in ('None', '해당없음') else v
+    return v if len(v) <= n else v[: n - 1].rstrip() + '…'
+
+
 rows = fetch_all(URL)
 conds = {c.get('서비스ID'): c for c in fetch_all(COND_URL)}
+details = {d.get('서비스ID'): d for d in fetch_all(DETAIL_URL)}
 out = []
 for r in rows:
     users = r.get('사용자구분') or ''
     if r.get('서비스분야') not in FIELDS or not re.search(r'개인|가구|소상공인', users):
         continue
     age, income, tags = conditions(conds.get(r.get('서비스ID')))
+    dt = details.get(r.get('서비스ID')) or {}
+    detail = {k: keep(dt.get(src)) for k, src in (
+        ('purpose', '서비스목적'), ('target', '지원대상'), ('criteria', '선정기준'), ('content', '지원내용'),
+        ('deadline', '신청기한'), ('method', '신청방법'), ('docs', '구비서류'), ('docsOfficial', '공무원확인구비서류'),
+        ('docsSelf', '본인확인필요구비서류'), ('receiver', '접수기관명'), ('contact', '문의처'), ('online', '온라인신청사이트URL'),
+        ('law', '법령'), ('ordinance', '자치법규'), ('rule', '행정규칙'))}
+    detail = {k: v for k, v in detail.items() if v}
     out.append({
+        'detail': detail,
         'age': age, 'income': income, 'tags': tags,
         'id': r.get('서비스ID'), 'name': clip(r.get('서비스명'), 80), 'summary': clip(r.get('서비스목적요약'), 160),
         'target': clip(r.get('지원대상'), 260), 'content': clip(r.get('지원내용'), 260), 'deadline': clip(r.get('신청기한'), 80),
@@ -109,4 +126,4 @@ for r in rows:
 out.sort(key=lambda x: x['id'] or '')
 Path('data').mkdir(exist_ok=True)
 Path('data/benefits.json').write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-print(f'services {len(rows)} (conditions {len(conds)}) -> kept {len(out)}, tagged {sum(1 for o in out if o["tags"])}, age {sum(1 for o in out if o["age"])}, {Path("data/benefits.json").stat().st_size // 1024} KB')
+print(f'services {len(rows)} (conditions {len(conds)}, details {len(details)}) -> kept {len(out)}, tagged {sum(1 for o in out if o["tags"])}, age {sum(1 for o in out if o["age"])}, {Path("data/benefits.json").stat().st_size // 1024} KB')
