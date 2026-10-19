@@ -2,7 +2,7 @@
 
 Run: DATA_GO_KR_KEY=... python tools/fetch_benefits.py
 Keeps services for individuals/households/small businesses in welfare-type fields, trims long text,
-drops volatile fields (view count) so the file only changes when services change. Never prints the key.
+keeps the view count rounded to 2 significant digits (for popularity order) so daily changes stay small. Never prints the key.
 """
 import json
 import os
@@ -58,6 +58,8 @@ for r in rows:
         'orgType': r.get('소관기관유형') or '', 'dept': clip(r.get('부서명'), 30), 'phone': clip(r.get('전화문의'), 60),
         'field': r.get('서비스분야') or '', 'users': users.replace('||', ', '), 'type': (r.get('지원유형') or '').replace('||', ', '),
         'url': r.get('상세조회URL') or '', 'updated': (r.get('수정일시') or '')[:8],
+        # 많이 찾는 순서로 보여 주려고 조회수를 두 자리 유효숫자로만 남김 (매일 조금씩 바뀌는 값이 파일을 흔들지 않게)
+        'views': int(float(f"{int(r.get('조회수') or 0):.2g}")),
     })
 out.sort(key=lambda x: x['id'] or '')
 Path('data').mkdir(exist_ok=True)
