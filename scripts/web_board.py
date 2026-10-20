@@ -15,6 +15,8 @@
     "file_url": "https://.../FileDown.jsp?user_file_nm={0}&sys_file_nm={1}&file_path={2}",  # {0}{1}.. 또는 {id}(=첫 값)
     "json": {"path": "RSLT_DATA.searchList.dataMap", "id": "col0", "title": "col3", "date": "col5"}
                                        # (선택) 목록이 JSON 으로 오는 게시판: 글 목록 위치와 필드 이름 (상세는 detail_url 틀)
+    "pages": 3, "page_url": "https://.../list.do?page={n}"
+                                       # (선택) 한 쪽에 하루치도 안 담기는 게시판(고시공고 전체 등)은 2쪽부터 page_url 로 더 읽음
   }
 목록에서 제목에 일자리 키워드가 있는 글만 상세를 받는 것은 새올과 같다 (crawler.run_org).
 """
@@ -78,8 +80,16 @@ def crawl_web(f, org, board, pages, page_size, *, make_record, strip_ellipsis):
                 cfg["detail_url"].format(id=it.get(j["id"], "")), _date(str(it.get(j.get("date", ""), ""))))
         return out
 
-    soup = BeautifulSoup(text, "html.parser")
-    rows = soup.select(cfg["row"]) if cfg.get("row") else (soup.select("tbody tr") or soup.select("ul > li"))
+    texts = [text]
+    for n in range(2, int(cfg.get("pages", 1)) + 1):
+        try:
+            texts.append(f.get(cfg["page_url"].format(n=n)))
+        except Exception:  # 뒤쪽 목록이 실패해도 1쪽 결과는 살림
+            break
+    rows = []
+    for t in texts:
+        soup = BeautifulSoup(t, "html.parser")
+        rows += soup.select(cfg["row"]) if cfg.get("row") else (soup.select("tbody tr") or soup.select("ul > li"))
     for row in rows:
         if cfg.get("title"):
             a = row.select_one(cfg["title"])
