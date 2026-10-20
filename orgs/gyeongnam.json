@@ -1,5 +1,5 @@
 [
-{"sido": "경상남도", "sigungu": "창원시", "name": "창원시청", "homepage": "https://www.changwon.go.kr", "host": "eminwon.changwon.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 8, "note": ""},
+{"sido": "경상남도", "sigungu": "창원시", "name": "창원시청", "homepage": "https://www.changwon.go.kr", "host": "eminwon.changwon.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 8, "note": "채용(05) 게시판이 옛 글뿐이거나 비어 있어 고시공고에서 키워드로 수집 (10-20 점검)", "codes": "01,02,03,04,06"},
 {"sido": "경상남도", "sigungu": "진주시", "name": "진주시청", "homepage": "https://www.jinju.go.kr", "host": "eminwon.jinju.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 5, "note": ""},
 {"sido": "경상남도", "sigungu": "통영시", "name": "통영시청", "homepage": "https://www.tongyeong.go.kr", "host": "eminwon.tongyeong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
 {"sido": "경상남도", "sigungu": "사천시", "name": "사천시청", "homepage": "https://www.sacheon.go.kr", "host": "eminwon.sacheon.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "중간 인증서 보완, 채용(05)은 2016년 이후 안 써서 고시/공고에서 키워드로 수집 (10-16). 주소는 누리집 HTML로 확인됨. 서버가 중간 인증서(GlobalSign RSA OV SSL CA 2018)를 안 보내 Python 인증서 검증 실패(SSLError). 중간 인증서 번들 추가 시 사용 가능할 것", "codes": "01,02,03,04,06"},
@@ -13,7 +13,7 @@
 {"sido": "경상남도", "sigungu": "고성군", "name": "고성군청", "homepage": "https://www.goseong.go.kr", "host": "eminwon.goseong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 7, "note": ""},
 {"sido": "경상남도", "sigungu": "남해군", "name": "남해군청", "homepage": "https://www.namhae.go.kr", "host": "eminwon.namhae.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
 {"sido": "경상남도", "sigungu": "하동군", "name": "하동군청", "homepage": "https://www.hadong.go.kr", "host": "eminwon.hadong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
-{"sido": "경상남도", "sigungu": "산청군", "name": "산청군청", "homepage": "https://www.sancheong.go.kr", "host": "eminwon.sancheong.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": "채용(05) 게시판 사용 적음(1건)"},
+{"sido": "경상남도", "sigungu": "산청군", "name": "산청군청", "homepage": "https://www.sancheong.go.kr", "host": "eminwon.sancheong.go.kr", "legacy": false, "status": "ok", "listed": 1, "matched": 1, "note": "채용(05) 게시판 사용 적음(1건) / 채용(05) 게시판이 옛 글뿐이거나 비어 있어 고시공고에서 키워드로 수집 (10-20 점검)", "codes": "01,02,03,04,06"},
 {"sido": "경상남도", "sigungu": "함양군", "name": "함양군청", "homepage": "https://www.hygn.go.kr", "host": "eminwon.hygn.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
 {"sido": "경상남도", "sigungu": "거창군", "name": "거창군청", "homepage": "https://www.geochang.go.kr", "host": "eminwon.geochang.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
 {"sido": "경상남도", "sigungu": "합천군", "name": "합천군청", "homepage": "https://www.hc.go.kr", "host": "eminwon.hc.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""}

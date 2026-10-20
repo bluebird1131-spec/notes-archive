@@ -64,7 +64,8 @@ EXCLUDE_RULES = [
     (re.compile(r"위원|자문단|평가단|심사단|협의체"), "위원·자문단 모집 (일자리 아님)"),
     (re.compile(r"통장|반장|(^|[\s(])이장"), "통장·반장·이장 위촉 모집 (일자리 아님)"),
     (re.compile(r"교육생|수강생|참가자|참가팀|체험단|입주자|입주기업|입점|사업자|업체|기업|단체|후원|봉사|"
-                r"서포터즈|기자단|모니터단|명예|공모|작품|선수|회원|임차인|분양|청약|감사인|회계법인|법무법인|감정평가|자원\s*활동|부스|이용\s*(아동|자)"),
+                r"서포터즈|기자단|모니터단|명예|공모|작품|선수|회원|임차인|분양|청약|감사인|회계법인|법무법인|감정평가|자원\s*활동|부스|이용\s*(아동|자)|"
+                r"감리자|감리원|입주|업소|영업자|판매자|사용자\s*모집|운영자\s*모집|제안|추천\s*이사"),
      "교육·참가자·사업자 모집 (일자리 아님)"),
     (re.compile(r"수탁|위탁|수행\s*기관|운영\s*기관|제공\s*기관|지원\s*사업|보조금|무료\s*개방|참여\s*(가구|업소|기관|학교)"),
      "사업 참여·위탁기관 모집 (일자리 아님)"),
@@ -379,15 +380,25 @@ def parse_saeol_detail(html, rec, host):
     rec["attachments"] = atts
 
 
+# 한 쪽에 며칠 치밖에 안 담기는 바쁜 게시판은 다음 쪽까지 읽음: 쪽의 가장 오래된 글이 BUSY_DAYS 안이면 다음 쪽 (최대 AUTO_PAGES)
+# (수집이 하루 이틀 막히거나 하루에 한 쪽 넘게 올라오는 날에도 공고가 빠지지 않게. 10-20 점검: 첫 쪽이 일주일 치도 안 되는 게시판 17곳)
+BUSY_DAYS = 7
+AUTO_PAGES = 3
+
+
 def crawl_saeol(f, org, board, pages, page_size):
     url = f"https://{org['host']}{SAEOL_ACTION}"
     recs = []
-    for p in range(1, pages + 1):
+    busy_since = (datetime.now(KST) - timedelta(days=BUSY_DAYS)).strftime("%Y-%m-%d")
+    for p in range(1, max(pages, AUTO_PAGES) + 1):
         page_size = board.get("page_size", page_size)
         html = f.post(url, saeol_list_params(board["codes"], p, page_size))
         got = parse_saeol_list(html, org, board)
         recs += got
         if len(got) < page_size:
+            break
+        dates = [r["posted_at"] for r in got if r["posted_at"]]
+        if p >= pages and (not dates or min(dates) < busy_since):
             break
     return recs
 
@@ -738,6 +749,14 @@ def saeol_org(key, name, region, host, gosi_codes, home_url, legacy=False):
     }
 
 
+def to_gosi(o, codes):
+    """채용(05) 게시판을 안 쓰고 고시/공고에 채용 공고를 섞어 올리는 기관: 그 구분으로 30건씩 보고 키워드로 거름"""
+    b = o["boards"][0]
+    b.update(name="새올 고시공고", codes=codes, page_size=30,
+             board_url=b["board_url"].replace("not_ancmt_se_code=05", "not_ancmt_se_code=" + codes))
+    return o
+
+
 def saeol_jobs_org(key, name, region, host, legacy=False):
     """다른 시·도 대표 지역: 새올 채용공고(05) 게시판만 (부하·실행 시간을 줄이려고 고시공고는 보지 않음)"""
     o = saeol_org(key, name, region, host, "", "", legacy)
@@ -781,7 +800,8 @@ ORGS += [
     saeol_jobs_org("광주북구", "광주광역시 북구청", "광주광역시 북구", "eminwon.bukgu.gwangju.kr"),
     saeol_jobs_org("대전서구", "대전광역시 서구청", "대전광역시 서구", "eminwon.seogu.go.kr"),
     saeol_jobs_org("세종시", "세종특별자치시청", "세종특별자치시 세종시", "eminwon.sejong.go.kr"),
-    saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True),
+    # 수원: 채용(05) 게시판은 2015년 글뿐이라 고시공고에서 키워드로 (10-20)
+    to_gosi(saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True), "01,02,03,04,06"),
     saeol_jobs_org("춘천시", "강원특별자치도 춘천시청", "강원특별자치도 춘천시", "eminwon.chuncheon.go.kr", legacy=True),
 ]
 ORGS_DIR = Path(__file__).resolve().parent.parent / "orgs"
@@ -810,10 +830,7 @@ def load_org_file(path):
             continue
         o = saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy)
         if e.get("codes"):
-            # 채용(05) 게시판을 안 쓰고 고시/공고에 채용 공고를 섞어 올리는 기관: 그 구분으로 30건씩 보고 키워드로 거름
-            b = o["boards"][0]
-            b.update(name="새올 고시공고", codes=e["codes"], page_size=30,
-                     board_url=b["board_url"].replace("not_ancmt_se_code=05", "not_ancmt_se_code=" + e["codes"]))
+            to_gosi(o, e["codes"])
         out.append(o)
         if legacy and e["host"] not in ATTACH_LEGACY_HOSTS:
             ATTACH_LEGACY_HOSTS.append(e["host"])
@@ -840,6 +857,9 @@ DETAIL_FN = {"saeol": parse_saeol_detail, "ulju": parse_ulju_detail, "ulsan": pa
 # ---------------------------------------------------------------------------
 # 실행
 # ---------------------------------------------------------------------------
+OLD_DAYS = 180  # 이보다 오래 전에 게시된 글은 건너뜀 (사이트는 마감 30일·게시 60일 지나면 어차피 내림)
+
+
 def run_org(org, pages, page_size, with_detail, verify):
     f = Fetcher(legacy_hosts=[org["host"]] if org["legacy_tls"] else [], verify=verify)
     log = {"org": org["key"], "source_org": org["source_org"], "boards": [], "ok": True}
@@ -855,16 +875,21 @@ def run_org(org, pages, page_size, with_detail, verify):
             print(f"  [{org['key']}] {board['name']} 목록 실패: {b['error']}")
             continue
         b["listed"] = len(recs)
+        old_before = (datetime.now(KST) - timedelta(days=OLD_DAYS)).strftime("%Y-%m-%d")
         for r in recs:
             if r["_key"] in seen:
                 continue
             seen.add(r["_key"])
+            if r["posted_at"] and r["posted_at"] < old_before:
+                b["old"] = b.get("old", 0) + 1
+                continue  # 게시판 위에 고정된 옛 글(2016년 공고 등): 상세·첨부를 받지 않음
             if not r["matched_keywords"]:
                 continue
             b["matched"] += 1
             kept.append(r)
         log["boards"].append(b)
-        print(f"  [{org['key']}] {board['name']}: 목록 {b['listed']}건, 키워드 통과 {b['matched']}건")
+        print(f"  [{org['key']}] {board['name']}: 목록 {b['listed']}건, 키워드 통과 {b['matched']}건"
+              + (f", 옛 글 {b['old']}건 건너뜀" if b.get("old") else ""))
 
     detail_ok = detail_fail = 0
     for r in kept:

@@ -1,5 +1,5 @@
 [
-{"sido": "대전광역시", "sigungu": "동구", "name": "대전광역시 동구청", "homepage": "https://www.donggu.go.kr", "host": "eminwon.donggu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 5, "note": ""},
+{"sido": "대전광역시", "sigungu": "동구", "name": "대전광역시 동구청", "homepage": "https://www.donggu.go.kr", "host": "eminwon.donggu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 5, "note": "채용(05) 게시판이 옛 글뿐이거나 비어 있어 고시공고에서 키워드로 수집 (10-20 점검)", "codes": "01,02,03,04,06"},
 {"sido": "대전광역시", "sigungu": "중구", "name": "대전광역시 중구청", "homepage": "https://www.djjunggu.go.kr", "host": "eminwon.djjunggu.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 5, "note": ""},
 {"sido": "대전광역시", "sigungu": "서구", "name": "대전광역시 서구청", "homepage": "https://www.seogu.go.kr", "host": "eminwon.seogu.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "기존"},
 {"sido": "대전광역시", "sigungu": "유성구", "name": "대전광역시 유성구청", "homepage": "https://www.yuseong.go.kr", "host": "eminwon.yuseong.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 9, "note": ""},
