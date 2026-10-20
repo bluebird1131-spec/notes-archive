@@ -65,7 +65,7 @@ EXCLUDE_RULES = [
     (re.compile(r"통장|반장|(^|[\s(])이장"), "통장·반장·이장 위촉 모집 (일자리 아님)"),
     (re.compile(r"교육생|수강생|참가자|참가팀|체험단|입주자|입주기업|입점|사업자|업체|기업|단체|후원|봉사|"
                 r"서포터즈|기자단|모니터단|명예|공모|작품|선수|회원|임차인|분양|청약|감사인|회계법인|법무법인|감정평가|자원\s*활동|부스|이용\s*(아동|자)|"
-                r"감리자|감리원|입주|업소|영업자|판매자|사용자\s*모집|운영자\s*모집|제안|추천\s*이사"),
+                r"감리자|감리원|입주|업소|영업자|판매자|사용자\s*모집|운영자\s*모집|제안|추천\s*이사|신청자|전지\s*훈련"),
      "교육·참가자·사업자 모집 (일자리 아님)"),
     (re.compile(r"수탁|위탁|수행\s*기관|운영\s*기관|제공\s*기관|지원\s*사업|보조금|무료\s*개방|참여\s*(가구|업소|기관|학교)"),
      "사업 참여·위탁기관 모집 (일자리 아님)"),
@@ -86,7 +86,14 @@ def match_keywords(title: str) -> list[str]:
     return [k for k in KEYWORDS if KEYWORD_RE[k].search(title)]
 
 
+# 기관을 뽑는 공고는 '일자리' 같은 낱말이 있어도 뺌 ('장애인일자리사업 민간위탁 수행기관 모집'). 그 기관의 직원·참여자 채용은 남김
+AGENCY_RE = re.compile(r"(수행|위탁|운영|제공)\s*기관|민간\s*위탁")
+AGENCY_JOB_RE = re.compile(r"근로자|직원|채용|참여자|인력")
+
+
 def excluded_reason(title: str, matched: list[str]) -> str | None:
+    if matched and AGENCY_RE.search(title) and not AGENCY_JOB_RE.search(title):
+        return "사업 참여·위탁기관 모집 (일자리 아님)"
     if not matched or not set(matched) <= GENERIC_KEYWORDS:
         return None
     for pattern, reason in EXCLUDE_RULES:
@@ -256,12 +263,13 @@ def make_record(org, board, *, title, notice_no, posted_at, dept, detail_url, ke
 SAEOL_ACTION = "/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do"
 
 
-def saeol_list_params(codes: str, page: int, page_size: int) -> dict:
+def saeol_list_params(codes: str, page: int, page_size: int, subcheck: str = "Y") -> dict:
     # 각 구청 홈페이지 iframe(OfrNotAncmtLSub.jsp)의 form1 hidden 값과 같다.
+    # subCheck: 대부분 Y. 태안·서귀포·함평처럼 Y 면 500 오류·0건이고 N 이라야 나오는 기관이 있음(10-20) → 기관 설정 "subcheck"
     return {
         "epcCheck": "", "pageIndex": str(page), "jndinm": "OfrNotAncmtEJB", "context": "NTIS",
         "method": "selectListOfrNotAncmt", "methodnm": "selectListOfrNotAncmtHomepage",
-        "not_ancmt_mgt_no": "", "homepage_pbs_yn": "Y", "subCheck": "Y",
+        "not_ancmt_mgt_no": "", "homepage_pbs_yn": "Y", "subCheck": subcheck,
         "ofr_pageSize": str(page_size), "not_ancmt_se_code": codes, "title": "",
         "cha_dep_code_nm": "", "initValue": "", "countYn": "Y", "list_gubun": "A",
         "not_ancmt_sj": "", "not_ancmt_cn": "", "dept_nm": "", "cgg_code": "",
@@ -271,9 +279,9 @@ def saeol_list_params(codes: str, page: int, page_size: int) -> dict:
     }
 
 
-def saeol_detail_url(host: str, mgt_no: str, codes: str) -> str:
+def saeol_detail_url(host: str, mgt_no: str, codes: str, subcheck: str = "Y") -> str:
     q = {
-        "not_ancmt_mgt_no": mgt_no, "subCheck": "Y", "not_ancmt_se_code": codes,
+        "not_ancmt_mgt_no": mgt_no, "subCheck": subcheck, "not_ancmt_se_code": codes,
         "method": "selectOfrNotAncmt", "methodnm": "selectOfrNotAncmtRegst",
         "jndinm": "OfrNotAncmtEJB", "context": "NTIS", "list_gubun": "A", "homepage_pbs_yn": "Y",
     }
@@ -311,7 +319,7 @@ def parse_saeol_list(html, org, board):
         rec = make_record(
             org, board, title=title, notice_no=notice_no,
             posted_at=texts[date_idx] if date_idx is not None else "", dept=dept,
-            detail_url=saeol_detail_url(org["host"], mgt_no, board["codes"]),
+            detail_url=saeol_detail_url(org["host"], mgt_no, board["codes"], board.get("detail_subcheck", "Y")),
             key=mgt_no,
         )
         rec["_truncated"] = truncated
@@ -392,7 +400,7 @@ def crawl_saeol(f, org, board, pages, page_size):
     busy_since = (datetime.now(KST) - timedelta(days=BUSY_DAYS)).strftime("%Y-%m-%d")
     for p in range(1, max(pages, AUTO_PAGES) + 1):
         page_size = board.get("page_size", page_size)
-        html = f.post(url, saeol_list_params(board["codes"], p, page_size))
+        html = f.post(url, saeol_list_params(board["codes"], p, page_size, board.get("subcheck", "Y")))
         got = parse_saeol_list(html, org, board)
         recs += got
         if len(got) < page_size:
@@ -831,6 +839,9 @@ def load_org_file(path):
         o = saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy)
         if e.get("codes"):
             to_gosi(o, e["codes"])
+        for k in ("subcheck", "detail_subcheck"):  # 새올 subCheck 값이 다른 기관 (saeol_list_params 설명)
+            if e.get(k):
+                o["boards"][0][k] = e[k]
         out.append(o)
         if legacy and e["host"] not in ATTACH_LEGACY_HOSTS:
             ATTACH_LEGACY_HOSTS.append(e["host"])
