@@ -45,7 +45,7 @@ UA = (
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 )
 DELAY_RANGE = (1.5, 3.0)
-TIMEOUT = 20
+TIMEOUT = 30  # 일반공고(04)를 함께 보는 목록은 20~35초 걸리는 기관이 있어 30초 → 다시 시도 60초 (10-22 깊은 수집에서 시간초과 28곳)
 BODY_LIMIT = 3000
 OUT_DIR = Path(__file__).resolve().parent / "out"
 
@@ -765,7 +765,7 @@ DEFAULT_CODES = "04,05"
 def to_gosi(o, codes):
     """채용(05) 게시판 대신(또는 함께) 고시/공고 구분을 30건씩 보고 키워드로 거름"""
     b = o["boards"][0]
-    b.update(name="새올 채용·일반공고" if "05" in codes else "새올 고시공고", codes=codes, page_size=30,
+    b.update(name="새올 채용공고" if codes == "05" else "새올 채용·일반공고" if "05" in codes else "새올 고시공고", codes=codes, page_size=30,
              board_url=b["board_url"].replace("not_ancmt_se_code=05", "not_ancmt_se_code=" + codes))
     return o
 
