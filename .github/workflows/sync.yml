@@ -73,6 +73,9 @@ jobs:
     needs: [plan, collect]
     if: ${{ always() && needs.plan.result == 'success' }}
     runs-on: ubuntu-latest
+    env:  # set DOWNSTREAM_TOKEN (fine-grained, actions:write on the site repo) to start the site update right after this sync
+      DOWNSTREAM_TOKEN: ${{ secrets.DOWNSTREAM_TOKEN }}
+      DOWNSTREAM_REPO: ${{ secrets.DOWNSTREAM_REPO }}
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -94,6 +97,7 @@ jobs:
           python tools/keep_failed.py /tmp/prev_raw.json
           python scripts/extract_rules.py
           python tools/org_index.py
+          python tools/health.py || echo "health check failed"
           cp scripts/out/raw_notices.json scripts/out/rules.json scripts/out/crawl_log.json data/
 
       - name: commit
@@ -108,7 +112,4 @@ jobs:
 
       - name: notify
         if: ${{ env.DOWNSTREAM_TOKEN != '' }}
-        env:
-          DOWNSTREAM_TOKEN: ${{ secrets.DOWNSTREAM_TOKEN }}
-          DOWNSTREAM_REPO: ${{ secrets.DOWNSTREAM_REPO }}
         run: GH_TOKEN="$DOWNSTREAM_TOKEN" gh workflow run update.yml -R "$DOWNSTREAM_REPO"

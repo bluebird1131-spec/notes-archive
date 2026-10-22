@@ -20,6 +20,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import functools
 import json
 import random
@@ -757,10 +758,14 @@ def saeol_org(key, name, region, host, gosi_codes, home_url, legacy=False):
     }
 
 
+# 채용(05)만 읽던 기관의 기본 구분: 동 주민자치 강사·공공근로·기간제가 일반공고(04)에 올라오는 곳이 많아 함께 읽음 (10-22 점검: 구로·사하·익산·당진·음성)
+DEFAULT_CODES = "04,05"
+
+
 def to_gosi(o, codes):
-    """채용(05) 게시판을 안 쓰고 고시/공고에 채용 공고를 섞어 올리는 기관: 그 구분으로 30건씩 보고 키워드로 거름"""
+    """채용(05) 게시판 대신(또는 함께) 고시/공고 구분을 30건씩 보고 키워드로 거름"""
     b = o["boards"][0]
-    b.update(name="새올 고시공고", codes=codes, page_size=30,
+    b.update(name="새올 채용·일반공고" if "05" in codes else "새올 고시공고", codes=codes, page_size=30,
              board_url=b["board_url"].replace("not_ancmt_se_code=05", "not_ancmt_se_code=" + codes))
     return o
 
@@ -804,13 +809,13 @@ ORGS = [
 ]
 # 1단계 지역 확장 (2026-10-16): 시·도마다 대표 1곳, 새올 채용 게시판 목록이 열리는 것을 확인한 곳
 ORGS += [
-    saeol_jobs_org("해운대구", "부산광역시 해운대구청", "부산광역시 해운대구", "eminwon.haeundae.go.kr"),
-    saeol_jobs_org("광주북구", "광주광역시 북구청", "광주광역시 북구", "eminwon.bukgu.gwangju.kr"),
-    saeol_jobs_org("대전서구", "대전광역시 서구청", "대전광역시 서구", "eminwon.seogu.go.kr"),
-    saeol_jobs_org("세종시", "세종특별자치시청", "세종특별자치시 세종시", "eminwon.sejong.go.kr"),
+    to_gosi(saeol_jobs_org("해운대구", "부산광역시 해운대구청", "부산광역시 해운대구", "eminwon.haeundae.go.kr"), DEFAULT_CODES),
+    to_gosi(saeol_jobs_org("광주북구", "광주광역시 북구청", "광주광역시 북구", "eminwon.bukgu.gwangju.kr"), DEFAULT_CODES),
+    to_gosi(saeol_jobs_org("대전서구", "대전광역시 서구청", "대전광역시 서구", "eminwon.seogu.go.kr"), DEFAULT_CODES),
+    to_gosi(saeol_jobs_org("세종시", "세종특별자치시청", "세종특별자치시 세종시", "eminwon.sejong.go.kr"), DEFAULT_CODES),
     # 수원: 채용(05) 게시판은 2015년 글뿐이라 고시공고에서 키워드로 (10-20)
     to_gosi(saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True), "01,02,03,04,06"),
-    saeol_jobs_org("춘천시", "강원특별자치도 춘천시청", "강원특별자치도 춘천시", "eminwon.chuncheon.go.kr", legacy=True),
+    to_gosi(saeol_jobs_org("춘천시", "강원특별자치도 춘천시청", "강원특별자치도 춘천시", "eminwon.chuncheon.go.kr", legacy=True), DEFAULT_CODES),
 ]
 ORGS_DIR = Path(__file__).resolve().parent.parent / "orgs"
 
@@ -837,8 +842,7 @@ def load_org_file(path):
                         "boards": [board]})
             continue
         o = saeol_jobs_org(e["name"], e["name"], f'{e["sido"]} {e["sigungu"]}', e["host"], legacy)
-        if e.get("codes"):
-            to_gosi(o, e["codes"])
+        to_gosi(o, e.get("codes") or DEFAULT_CODES)
         for k in ("subcheck", "detail_subcheck"):  # 새올 subCheck 값이 다른 기관 (saeol_list_params 설명)
             if e.get(k):
                 o["boards"][0][k] = e[k]
@@ -868,6 +872,7 @@ DETAIL_FN = {"saeol": parse_saeol_detail, "ulju": parse_ulju_detail, "ulsan": pa
 # ---------------------------------------------------------------------------
 # 실행
 # ---------------------------------------------------------------------------
+RECHECK_MAX = 5  # 잘린 제목 다시 보기: 게시판마다 상세 요청 상한
 OLD_DAYS = 180  # 이보다 오래 전에 게시된 글은 건너뜀 (사이트는 마감 30일·게시 60일 지나면 어차피 내림)
 
 
@@ -886,6 +891,8 @@ def run_org(org, pages, page_size, with_detail, verify):
             print(f"  [{org['key']}] {board['name']} 목록 실패: {b['error']}")
             continue
         b["listed"] = len(recs)
+        dates = [r["posted_at"] for r in recs if r["posted_at"]]
+        b["newest"] = max(dates) if dates else ""  # 게시판이 멈췄는지 보는 데 씀 (tools/health.py)
         old_before = (datetime.now(KST) - timedelta(days=OLD_DAYS)).strftime("%Y-%m-%d")
         for r in recs:
             if r["_key"] in seen:
@@ -895,6 +902,10 @@ def run_org(org, pages, page_size, with_detail, verify):
                 b["old"] = b.get("old", 0) + 1
                 continue  # 게시판 위에 고정된 옛 글(2016년 공고 등): 상세·첨부를 받지 않음
             if not r["matched_keywords"]:
+                # 목록 제목이 '...'로 잘려 낱말이 안 보이는 글은 상세의 전체 제목으로 다시 봄 (10-22 점검: 예천 농업기술센터 기간제)
+                if with_detail and r.get("_truncated") and b.get("recheck", 0) < RECHECK_MAX:
+                    b["recheck"] = b.get("recheck", 0) + 1
+                    kept.append(r)
                 continue
             b["matched"] += 1
             kept.append(r)
@@ -919,6 +930,7 @@ def run_org(org, pages, page_size, with_detail, verify):
         except Exception as e:
             r["detail_error"] = f"{type(e).__name__}: {e}"[:300]
             detail_fail += 1
+    kept = [r for r in kept if r["matched_keywords"]]  # 잘린 제목을 다시 봤는데도 일자리 낱말이 없으면 버림
     for b in log["boards"]:
         names = {r["_key"] for r in kept if r["board_name"] == b["board"] and r["excluded_reason"]}
         b["excluded"] = len(names)
@@ -990,6 +1002,9 @@ def main(argv=None):
         return 0
 
     pages = max(1, min(args.pages, 3))
+    # 매주 월요일(또는 DEEP=1)은 모든 게시판을 3쪽까지: 하루 이틀 수집이 막혀 밀려난 공고를 다시 채움
+    if os.environ.get("DEEP") == "1" or datetime.now(KST).weekday() == 0:
+        pages = 3
     page_size = max(5, min(args.page_size, 30))
     base = load_org_file(args.org_file) if args.org_file else ORGS
     wanted = [ALIASES.get(x.strip(), x.strip()) for x in args.orgs.split(",") if x.strip()]
