@@ -22,6 +22,9 @@ load = lambda p: json.loads(p.read_text(encoding='utf-8')) if p and p.exists() e
 raw = load(OUT / 'raw_notices.json') or []
 log = load(OUT / 'crawl_log.json') or {}
 failed = {o.get('source_org') for o in log.get('orgs', []) if isinstance(o, dict) and not o.get('ok', True)}
+# 해외에서는 오류 없이 빈 목록만 주는 기관(속초·삼척·청도·울릉·진안, 10-23)도 실패로 보고 국내·지난 결과로 채움
+failed |= {o.get('source_org') for o in log.get('orgs', []) if isinstance(o, dict) and o.get('ok', True)
+           and o.get('boards') and sum(b.get('listed', 0) for b in o['boards']) == 0}
 
 dom = load(Path('data/domestic_raw.json')) or {}
 dom_fresh = bool(dom.get('at')) and now - datetime.fromisoformat(dom['at']) < timedelta(hours=36)
