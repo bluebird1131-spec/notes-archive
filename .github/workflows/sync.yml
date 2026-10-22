@@ -103,7 +103,7 @@ jobs:
           git add data
           if git diff --cached --quiet; then echo "no change"; else
             git commit -m "sync $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M')"
-            git pull --rebase && git push
+            git pull --rebase -X theirs && git push  # data files: keep this run (newer) on conflict
           fi
 
       - name: notify
