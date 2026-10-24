@@ -79,10 +79,10 @@ def lines_of(text):
     return [l.strip() for l in text.splitlines() if l.strip()]
 
 
-def find_line(lines, pattern, span=1):
+def find_line(lines, pattern, span=1, skip=None):
     rx = re.compile(pattern)
     for i, l in enumerate(lines):
-        if rx.search(l):
+        if rx.search(l) and not (skip and re.search(skip, l)):
             return ' '.join(lines[i:i + span]), i
     return None, -1
 
@@ -99,7 +99,8 @@ def extract(n):
 
     # 접수기간: '공고기간'은 빼고 접수·모집 기간 우선
     for pat in [r'접\s*수\s*기\s*간', r'원서\s*접수', r'서류\s*접수\s*기간', r'모\s*집\s*기\s*간', r'접수\s*일시', r'신청\s*기간']:
-        line, i = find_line(lines, pat)
+        # '채용서류는 2027. 2. 1.까지 채용서류 반환청구서를 응시원서 접수처에 제출' 같은 서류 반환 안내는 접수기간이 아님 (10-24 영도구청)
+        line, i = find_line(lines, pat, skip=r'반환\s*청구')
         if line:
             got = period_of(lines, i, year)
             if got:
