@@ -1,5 +1,5 @@
 {
- "at": "2026-10-24T00:36:58+09:00",
+ "at": "2026-10-24T23:46:49+09:00",
  "orgs": 231,
  "failed": [
   {
@@ -7,12 +7,12 @@
    "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
   },
   {
-   "org": "전라남도 구례군청",
-   "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.gurye.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
+   "org": "진주시청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/moga"
   },
   {
-   "org": "서울특별시 중구청",
-   "error": "SSLError: HTTPSConnectionPool(host='www.junggu.seoul.kr', port=443): Max retries exceeded with url: /content.do?cmsid=15"
+   "org": "제주시청",
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.jejusi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/nt"
   }
  ],
  "stale": [],
