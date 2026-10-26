@@ -1,5 +1,5 @@
 [
-{"sido": "경상북도", "sigungu": "포항시", "name": "경상북도 포항시청", "homepage": "https://www.pohang.go.kr", "host": "eminwon.pohang.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 10, "note": ""},
+{"sido": "경상북도", "sigungu": "포항시", "name": "경상북도 포항시청", "homepage": "https://www.pohang.go.kr", "host": "eminwon.pohang.go.kr", "legacy": true, "status": "ok", "listed": 10, "matched": 10, "timeout": 90, "note": "목록 응답이 60초를 넘는 날이 있어 90초까지 기다림 (10-26)"},
 {"sido": "경상북도", "sigungu": "경주시", "name": "경상북도 경주시청", "homepage": "https://www.gyeongju.go.kr", "host": "eminwon.gyeongju.go.kr", "legacy": false, "status": "ok", "listed": 10, "matched": 8, "note": ""},
 {"sido": "경상북도", "sigungu": "김천시", "name": "경상북도 김천시청", "homepage": "https://www.gc.go.kr", "host": "eminwon.gc.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "채용(05) 게시판 대신 고시/공고(01~04·06)에서 키워드로 수집 (10-16 확인). 채용(05) 게시판 목록 0건", "codes": "01,02,03,04,06"},
 {"sido": "경상북도", "sigungu": "안동시", "name": "경상북도 안동시청", "homepage": "https://www.andong.go.kr", "host": "eminwon.andong.go.kr", "legacy": false, "status": "ok", "listed": 0, "matched": 0, "note": "중간 인증서 보완으로 수집 (10-16). 서버 인증서 중간체인 누락으로 probe(검증 켬) SSLError. 검증 끄면 listed 10, matched 10 확인"},

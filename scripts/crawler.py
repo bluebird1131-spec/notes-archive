@@ -7,7 +7,7 @@
     python scripts/crawler.py                      # 6개 기관, 게시판마다 1쪽
     python scripts/crawler.py --orgs 남구,중구 --pages 2
     python scripts/crawler.py --no-detail          # 목록만 (상세 요청 생략)
-    python scripts/crawler.py --attach             # 수집 + 대상 공고의 .hwpx/.pdf 첨부 텍스트 추출
+    python scripts/crawler.py --attach             # 수집 + 대상 공고의 .hwpx/.hwp/.pdf 첨부 텍스트 추출
     python scripts/crawler.py --attach-only        # 저장된 파일에 첨부 텍스트만 채우기
 
 출력:
@@ -16,6 +16,7 @@
 
 의존성: requests, beautifulsoup4 (pip install --user requests beautifulsoup4)
        pdf 첨부 추출은 pypdf가 있을 때만 (없으면 pdf는 건너뜀)
+       옛 한글(.hwp·.hwt) 첨부 추출은 olefile이 있을 때만 (없으면 건너뜀)
 """
 from __future__ import annotations
 
@@ -138,7 +139,7 @@ def ca_bundle() -> str | bool:
 
 
 class Fetcher:
-    def __init__(self, legacy_hosts=(), verify=True):
+    def __init__(self, legacy_hosts=(), verify=True, timeout=TIMEOUT):
         self.s = requests.Session()
         self.s.headers.update({
             "User-Agent": UA,
@@ -148,6 +149,7 @@ class Fetcher:
         for host in legacy_hosts:
             self.s.mount(f"https://{host}", LegacyTLSAdapter())
         self.verify = ca_bundle() if verify is True else verify
+        self.timeout = timeout  # 응답 기다리는 시간 (연결 시간은 TIMEOUT 그대로)
         self.count = 0
         self._last = 0.0
 
@@ -165,7 +167,7 @@ class Fetcher:
                 time.sleep(5)
             try:
                 r = self.s.request(method, url, verify=self.verify,
-                                   timeout=TIMEOUT * attempt, **kw)
+                                   timeout=(TIMEOUT * attempt, self.timeout * attempt), **kw)
                 break
             except (requests.Timeout, requests.ConnectionError):
                 if attempt == 2:
@@ -366,8 +368,10 @@ def parse_saeol_detail(html, rec, host):
         q = {"user_file_nm": m.group(1), "sys_file_nm": m.group(2), "file_path": m.group(3)}
         if is_home:
             q["isHome"] = "Y"
+        # 링크 글자가 확장자로 끝나지 않으면('….hwpx 다운로드' — 제주시) 원래 파일 이름
+        label = clean(a.get_text())
         atts.append({
-            "name": clean(a.get_text()) or m.group(1),
+            "name": label if _ext(label) else (m.group(1) or label),
             # 중구는 form POST 방식(+ 인코딩, GET도 동작 확인), 나머지는 encodeURI 방식
             "url": f"https://{host}{base}?" + (up.urlencode(q) if is_home else encode_uri_query(q)),
         })
@@ -545,6 +549,10 @@ try:  # pdf 추출은 pypdf가 있을 때만
     import pypdf  # type: ignore
 except ImportError:  # pragma: no cover
     pypdf = None
+try:  # 옛 한글(hwp 5.0) 추출은 olefile이 있을 때만
+    import olefile  # type: ignore
+except ImportError:  # pragma: no cover
+    olefile = None
 
 
 def _local(tag: str) -> str:
@@ -610,6 +618,81 @@ def pdf_text(data: bytes) -> str:
     return "\n".join(x for x in lines if x)
 
 
+HWP_CHAR1 = {0, 10, 13, 24, 25, 26, 27, 28, 29, 30, 31}  # 1글자 크기 제어 문자. 나머지 0~31 은 8글자(16바이트) 크기
+
+
+def hwp_text(data: bytes) -> str:
+    """옛 한글(hwp 5.0, OLE) BodyText/Section* 의 문단 글자(PARA_TEXT 레코드)를 줄로 모은다. 표 안 문단도 같은 흐름에 있다."""
+    import io
+    import struct
+    import zlib
+
+    ole = olefile.OleFileIO(io.BytesIO(data))
+    flags = struct.unpack_from("<I", ole.openstream("FileHeader").read(), 36)[0]
+    if flags & 0x2:
+        raise ValueError("암호가 걸린 hwp")
+    if flags & 0x4:
+        raise ValueError("배포용 hwp (본문 암호화)")
+    secs = sorted((e for e in ole.listdir() if len(e) == 2 and e[0] == "BodyText" and re.fullmatch(r"Section\d+", e[1])),
+                  key=lambda e: int(e[1][7:]))
+    if not secs:
+        raise ValueError("hwp 안에 BodyText/Section 없음")
+    lines: list[str] = []
+    size = 0
+    for e in secs:
+        raw = ole.openstream(e).read()
+        if flags & 0x1:  # 본문 압축
+            d = zlib.decompressobj(-15)
+            raw = d.decompress(raw, ATTACH_XML_MAX)
+            if d.unconsumed_tail:
+                raise ValueError(f"{e[1]} 압축 해제 크기 초과")
+        i = 0
+        while i + 4 <= len(raw):
+            h = struct.unpack_from("<I", raw, i)[0]
+            i += 4
+            tag, n = h & 0x3FF, h >> 20
+            if n == 0xFFF:
+                n = struct.unpack_from("<I", raw, i)[0]
+                i += 4
+            if tag == 67:  # HWPTAG_PARA_TEXT: UTF-16LE 글자 사이에 제어 문자
+                w, out, j = raw[i:i + n], bytearray(), 0
+                while j + 2 <= len(w):
+                    ch = w[j] | w[j + 1] << 8
+                    if ch >= 32:
+                        out += w[j:j + 2]
+                    elif ch in (9, 10):  # 탭·줄바꿈
+                        out += b" \x00"
+                    j += 2 if ch >= 32 or ch in HWP_CHAR1 else 16
+                line = clean(out.decode("utf-16-le", "replace"))
+                if line:
+                    lines.append(line)
+                    size += len(line)
+            i += n
+        if size > ATTACH_LIMIT * 2:
+            break
+    return "\n".join(lines)
+
+
+OLE_MAGIC = b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+
+
+def attach_text(data: bytes) -> str:
+    """파일 앞부분으로 형식을 보고 글자를 뽑는다. 이름은 .hwpx 인데 속은 옛 hwp 인 첨부가 꽤 있음 (10-26 확인)"""
+    if data.startswith(b"PK"):
+        return hwpx_text(data)
+    if data.startswith(OLE_MAGIC):
+        if olefile is None:
+            raise ValueError("olefile 없음 (옛 hwp)")
+        return hwp_text(data)
+    if data.startswith(b"%PDF"):
+        if pypdf is None:
+            raise ValueError("pypdf 없음")
+        return pdf_text(data)
+    if data.startswith(b"SCDSA") or b"DRMONE" in data[:16]:  # SoftCamp·Fasoo 문서 보안
+        raise ValueError("문서 보안(DRM)이 걸린 파일")
+    raise ValueError(f"읽을 수 있는 형식이 아님 (응답 앞부분: {data[:40]!r})")
+
+
 def _ext(name: str) -> str:
     m = re.search(r"\.([A-Za-z0-9]+)\s*$", name or "")
     return m.group(1).lower() if m else ""
@@ -631,17 +714,29 @@ def plan_attachments(atts: list[dict]) -> tuple[list[dict], list[dict]]:
         name, ext = a.get("name", ""), _ext(a.get("name", ""))
         if ATTACH_RESULT_RE.search(name):
             skipped.append({"name": name, "status": "skipped", "note": "결과·합격자 문서 (개인정보, 받지 않음)"})
-        elif ext not in ("hwpx", "pdf"):
+        elif ext not in ATTACH_ORDER:
             skipped.append({"name": name, "status": "skipped", "note": f"지원하지 않는 형식 (.{ext or '?'})"})
         elif ext == "pdf" and pypdf is None:
             skipped.append({"name": name, "status": "skipped", "note": "pypdf 없음"})
+        elif ext in ("hwp", "hwt") and olefile is None:
+            skipped.append({"name": name, "status": "skipped", "note": "olefile 없음"})
         else:
             cands.append(a)
-    # 공고문 > 기타 > 서식·원서, 같은 순위면 hwpx 먼저
+    # 공고문 > 기타 > 서식·원서, 같은 순위면 hwpx > hwp > pdf
     cands.sort(key=lambda a: (0 if "공고" in a["name"] and not ATTACH_FORM_RE.search(a["name"])
                               else 2 if ATTACH_FORM_RE.search(a["name"]) else 1,
-                              0 if _ext(a["name"]) == "hwpx" else 1))
+                              ATTACH_ORDER[_ext(a["name"])]))
     return cands, skipped
+
+
+# 읽는 첨부 형식과 같은 순위일 때의 순서 (hwtx·hwt 는 한글 서식 파일, 속은 hwpx·hwp 와 같음)
+ATTACH_ORDER = {"hwpx": 0, "hwtx": 0, "hwp": 1, "hwt": 1, "pdf": 2}
+
+
+def has_new_attachments(prev: dict, n: dict) -> bool:
+    """지난번엔 못 읽는 형식이라 건너뛴 첨부를 이제 읽을 수 있는지 (10-26 hwp 지원, 제주시 첨부 이름)"""
+    tried = {x["name"] for x in prev.get("attachment_files", []) if not x.get("note", "").startswith("지원하지 않는 형식")}
+    return any(a["name"] not in tried for a in plan_attachments(n.get("attachments") or [])[0])
 
 
 def fetch_attachment_text(f: "Fetcher", n: dict) -> None:
@@ -649,9 +744,9 @@ def fetch_attachment_text(f: "Fetcher", n: dict) -> None:
     cands, files = plan_attachments(n.get("attachments") or [])
     texts, tried, ok_stems = [], 0, set()
     for a in cands:
-        name, ext = a["name"], _ext(a["name"])
-        if ext == "pdf" and _stem(name) in ok_stems:
-            files.append({"name": name, "status": "skipped", "note": "같은 이름의 hwpx를 이미 추출"})
+        name = a["name"]
+        if _stem(name) in ok_stems:
+            files.append({"name": name, "status": "skipped", "note": "같은 이름의 문서를 이미 추출"})
             continue
         if tried >= ATTACH_MAX_FILES:
             files.append({"name": name, "status": "skipped", "note": f"공고당 최대 {ATTACH_MAX_FILES}개"})
@@ -659,14 +754,7 @@ def fetch_attachment_text(f: "Fetcher", n: dict) -> None:
         tried += 1
         try:
             data = f.get_bytes(a["url"], referer=n.get("detail_url"), max_bytes=ATTACH_MAX_BYTES)
-            if ext == "hwpx":
-                if not data.startswith(b"PK"):
-                    raise ValueError(f"zip 형식이 아님 (응답 앞부분: {data[:40]!r})")
-                text = hwpx_text(data)
-            else:
-                if not data.startswith(b"%PDF"):
-                    raise ValueError(f"PDF 형식이 아님 (응답 앞부분: {data[:40]!r})")
-                text = pdf_text(data)
+            text = attach_text(data)
             if not text.strip():
                 raise ValueError("추출한 텍스트가 비어 있음 (스캔 이미지 PDF일 수 있음)")
             ok_stems.add(_stem(name))
@@ -699,7 +787,8 @@ def run_attachments(notices: list[dict], verify: bool, *, reuse: dict | None = N
         prev = (reuse or {}).get(n.get("detail_url"))
         if prev and prev.get("attachment_text") and \
                 [a["url"] for a in prev.get("attachments", [])] == [a["url"] for a in n["attachments"]] and \
-                not any(x.get("status") == "error" for x in prev.get("attachment_files", [])):
+                not any(x.get("status") == "error" for x in prev.get("attachment_files", [])) and \
+                not has_new_attachments(prev, n):
             n["attachment_text"] = prev["attachment_text"]
             n["attachment_files"] = prev.get("attachment_files", [])
             st["reused"] += 1
@@ -813,8 +902,9 @@ ORGS += [
     to_gosi(saeol_jobs_org("광주북구", "광주광역시 북구청", "광주광역시 북구", "eminwon.bukgu.gwangju.kr"), DEFAULT_CODES),
     to_gosi(saeol_jobs_org("대전서구", "대전광역시 서구청", "대전광역시 서구", "eminwon.seogu.go.kr"), DEFAULT_CODES),
     to_gosi(saeol_jobs_org("세종시", "세종특별자치시청", "세종특별자치시 세종시", "eminwon.sejong.go.kr"), DEFAULT_CODES),
-    # 수원: 채용(05) 게시판은 2015년 글뿐이라 고시공고에서 키워드로 (10-20)
-    to_gosi(saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True), "01,02,03,04,06"),
+    # 수원: 채용(05) 게시판은 2015년 글뿐이라 고시공고에서 키워드로 (10-20). 목록 응답이 60초를 넘는 날이 많아 90초까지 기다림 (10-26)
+    {**to_gosi(saeol_jobs_org("수원시", "경기도 수원시청", "경기도 수원시", "eminwon.suwon.go.kr", legacy=True), "01,02,03,04,06"),
+     "timeout": 90},
     to_gosi(saeol_jobs_org("춘천시", "강원특별자치도 춘천시청", "강원특별자치도 춘천시", "eminwon.chuncheon.go.kr", legacy=True), DEFAULT_CODES),
 ]
 ORGS_DIR = Path(__file__).resolve().parent.parent / "orgs"
@@ -846,6 +936,8 @@ def load_org_file(path):
         for k in ("subcheck", "detail_subcheck"):  # 새올 subCheck 값이 다른 기관 (saeol_list_params 설명)
             if e.get(k):
                 o["boards"][0][k] = e[k]
+        if e.get("timeout"):  # 응답이 느린 기관: 기다리는 시간(초)
+            o["timeout"] = e["timeout"]
         out.append(o)
         if legacy and e["host"] not in ATTACH_LEGACY_HOSTS:
             ATTACH_LEGACY_HOSTS.append(e["host"])
@@ -877,7 +969,7 @@ OLD_DAYS = 180  # 이보다 오래 전에 게시된 글은 건너뜀 (사이트�
 
 
 def run_org(org, pages, page_size, with_detail, verify):
-    f = Fetcher(legacy_hosts=[org["host"]] if org["legacy_tls"] else [], verify=verify)
+    f = Fetcher(legacy_hosts=[org["host"]] if org["legacy_tls"] else [], verify=verify, timeout=org.get("timeout", TIMEOUT))
     log = {"org": org["key"], "source_org": org["source_org"], "boards": [], "ok": True}
     seen, kept = set(), []
     for board in org["boards"]:
@@ -960,7 +1052,7 @@ def main(argv=None):
     ap.add_argument("--refilter", action="store_true",
                     help="네트워크 요청 없이 --out 파일에 키워드·제외 규칙만 다시 적용")
     ap.add_argument("--attach", action="store_true",
-                    help="수집 후 대상 공고(제외·결과 공고 아님)의 .hwpx/.pdf 첨부를 받아 attachment_text 저장")
+                    help="수집 후 대상 공고(제외·결과 공고 아님)의 .hwpx/.hwp/.pdf 첨부를 받아 attachment_text 저장")
     ap.add_argument("--attach-only", action="store_true",
                     help="목록·상세 수집 없이 --out 파일의 공고에 첨부 텍스트만 채움 (--orgs로 기관 한정 가능)")
     args = ap.parse_args(argv)
