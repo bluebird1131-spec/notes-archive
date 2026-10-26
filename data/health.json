@@ -1,16 +1,7 @@
 {
- "at": "2026-10-25T23:59:51+09:00",
+ "at": "2026-10-27T02:35:19+09:00",
  "orgs": 231,
- "failed": [
-  {
-   "org": "경기도 수원시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Read timed out. (read timeout=60)"
-  },
-  {
-   "org": "경상북도 포항시청",
-   "error": "SSLError: HTTPSConnectionPool(host='eminwon.pohang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/nt"
-  }
- ],
+ "failed": [],
  "stale": [],
  "empty": [
   {
@@ -32,10 +23,6 @@
   {
    "org": "전북특별자치도 진안군청",
    "board": "새올 채용·일반공고"
-  },
-  {
-   "org": "전라남도 완도군청",
-   "board": "새올 고시공고"
   }
  ]
 }
