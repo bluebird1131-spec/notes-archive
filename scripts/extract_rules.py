@@ -19,8 +19,10 @@ OUT = Path('scripts/out/rules.json')
 TRUTH = Path('scripts/out/structured.json')
 
 SP = r'[\s ]*'
-# 2026. 10. 14. / 2026.10.14 / ’26. 10. 14 / 2026년 10월 14일
-FULL = re.compile(r"(?:(20\d{2})|[’‘'](\d{2}))" + SP + r"[.년]" + SP + r"(\d{1,2})" + SP + r"[.월]" + SP + r"(\d{1,2})")
+# 2026. 10. 14. / 2026.10.14 / ’26. 10. 14 / `26. 10. 14 / 2026년 10월 14일
+FULL = re.compile(r"(?:(20\d{2})|[’‘'`＇](\d{2}))" + SP + r"[.년]" + SP + r"(\d{1,2})" + SP + r"[.월]" + SP + r"(\d{1,2})")
+# 26. 10. 20. (따옴표 없는 두 자리 연도, 10-27 철원 군부대 공고) — 공고 연도 ±1년일 때만 연도로 봄
+BARE = re.compile(r"(?<![\d.])(\d{2})" + SP + r"\." + SP + r"(\d{1,2})" + SP + r"\." + SP + r"(\d{1,2})(?!\d)")
 SHORT = re.compile(r"(?<![\d.])(\d{1,2})" + SP + r"[.월]" + SP + r"(\d{1,2})(?!\d)")
 # 시각("~ 18:00")은 날짜가 아님 → 뒤에 콜론이 오면 제외
 DAY_ONLY = re.compile(r"[~∼～]" + SP + r"(\d{1,2})" + SP + r"[.일]?(?!" + SP + r"[\d.월:])")
@@ -33,6 +35,10 @@ def dates_in(text, base_year):
     for m in FULL.finditer(text):
         y = int(m.group(1)) if m.group(1) else 2000 + int(m.group(2))
         spans.append((m.start(), m.end(), y, int(m.group(3)), int(m.group(4))))
+    for m in BARE.finditer(text):
+        y = 2000 + int(m.group(1))
+        if abs(y - base_year) <= 1 and not any(s <= m.start() < e for s, e, *_ in spans):
+            spans.append((m.start(), m.end(), y, int(m.group(2)), int(m.group(3))))
     for m in SHORT.finditer(text):
         if any(s <= m.start() < e for s, e, *_ in spans):
             continue
@@ -60,15 +66,38 @@ def dates_in(text, base_year):
     return out
 
 
-def period_of(lines, i, year):
-    """접수 줄 안에서 두 날짜를 먼저 찾고, 모자랄 때만 다음 줄을 봄. 종료일이 시작일보다 앞이면 버림"""
-    ds = dates_in(lines[i], year)
-    used = [lines[i]]
-    if len(ds) < 2 and i + 1 < len(lines) and re.match(r'^\s*[~∼～]|^\s*\d', lines[i + 1]):
-        ds = dates_in(lines[i] + ' ' + lines[i + 1], year)
-        used.append(lines[i + 1])
+TILDE = r'[~∼～]'
+# 날짜가 하나뿐일 때: 마감일만 적힘('10. 28.(수) 18:00까지', '공고일 ~ 10. 23.') → 시작일 없음(게시일로)
+DEADLINE = re.compile(r'^[^~∼～]*?(까지|限|\d{1,2}\s*:\s*\d{2}\s*한)')
+# 시작일만 적힘('10. 8.(목) ~ 채용시까지') → 마감일 없음(원문 확인)
+OPEN_END = re.compile(TILDE + r'\s*(채용|충원|선발|모집\s*(완료|시)|예산|소진|$)')
+# 다음 줄이 날짜나 '~'로 시작하면 이어 봄 ('5. 접수방법' 같은 번호 줄은 아님)
+STARTS_DATE = re.compile(r"^\s*(?:" + TILDE + r"|(?:20\d{2}|[’‘'`＇]\d{2})" + SP + r"[.년]|\d{1,2}" + SP + r"[.월]" + SP + r"\d)")
+
+
+def period_of(lines, i, year, at=0):
+    """접수 낱말(at 글자 위치) 뒤에서 두 날짜를 먼저 찾고, 모자라면 다음 줄을 세 줄까지 이어 봄
+    (표 칸이 '2026. 10. 23.(금)' / '~' / '10. 27.(화)'처럼 줄마다 나뉨). 종료일이 시작일보다 앞이면 버림"""
+    line = lines[i][at:]
+    ds = dates_in(line, year)
+    used = [line]  # 근거도 낱말부터 (검수가 근거 줄의 날짜로 다시 대조함)
+    j = i + 1
+    while len(ds) < 2 and j < len(lines) and j <= i + 3 and (STARTS_DATE.match(lines[j]) or re.search(TILDE + r'\s*$', line)):
+        line = line + ' ' + lines[j]
+        ds = dates_in(line, year)
+        used.append(lines[j])
+        j += 1
+    if len(used) > 1 and not re.search(TILDE, line):
+        ds = ds[:1]  # 줄을 이었는데 '~'가 없으면 둘째 날짜는 다른 칸(면접일 등)일 수 있음
     if not ds:
         return None
+    if len(ds) == 1:
+        m = next(FULL.finditer(line), None) or next(BARE.finditer(line), None) or next(SHORT.finditer(line), None)
+        before, rest = (line[:m.start()], line[m.end():]) if m else ('', '')
+        if OPEN_END.search(rest):
+            return ds[0], None, ' / '.join(used)
+        if re.search(TILDE, before) or DEADLINE.search(rest):
+            return None, ds[0], ' / '.join(used)
     start, end = ds[0], ds[1] if len(ds) > 1 else ds[0]
     if end < start:
         return None
@@ -97,15 +126,29 @@ def extract(n):
     year = int((n.get('posted_at') or '2026')[:4])
     r, ev = {}, {}
 
-    # 접수기간: '공고기간'은 빼고 접수·모집 기간 우선
-    for pat in [r'접\s*수\s*기\s*간', r'원서\s*접수', r'서류\s*접수\s*기간', r'모\s*집\s*기\s*간', r'접수\s*일시', r'신청\s*기간']:
+    # 접수기간: '공고기간'은 빼고 접수·모집 기간 우선. '공고(접수)기간'·'접수(취소)기간'·'원 서 접 수'도 봄 (10-27)
+    for pat in [r'접\s*수\s*\)?\s*(?:\([^)]{1,6}\)\s*)?기\s*간', r'원\s*서\s*접\s*수', r'서\s*류\s*접\s*수',
+                r'모\s*집\s*기\s*간', r'접\s*수\s*일\s*시', r'신\s*청\s*기\s*간']:
+        rx = re.compile(pat)
         # '채용서류는 2027. 2. 1.까지 채용서류 반환청구서를 응시원서 접수처에 제출' 같은 서류 반환 안내는 접수기간이 아님 (10-24 영도구청)
-        line, i = find_line(lines, pat, skip=r'반환\s*청구')
-        if line:
-            got = period_of(lines, i, year)
+        hits = [(i, m.start()) for i, l in enumerate(lines) if (m := rx.search(l)) and not re.search(r'반환\s*청구', l)]
+        got = None
+        # 낱말 뒤의 날짜만 봄('1. 1차 서류접수 2026. 10. 12.'의 '1. 1'은 날짜 아님). 처음 걸린 줄은 날짜가 낱말 앞에만 있으면
+        # 줄 전체를 봄('나. 2026. 10. 22. ~ 10. 23. : 응시원서 접수'). 날짜가 없으면('4. 접수기간 및 방법' 같은 머리 줄) 다음에 걸린 줄들을 봄
+        for k, (i, at) in enumerate(hits):
+            front_only = k == 0 and not dates_in(lines[i][at:], year) and dates_in(lines[i], year)
+            got = period_of(lines, i, year, 0 if front_only else at)
             if got:
-                r['apply_start'], r['apply_end'], ev['period'] = got
                 break
+        if got:
+            r['apply_start'], r['apply_end'], ev['period'] = got
+            if not got[1]:  # 시작일만 적힌 공고
+                m = OPEN_END.search(got[2])
+                if m and re.search(r'예산|소진', m.group(1)):
+                    r['apply_note'] = '예산 소진 시까지'
+                elif m and m.group(1):
+                    r['apply_note'] = '채용 시까지'
+            break
 
     # 근무기간
     line, i = find_line(lines, r'(근무|계약|사업)\s*기간', span=2)
