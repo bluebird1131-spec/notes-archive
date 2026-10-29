@@ -263,6 +263,7 @@ def strip_ellipsis(title: str) -> tuple[str, bool]:
 
 
 def make_record(org, board, *, title, notice_no, posted_at, dept, detail_url, key):
+    title = web_board.clean_title(title)  # '제목 :'·'new'·'핫이슈' 같은 게시판 표시는 모든 게시판에서 뗌
     matched = match_keywords(title)
     return {
         "source_org": org["source_org"],
@@ -557,7 +558,7 @@ def parse_ulsan_detail(html, rec, _host):
 # ---------------------------------------------------------------------------
 # 첨부 본문 추출 (--attach, --attach-only)
 # ---------------------------------------------------------------------------
-ATTACH_LIMIT = 6000          # attachment_text 최대 글자 수
+ATTACH_LIMIT = 12000         # attachment_text 최대 글자 수 (10-30: 6000 → 12000, 공고문 뒤쪽 일정표가 잘리던 공고 356건)
 ATTACH_MAX_FILES = 2         # 공고당 내려받는 첨부 수
 ATTACH_MAX_BYTES = 30 * 1024 * 1024
 ATTACH_XML_MAX = 50 * 1024 * 1024   # hwpx 안 section XML 압축 해제 상한 (zip bomb 방지)
@@ -756,6 +757,13 @@ def plan_attachments(atts: list[dict]) -> tuple[list[dict], list[dict]]:
 ATTACH_ORDER = {"hwpx": 0, "hwtx": 0, "hwp": 1, "hwt": 1, "pdf": 2}
 
 
+def was_cut(prev: dict) -> bool:
+    """지난번 글자 한도에 잘린 첨부 글인데 지금 한도가 더 넉넉한지 (한도를 늘린 뒤 한 번만 다시 받음)"""
+    text = prev.get("attachment_text") or ""
+    got = sum(x.get("chars", 0) for x in prev.get("attachment_files", []) if x.get("status") == "ok")
+    return got > len(text) and len(text) < ATTACH_LIMIT
+
+
 def has_new_attachments(prev: dict, n: dict) -> bool:
     """지난번엔 못 읽는 형식이라 건너뛴 첨부를 이제 읽을 수 있는지 (10-26 hwp 지원, 제주시 첨부 이름)"""
     tried = {x["name"] for x in prev.get("attachment_files", []) if not x.get("note", "").startswith("지원하지 않는 형식")}
@@ -811,7 +819,7 @@ def run_attachments(notices: list[dict], verify: bool, *, reuse: dict | None = N
         if prev and prev.get("attachment_text") and \
                 [a["url"] for a in prev.get("attachments", [])] == [a["url"] for a in n["attachments"]] and \
                 not any(x.get("status") == "error" for x in prev.get("attachment_files", [])) and \
-                not has_new_attachments(prev, n):
+                not has_new_attachments(prev, n) and not was_cut(prev):
             n["attachment_text"] = prev["attachment_text"]
             n["attachment_files"] = prev.get("attachment_files", [])
             st["reused"] += 1

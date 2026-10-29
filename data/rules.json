@@ -353,6 +353,9 @@
     "title": "2026년 기장군립도서관 공무직근로자(사서업무) 공개채용 공고"
   },
   {
+    "apply_start": "2026-10-27",
+    "apply_end": "2026-11-04",
+    "period_basis": "공고기간",
     "daily_pay": 95384,
     "headcount": 2,
     "apply_place": "정관보건지소 1층 민원실 건강행정팀",
@@ -361,6 +364,7 @@
     "qualification": "근무장소",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 27.(화) ~ 2026. 11. 4.(수) 16시까지",
       "pay": ".(일)(예산범위 내)  임 금: 95,384원/일 - 2026년 기",
       "docs": "6. 제출서류",
       "qualification": "응시자격"
@@ -428,6 +432,9 @@
     "title": "2026년 환경공무관(공무직근로자) 공개채용 계획 공고"
   },
   {
+    "apply_start": "2026-10-21",
+    "apply_end": "2026-10-28",
+    "period_basis": "공고기간",
     "daily_pay": 95384,
     "headcount": 1,
     "apply_place": "",
@@ -436,6 +443,7 @@
     "qualification": "근무장소 / 물리치료실",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 21.(수) ~ 2026. 10. 28.(수) 17시까지",
       "pay": " 30.(예산범위 내)  임 금: 95,384원/일(2026년 기장군",
       "docs": "6. 제출서류",
       "qualification": "응시자격"
@@ -777,9 +785,14 @@
     "title": "충북여성새로일하기지원본부 직원 채용 공고(보은여성취업지원센터 직업교육 매니저)"
   },
   {
+    "apply_start": "2026-10-16",
+    "apply_end": "2026-10-30",
+    "period_basis": "공고기간",
     "headcount": 1,
     "target_groups": [],
-    "evidence": {},
+    "evidence": {
+      "period": "공고기간: 2026. 10. 16.(금) ~ 20260. 10. 30.(금)"
+    },
     "source_url": "https://www.boeun.go.kr/www/selectBbsNttView.do?key=142&bbsNo=68&nttNo=227422",
     "title": "보은군청소년상담복지센터 직원(안전망 팀장) 채용 공고"
   },
@@ -1250,12 +1263,16 @@
     "title": "2026년 괴산군보건소 기간제근로자(진료실) 채용 공고"
   },
   {
+    "apply_start": "2026-10-21",
+    "apply_end": "2026-10-28",
+    "period_basis": "공고기간",
     "daily_pay": 82560,
     "apply_place": "및 접수방법",
     "required_docs": "력증명서",
     "qualification": "신청기간",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간 : 2026. 10. 21.(수) ~ 2026. 10. 28.(수)",
       "pay": " 근무조건 가. 임금 및 보험 1) 1일 임금 : 82,560원 / 1일 2) 보",
       "docs": "5. 응시자 제출서류",
       "qualification": "2. 신청자격 및 접수방법"
@@ -2858,6 +2875,9 @@
     "title": "2026년 공공산림가꾸기（산림자원조사단） 기간제근로자 채용 공고（2차）"
   },
   {
+    "apply_start": "2026-10-01",
+    "apply_end": "2026-10-14",
+    "period_basis": "공고기간",
     "work_start": "2026-11-01",
     "work_end": "2027-11-30",
     "headcount": 1,
@@ -2867,6 +2887,7 @@
     "qualification": "공고일 현재",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간 : 2026. 10. 01. ∼ 2026. 10. 14.(14일간)",
       "work": "- 계약기간: 2026. 11. 1.~ 27. 11.30.(13개월)",
       "docs": "6. 제출서류 (* 모든 증빙자료는 공고일 이후 발급한 것에 한하여 유효함)",
       "qualification": "3. 응시자격"
@@ -4165,6 +4186,9 @@
     "title": "환경보호과 환경자원순환센터 기간제근로자 채용 재공고"
   },
   {
+    "apply_start": "2026-10-28",
+    "apply_end": "2026-11-06",
+    "period_basis": "공고기간",
     "work_start": "2026-11-16",
     "work_end": "2026-12-31",
     "daily_pay": 82790,
@@ -4173,6 +4197,7 @@
     "qualification": "응시연령 : 공고일 현재 만 18세 이상인 자 / 거 주 지 : 공고일 기준 경산시에 주민등록이 되어있는 자 / 경산시 공무직 관리규정 제6조제8호에 해당하지 아니한 자",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간 : 2026. 10. 28.(수) ~ 11. 6.(금) / 10일간",
       "work": "- 근무기간 : 2026. 11. 16. ~ 12. 31.",
       "pay": " 1일 유급휴가 부여 ❍ 급 여 - 일급 82,790원 (주휴·연차수당 ",
       "docs": "5. 제출서류",
@@ -4386,11 +4411,15 @@
     "title": "별파랑공원 기간제근로자 (환경정화) 채용 재공고"
   },
   {
+    "apply_start": "2026-10-20",
+    "apply_end": "2026-10-27",
+    "period_basis": "공고기간",
     "headcount": 1,
     "required_docs": "1. 채용신청서(최근 촬영사진, 사진파일 가능)",
     "qualification": "· 공고일 현재 고령군에 주민등록상 주소를 두고 있는 자",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간 / 2026. 10. 20.(화) ~ 2026. 10. 27.(화)",
       "docs": "※ 제출서류 기재사항이 허위로 판명될 경우 합격취소 처리",
       "qualification": "응시자격"
     },
@@ -4464,11 +4493,15 @@
     "title": "2026년 성주군 기간제근로자(농정과 농지전수조사조사원) 채용 공고"
   },
   {
+    "apply_start": "2026-10-16",
+    "apply_end": "2026-10-23",
+    "period_basis": "공고기간",
     "work_start": "2026-11-01",
     "work_end": "2026-12-31",
     "daily_pay": 82560,
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 16.(금)~10. 23.(금)",
       "work": "2. 근무기간: 2026. 11. 1.~12. 31. [약 60일 정도, 예산범위 내 사역실시]",
       "pay": "변동 될 수 있음.) 4. 보 수: 82,560원/일, 4대보험 가입 "
     },
@@ -4672,6 +4705,9 @@
     "title": "2026년도 불영계곡 주민감시원(시범운영) 채용 공고 2차"
   },
   {
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-11-04",
+    "period_basis": "공고기간",
     "headcount": 1,
     "apply_place": "울진군 보건소 방문보건팀(054-789-5042)",
     "apply_type": "구청 방문/우편",
@@ -4679,6 +4715,7 @@
     "qualification": "기준: 1급 또는 2급 사회복지사",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 26.(월) ~ 2026. 11. 4.(수)",
       "docs": "라. 제출서류",
       "qualification": "3. 자격기준: 1급 또는 2급 사회복지사"
     },
@@ -6501,10 +6538,15 @@
     "title": "2027년 지역보건의료사업 업무대행(의사) 모집 공고"
   },
   {
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-10-30",
+    "period_basis": "공고기간",
     "headcount": 1,
     "apply_type": "구청 방문/우편",
     "target_groups": [],
-    "evidence": {},
+    "evidence": {
+      "period": "공고기간 : 2026. 10. 26.(월) ~ 10. 30.(금)"
+    },
     "source_url": "https://eminwon.yp21.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=54391&subCheck=Y&not_ancmt_se_code=01%2C02%2C03%2C04%2C06&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "2026년 양평 매력캠퍼스(평생학습센터) 수영장 안전요원 기간제근로자 채용 시험 공고"
   },
@@ -6866,6 +6908,9 @@
     "title": "2026년 부곡면 녹색생태도시조성 환경정비 기간제 근로자 모집 공고"
   },
   {
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-11-02",
+    "period_basis": "공고기간",
     "work_start": "2026-11-16",
     "work_end": "2026-12-31",
     "headcount": 4,
@@ -6877,6 +6922,7 @@
       "무주택/취약계층"
     ],
     "evidence": {
+      "period": "공고기간: 2026. 10. 26. ~ 2026. 11. 2.(공고일로부터 7일간)",
       "work": "가. 근무기간: 2026. 11. 16.(월) ~ 2026. 12. 31.(목)",
       "docs": "제출 서류",
       "qualification": "응시자격 요건",
@@ -7492,12 +7538,16 @@
     "title": "2026학년도 송도꿈유치원 겨울방학 중 단기기간제 모집(12/24~2/19근무)"
   },
   {
+    "apply_start": "2026-10-23",
+    "apply_end": "2026-10-27",
+    "period_basis": "공고기간",
     "work_start": "2026-11-01",
     "work_end": "2027-01-07",
     "headcount": 1,
     "required_docs": "응시원서 【별첨1】, 주민등록초본 또는 신분증 사본, 경력증명서 (해당자에 한함), 자격증 또는 면허증 사본 (해당자에 한함), 근로자 채용 통합 확인서 【별첨2】",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026.10.23.(금) 10:00 ∼ 2026.10.27.(화) 16:00",
       "work": "가. 근로계약기간: 2026. 11. 01.(채용시) ~ 2027. 01. 07.(미급식기간은 제외됨)",
       "docs": "5. 제출서류"
     },
@@ -8629,12 +8679,16 @@
     "title": "2026년 제8회 고흥군 공무직근로자 채용 공고"
   },
   {
+    "apply_start": "2026-10-22",
+    "apply_end": "2026-11-03",
+    "period_basis": "공고기간",
     "daily_pay": 82560,
     "headcount": 1,
     "required_docs": "❶ 응시원서 및 이력서, ❷ 주민등록초본 (공고일 이후 발급, 남성의 경우 병역사항 포함), ➌ 경력증명서, ➍ 면허증 및 자격증 사본, ➎ 개인정보 수집․이용 동의서, ➏ 자격요건 검증을 위한 동의서, ➐ 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서, ➑ 본인 범죄사실 확인 증명서",
     "qualification": "자격요건: 다음 각 순위의 자격요건 중 어느 하나에 해당하는 사람 / 1순위) 치과위생사 면허증 보유 및 치과병의원 1년 이상 근무경력자",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 22.(목) ∼ 11. 3.(화)",
       "pay": "보 수 • 기간제근로자 등: 기본급 82,560원/일(8시간 기준) 및",
       "docs": "5. 응시원서 접수 및 제출서류",
       "qualification": "3. 응시자격 및 채용기준"
@@ -8657,6 +8711,9 @@
     "title": "2026년 화순군보건소 기간제 근로자(시니어 의사) 채용 공고(7차)"
   },
   {
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-10-28",
+    "period_basis": "공고기간",
     "work_start": "2026-11-04",
     "work_end": "2027-02-28",
     "headcount": 1,
@@ -8665,6 +8722,7 @@
     "qualification": "응시연령: 공고일 현재 만19세 이상인 자",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: '26. 10. 26. ~ 10. 28.(3일간)",
       "work": "3. 근무기간: '26. 11. 4. ~ '27. 2. 28. / 가축전염병 발생상황에 따라 기간 변동 될 수 있음",
       "qualification": "응시자격 및 제한요건"
     },
@@ -9317,9 +9375,14 @@
     "title": "(긴급)2026년 중구발달장애인평생교육센터 직원 모집 공고"
   },
   {
+    "apply_start": "2026-10-28",
+    "apply_end": "2026-11-04",
+    "period_basis": "공고기간",
     "headcount": 3,
     "target_groups": [],
-    "evidence": {},
+    "evidence": {
+      "period": "공고기간: 2026. 10. 28.(수) ~ 2026. 11. 4.(수)"
+    },
     "source_url": "https://eminwon.sd.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=41979&subCheck=Y&not_ancmt_se_code=04%2C05&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "2026년 성동구 공립 작은도서관 기간제근로자 채용 공고"
   },
@@ -9582,14 +9645,24 @@
     "title": "대사증후군관리사업 기간제근로자(간호사) 채용 공고"
   },
   {
+    "apply_start": "2026-10-28",
+    "apply_end": "2026-11-05",
+    "period_basis": "공고기간",
     "target_groups": [],
-    "evidence": {},
+    "evidence": {
+      "period": "공고기간 : 2026. 10. 28.(수) ~ 2026. 11. 5.(목)"
+    },
     "source_url": "https://eminwon.nowon.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=23886&subCheck=Y&not_ancmt_se_code=01%2C02%2C03%2C04%2C06&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "카페 기차가 있는 풍경 기간제(주25시간, 40시간) 근로자 채용 공고"
   },
   {
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-11-02",
+    "period_basis": "공고기간",
     "target_groups": [],
-    "evidence": {},
+    "evidence": {
+      "period": "공고기간 : 2026. 10. 26.(월) ~ 11. 2.(월) (7일간)"
+    },
     "source_url": "https://eminwon.nowon.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=23885&subCheck=Y&not_ancmt_se_code=01%2C02%2C03%2C04%2C06&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",
     "title": "「2026년 어르신일자리 사업」 단기 기간제근로자 채용 공고"
   },
@@ -10997,6 +11070,9 @@
     "title": "장성동 기간제근로자(대체인력) 채용 공고"
   },
   {
+    "apply_start": "2026-10-19",
+    "apply_end": "2026-10-23",
+    "period_basis": "공고기간",
     "daily_pay": 82560,
     "headcount": 5,
     "apply_type": "구청 방문/우편",
@@ -11004,6 +11080,7 @@
     "qualification": ") 만 18세 이상 근로능력자로 공고일 현재 태백시에 / 주민등록이 되어 있는 자",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간: 2026. 10. 19. ~ 10. 23.",
       "pay": "09:00~18:00) - 보 수: 1일 82,560원(주휴수당, 간식비",
       "docs": "8. (제출서류) 신청서, 개인정보수집 이용제공 동의서, 주민등록등본",
       "qualification": "5. (응시자격) 만 18세 이상 근로능력자로 공고일 현재 태백시에"
@@ -13038,9 +13115,13 @@
     "title": "2026년 가을철 산불재난대응단 모집 공고"
   },
   {
+    "apply_start": "2026-10-27",
+    "apply_end": "2026-11-10",
+    "period_basis": "공고기간",
     "required_docs": "산구 자치회관 강사 응시원서, (사본첨부), 자격증 등 증빙서류 사본",
     "target_groups": [],
     "evidence": {
+      "period": "공고기간 : 2026. 10. 27. ~ 2026. 11. 10.",
       "docs": "[붙임2] 제출 서류(서식).hwpx"
     },
     "source_url": "https://eminwon.yongsan.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_mgt_no=24234&subCheck=Y&not_ancmt_se_code=01%2C02%2C03%2C04%2C06&method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&list_gubun=A&homepage_pbs_yn=Y",

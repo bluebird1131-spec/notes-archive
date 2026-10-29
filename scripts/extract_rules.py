@@ -104,6 +104,10 @@ def period_of(lines, i, year, at=0):
     return start, end, ' / '.join(used)
 
 
+JOB_TITLE = re.compile(r'채용|근로자|기간제|공무직|강사\s*(공개\s*)?모집|요원|도우미|감시원|대응단|인력|직원|배식원|조사원|보조원')
+NOT_JOB_TITLE = re.compile(r'입찰|견적|예고|공시\s*송달|통보|교육\s*모집|역량\s*강화')
+
+
 def lines_of(text):
     return [l.strip() for l in text.splitlines() if l.strip()]
 
@@ -149,6 +153,19 @@ def extract(n):
                 elif m and m.group(1):
                     r['apply_note'] = '채용 시까지'
             break
+
+    # 접수기간이 없고 '공고기간'만 적힌 공고(본문에 '공고기간 : 2026. 10. 27. ~ 10. 31.'뿐)는 공고기간을 접수기간으로 씀.
+    # 시작·끝이 다 있을 때만, 화면에는 '공고기간 기준'으로 표시 (10-30, 정보 부족으로 빠지던 성동·노원·광진·양평·보은 등)
+    # 입찰·행정예고·공시송달처럼 공고기간만 있는 일자리 아닌 공고가 같이 들어오지 않게 제목이 일자리 공고일 때만
+    if 'apply_start' not in r and 'apply_end' not in r and JOB_TITLE.search(n.get('title') or '') \
+            and not NOT_JOB_TITLE.search(n.get('title') or ''):
+        for i, l in enumerate(lines):
+            m = re.search(r'공\s*고\s*기\s*간', l)
+            got = m and period_of(lines, i, year, m.start())
+            if got and got[0] and got[1]:
+                r['apply_start'], r['apply_end'], ev['period'] = got
+                r['period_basis'] = '공고기간'
+                break
 
     # 근무기간
     line, i = find_line(lines, r'(근무|계약|사업)\s*기간', span=2)

@@ -25,8 +25,11 @@ from __future__ import annotations
 import json
 import re
 import urllib.parse as up
+from datetime import datetime, timedelta, timezone
 
 from bs4 import BeautifulSoup
+
+KST = timezone(timedelta(hours=9))
 
 DATE_RE = re.compile(r"(20\d{2})\s*[.\-/년]\s*(\d{1,2})\s*[.\-/월]\s*(\d{1,2})")
 FILE_EXT = re.compile(r"\.(hwpx|hwp|pdf|docx?|xlsx?|zip)\b", re.I)
@@ -38,7 +41,23 @@ URI_SAFE = "~@#$&()*!+=:;,.?/'"  # 새올 FileDown.jsp 는 encodeURI 형태만 �
 
 def _date(text: str) -> str:
     m = DATE_RE.search(text or "")
-    return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}" if m else ""
+    if not m:
+        return ""
+    d = f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+    # 게시일이 오늘보다 뒤면 게시일이 아님 (제목·본문 속 마감일, 10-28 철원 군단 공고 '~ 2026. 10. 31. 까지')
+    return "" if d > datetime.now(KST).strftime("%Y-%m-%d") else d
+
+
+# 제목 앞뒤에 붙는 게시판 표시 ('제목 :', '새글', 'new', '핫이슈', '첨부파일') (10-28 점검: 13건)
+TITLE_NOISE_HEAD = re.compile(r"^\s*제\s*목\s*[:：]\s*")
+TITLE_NOISE_TAIL = re.compile(r"\s*(새\s*글|(?<![A-Za-z])new|핫\s*이슈|첨부\s*파일|파일\s*있음)\s*$", re.I)
+
+
+def clean_title(t: str) -> str:
+    t = TITLE_NOISE_HEAD.sub("", t or "")
+    while TITLE_NOISE_TAIL.search(t):
+        t = TITLE_NOISE_TAIL.sub("", t)
+    return t.strip()
 
 
 def _title_link(row):
@@ -46,8 +65,7 @@ def _title_link(row):
     best = None
     for a in row.find_all("a"):
         t = re.sub(r"\s+", " ", a.get("title") or "") if len(a.get_text(strip=True)) < 4 else ""
-        t = t or re.sub(r"\s+", " ", a.get_text(" ")).strip()
-        t = re.sub(r"\s*(새\s*글|새글|new|첨부\s*파일|파일\s*있음)\s*$", "", t, flags=re.I).strip()
+        t = clean_title(t or re.sub(r"\s+", " ", a.get_text(" ")).strip())
         if len(t) >= 6 and not DATE_RE.fullmatch(t) and (best is None or len(t) > len(best[1])):
             best = (a, t)
     return best
@@ -76,7 +94,7 @@ def crawl_web(f, org, board, pages, page_size, *, make_record, strip_ellipsis):
     if cfg.get("json"):
         j = cfg["json"]
         for it in _dig(json.loads(text), j["path"]):
-            add(re.sub(r"\s+", " ", str(it.get(j["title"], ""))).strip(),
+            add(clean_title(re.sub(r"\s+", " ", str(it.get(j["title"], "")))),
                 cfg["detail_url"].format(id=it.get(j["id"], "")), _date(str(it.get(j.get("date", ""), ""))))
         return out
 
@@ -93,7 +111,7 @@ def crawl_web(f, org, board, pages, page_size, *, make_record, strip_ellipsis):
     for row in rows:
         if cfg.get("title"):
             a = row.select_one(cfg["title"])
-            hit = (a, re.sub(r"\s+", " ", a.get("title") or a.get_text(" ")).strip()) if a else None
+            hit = (a, clean_title(re.sub(r"\s+", " ", a.get("title") or a.get_text(" ")))) if a else None
         else:
             hit = _title_link(row)
         if not hit or not hit[1] or (cfg.get("title_skip") and re.search(cfg["title_skip"], hit[1])):
@@ -108,7 +126,9 @@ def crawl_web(f, org, board, pages, page_size, *, make_record, strip_ellipsis):
         else:
             detail = ""
         cell = row.select_one(cfg["date"]) if cfg.get("date") else None
-        posted = _date(cell.get_text(" ")) if cell else ("" if cfg.get("date") else _date(row.get_text(" ")))
+        # 등록일 칸을 따로 정하지 않은 게시판은 제목 링크 밖의 글자에서 날짜를 찾음 (제목 속 마감일을 게시일로 읽지 않게)
+        rest = " ".join(t for t in row.find_all(string=True) if not any(p is a for p in t.parents))
+        posted = _date(cell.get_text(" ")) if cell else ("" if cfg.get("date") else _date(rest))
         add(title_raw, detail, posted)
     return out
 
