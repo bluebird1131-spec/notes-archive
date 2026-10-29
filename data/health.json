@@ -1,16 +1,7 @@
 {
- "at": "2026-10-29T02:33:52+09:00",
+ "at": "2026-10-30T02:56:09+09:00",
  "orgs": 231,
- "failed": [
-  {
-   "org": "충청북도 보은군청",
-   "error": "ConnectionError: HTTPSConnectionPool(host='www.boeun.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNtt"
-  },
-  {
-   "org": "밀양시청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mo"
-  }
- ],
+ "failed": [],
  "stale": [],
  "empty": [
   {
@@ -32,6 +23,10 @@
   {
    "org": "전북특별자치도 진안군청",
    "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "전라남도 완도군청",
+   "board": "새올 고시공고"
   }
  ]
 }
