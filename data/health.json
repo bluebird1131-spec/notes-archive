@@ -1,7 +1,12 @@
 {
- "at": "2026-10-30T02:56:09+09:00",
+ "at": "2026-10-30T21:55:33+09:00",
  "orgs": 231,
- "failed": [],
+ "failed": [
+  {
+   "org": "서울특별시 강서구청",
+   "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.gangseo.seoul.kr', port=443): Max retries exceeded with url: /emwp/go"
+  }
+ ],
  "stale": [],
  "empty": [
   {
