@@ -1,22 +1,18 @@
 {
- "at": "2026-11-03T05:56:35+09:00",
+ "at": "2026-11-04T03:37:46+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "경상북도 경주시청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gyeongju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/m"
-  },
-  {
-   "org": "경기도 남양주시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Read timed out. (read timeout=60)"
-  },
-  {
-   "org": "창원시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.changwon.go.kr', port=443): Read timed out. (read timeout=60)"
-  },
-  {
    "org": "진주시청",
    "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/moga"
+  },
+  {
+   "org": "전북특별자치도 남원시청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
+  },
+  {
+   "org": "전북특별자치도 부안군청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.buan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogah"
   }
  ],
  "stale": [],

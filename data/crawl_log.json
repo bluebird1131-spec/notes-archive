@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-03T05:10:09+09:00",
-  "finished_at": "2026-11-03T05:56:13+09:00",
+  "started_at": "2026-11-04T02:40:12+09:00",
+  "finished_at": "2026-11-04T03:37:23+09:00",
   "options": {
     "groups": [
       "base",
@@ -21,8 +21,8 @@
       "seoul"
     ]
   },
-  "total_kept": 2056,
-  "total_excluded": 1026,
+  "total_kept": 2139,
+  "total_excluded": 1123,
   "orgs": [
     {
       "org": "중구",
@@ -39,19 +39,19 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 3,
-          "excluded": 3,
+          "matched": 1,
+          "excluded": 1,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 3
+          "newest": "2026-11-04",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 7,
+      "requests": 16,
+      "detail_ok": 8,
       "detail_fail": 1,
-      "kept": 13,
-      "excluded": 3
+      "kept": 11,
+      "excluded": 1
     },
     {
       "org": "남구",
@@ -69,19 +69,19 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 1,
-          "excluded": 0,
+          "matched": 3,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 3
+          "newest": "2026-11-04",
+          "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 15,
-      "detail_ok": 9,
+      "requests": 13,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 6,
-      "excluded": 1
+      "kept": 8,
+      "excluded": 3
     },
     {
       "org": "동구",
@@ -98,18 +98,20 @@
         },
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.donggu.ulsan.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "listed": 30,
+          "matched": 4,
+          "excluded": 4,
+          "error": null,
+          "newest": "2026-11-03",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 8,
-      "detail_ok": 2,
-      "detail_fail": 0,
-      "kept": 9,
-      "excluded": 1
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 5,
+      "detail_fail": 1,
+      "kept": 13,
+      "excluded": 5
     },
     {
       "org": "북구",
@@ -121,24 +123,24 @@
           "matched": 8,
           "excluded": 1,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         },
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 3,
-          "excluded": 3,
+          "matched": 4,
+          "excluded": 4,
           "error": null,
           "newest": "2026-11-03",
-          "recheck": 2
+          "recheck": 1
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 7,
+      "requests": 10,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 4
+      "kept": 12,
+      "excluded": 5
     },
     {
       "org": "울주군",
@@ -148,9 +150,9 @@
           "board": "울주군 채용공고",
           "listed": 10,
           "matched": 9,
-          "excluded": 1,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         },
         {
           "board": "울주군 일반공고",
@@ -158,15 +160,15 @@
           "matched": 1,
           "excluded": 1,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 8,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
       "kept": 10,
-      "excluded": 2
+      "excluded": 3
     },
     {
       "org": "울산시",
@@ -175,18 +177,18 @@
         {
           "board": "울산시 고시공고",
           "listed": 10,
-          "matched": 0,
-          "excluded": 0,
+          "matched": 2,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
       "requests": 1,
       "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 2,
+      "excluded": 2
     },
     {
       "org": "해운대구",
@@ -195,18 +197,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 9,
-          "excluded": 5,
+          "matched": 11,
+          "excluded": 7,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 6,
+      "requests": 7,
       "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 5
+      "kept": 11,
+      "excluded": 7
     },
     {
       "org": "광주북구",
@@ -215,10 +217,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 15,
+          "matched": 14,
           "excluded": 12,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -226,7 +228,7 @@
       "requests": 11,
       "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 16,
+      "kept": 15,
       "excluded": 12
     },
     {
@@ -236,8 +238,8 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 21,
-          "excluded": 10,
+          "matched": 19,
+          "excluded": 9,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
@@ -247,8 +249,8 @@
       "requests": 15,
       "detail_ok": 12,
       "detail_fail": 0,
-      "kept": 21,
-      "excluded": 10
+      "kept": 19,
+      "excluded": 9
     },
     {
       "org": "세종시",
@@ -257,19 +259,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 15,
-          "excluded": 10,
+          "matched": 21,
+          "excluded": 14,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 11,
+      "requests": 17,
+      "detail_ok": 13,
       "detail_fail": 0,
-      "kept": 16,
-      "excluded": 10
+      "kept": 22,
+      "excluded": 14
     },
     {
       "org": "수원시",
@@ -277,19 +279,18 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 90,
-          "matched": 16,
-          "excluded": 10,
-          "error": null,
-          "newest": "2026-11-03"
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NewConnectionError(\"HTTPSConnection(host='eminwon.suwon.go.kr', port=443): Failed to establish a new connection: [Errno 111] Connect"
         }
       ],
-      "ok": true,
-      "requests": 9,
-      "detail_ok": 6,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 16,
-      "excluded": 10
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "춘천시",
@@ -298,19 +299,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 14,
-          "excluded": 11,
+          "matched": 11,
+          "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 15,
+      "requests": 13,
       "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 15,
-      "excluded": 11
+      "kept": 12,
+      "excluded": 8
     },
     {
       "org": "부산광역시 중구청",
@@ -318,18 +319,20 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsjunggu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsjunggu.go.kr', port=443) at 0x7c316377e180>, 'Connection to eminwon.bsjunggu."
+          "listed": 30,
+          "matched": 1,
+          "excluded": 1,
+          "error": null,
+          "newest": "2026-11-03",
+          "recheck": 4
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 2,
+      "excluded": 1
     },
     {
       "org": "부산광역시 서구청",
@@ -337,18 +340,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsseogu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsseogu.go.kr', port=443) at 0x7c316377e4b0>, 'Connection to eminwon.bsseogu.go."
+          "listed": 30,
+          "matched": 4,
+          "excluded": 3,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 5,
+      "detail_ok": 4,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 4,
+      "excluded": 3
     },
     {
       "org": "부산광역시 동구청",
@@ -356,18 +361,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsdonggu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsdonggu.go.kr', port=443) at 0x7c316377d040>, 'Connection to eminwon.bsdonggu."
+          "listed": 60,
+          "matched": 19,
+          "excluded": 15,
+          "error": null,
+          "newest": "2026-11-03",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 19,
+      "excluded": 15
     },
     {
       "org": "부산광역시 영도구청",
@@ -375,18 +382,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeongdo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeongdo.go.kr', port=443) at 0x7c316377f890>, 'Connection to eminwon.yeongdo.go."
+          "listed": 60,
+          "matched": 17,
+          "excluded": 5,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 17,
+      "excluded": 5
     },
     {
       "org": "부산광역시 부산진구청",
@@ -394,18 +403,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.busanjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.busanjin.go.kr', port=443) at 0x7c31637c0560>, 'Connection to eminwon.busanjin."
+          "listed": 90,
+          "matched": 12,
+          "excluded": 6,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 12,
+      "excluded": 6
     },
     {
       "org": "부산광역시 동래구청",
@@ -413,18 +424,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.dongnae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.dongnae.go.kr', port=443) at 0x7c316377fef0>, 'Connection to eminwon.dongnae.go."
+          "listed": 60,
+          "matched": 13,
+          "excluded": 9,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 15,
+      "excluded": 9
     },
     {
       "org": "부산광역시 남구청",
@@ -432,18 +445,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsnamgu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsnamgu.go.kr', port=443) at 0x7c316377ef00>, 'Connection to eminwon.bsnamgu.go."
+          "listed": 60,
+          "matched": 6,
+          "excluded": 5,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 6,
+      "excluded": 5
     },
     {
       "org": "부산광역시 북구청",
@@ -451,18 +466,20 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsbukgu.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsbukgu.go.kr', port=443) at 0x7c31637c0c20>, 'Connection to eminwon.bsbukgu.go."
+          "listed": 60,
+          "matched": 15,
+          "excluded": 8,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 15,
+      "excluded": 8
     },
     {
       "org": "부산광역시 사하구청",
@@ -470,18 +487,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.saha.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.saha.go.kr', port=443) at 0x7c31637c0fe0>, 'Connection to eminwon.saha.go.kr timed "
+          "listed": 60,
+          "matched": 6,
+          "excluded": 1,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 12,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 6,
+      "excluded": 1
     },
     {
       "org": "부산광역시 금정구청",
@@ -489,18 +508,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.geumjeong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.geumjeong.go.kr', port=443) at 0x7c316377e4b0>, 'Connection to eminwon.geumjeo"
+          "listed": 60,
+          "matched": 16,
+          "excluded": 8,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 16,
+      "excluded": 8
     },
     {
       "org": "부산광역시 강서구청",
@@ -508,18 +529,20 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.bsgangseo.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.bsgangseo.go.kr', port=443) at 0x7c316377f2f0>, 'Connection to eminwon.bsgangs"
+          "listed": 60,
+          "matched": 6,
+          "excluded": 6,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 6,
+      "excluded": 6
     },
     {
       "org": "부산광역시 연제구청",
@@ -527,18 +550,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeonje.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeonje.go.kr', port=443) at 0x7c31637c0530>, 'Connection to eminwon.yeonje.go.kr "
+          "listed": 60,
+          "matched": 7,
+          "excluded": 4,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "ok": true,
+      "requests": 12,
+      "detail_ok": 7,
+      "detail_fail": 1,
+      "kept": 7,
+      "excluded": 4
     },
     {
       "org": "부산광역시 수영구청",
@@ -549,7 +574,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suyeong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suyeong.go.kr', port=443) at 0x7c31637c0890>, 'Connection to eminwon.suyeong.go."
+          "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
         }
       ],
       "ok": false,
@@ -565,18 +590,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.sasang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.sasang.go.kr', port=443) at 0x7c31637c2270>, 'Connection to eminwon.sasang.go.kr "
+          "listed": 60,
+          "matched": 9,
+          "excluded": 3,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 9,
+      "excluded": 3
     },
     {
       "org": "부산광역시 기장군청",
@@ -587,7 +614,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gijang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gijang.go.kr', port=443) at 0x7c316377fec0>, 'Connection to eminwon.gijang.go.kr "
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.gijang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
       "ok": false,
@@ -604,17 +631,17 @@
         {
           "board": "누리집 게시판",
           "listed": 100,
-          "matched": 6,
+          "matched": 4,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "requests": 1,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 6,
+      "kept": 4,
       "excluded": 4
     },
     {
@@ -623,20 +650,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 90,
-          "matched": 10,
-          "excluded": 4,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.chungju.go.kr', port=443): Read timed out. (read timeout=60)"
         }
       ],
-      "ok": true,
-      "requests": 12,
-      "detail_ok": 9,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 10,
-      "excluded": 4
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "충청북도 제천시청",
@@ -645,18 +670,18 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 29,
+          "matched": 30,
           "excluded": 12,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 26,
-      "detail_ok": 22,
+      "requests": 27,
+      "detail_ok": 23,
       "detail_fail": 0,
-      "kept": 29,
+      "kept": 30,
       "excluded": 12
     },
     {
@@ -669,7 +694,7 @@
           "matched": 10,
           "excluded": 5,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
@@ -689,7 +714,7 @@
           "matched": 5,
           "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -707,19 +732,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 19,
-          "excluded": 6,
+          "matched": 14,
+          "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 21,
-      "detail_ok": 14,
-      "detail_fail": 0,
-      "kept": 19,
-      "excluded": 6
+      "requests": 20,
+      "detail_ok": 11,
+      "detail_fail": 1,
+      "kept": 14,
+      "excluded": 4
     },
     {
       "org": "충청북도 증평군청",
@@ -731,14 +756,14 @@
           "matched": 2,
           "excluded": 1,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
       "ok": true,
       "requests": 8,
-      "detail_ok": 5,
-      "detail_fail": 0,
+      "detail_ok": 4,
+      "detail_fail": 1,
       "kept": 2,
       "excluded": 1
     },
@@ -749,18 +774,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 13,
+          "matched": 12,
           "excluded": 10,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 13,
+      "kept": 12,
       "excluded": 10
     },
     {
@@ -770,19 +795,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 14,
-          "excluded": 5,
+          "matched": 15,
+          "excluded": 7,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 10,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 14,
-      "excluded": 5
+      "kept": 15,
+      "excluded": 7
     },
     {
       "org": "충청북도 음성군청",
@@ -791,18 +816,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 11,
+          "matched": 13,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 12,
+      "requests": 16,
+      "detail_ok": 14,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 13,
       "excluded": 3
     },
     {
@@ -813,10 +838,10 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 8,
-          "excluded": 1,
+          "excluded": 0,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 5
+          "newest": "2026-11-03",
+          "recheck": 4
         }
       ],
       "ok": true,
@@ -824,7 +849,7 @@
       "detail_ok": 12,
       "detail_fail": 0,
       "kept": 8,
-      "excluded": 1
+      "excluded": 0
     },
     {
       "org": "충청남도 천안시청",
@@ -834,9 +859,9 @@
           "board": "누리집 게시판",
           "listed": 20,
           "matched": 20,
-          "excluded": 4,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
@@ -844,7 +869,7 @@
       "detail_ok": 14,
       "detail_fail": 0,
       "kept": 20,
-      "excluded": 4
+      "excluded": 5
     },
     {
       "org": "충청남도 공주시청",
@@ -853,28 +878,7 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 9,
-          "excluded": 6,
-          "error": null,
-          "newest": "2026-11-02",
-          "recheck": 5
-        }
-      ],
-      "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
-      "detail_fail": 0,
-      "kept": 9,
-      "excluded": 6
-    },
-    {
-      "org": "충청남도 보령시청",
-      "source_org": "충청남도 보령시청",
-      "boards": [
-        {
-          "board": "새올 채용·일반공고",
-          "listed": 60,
-          "matched": 9,
+          "matched": 6,
           "excluded": 4,
           "error": null,
           "newest": "2026-11-03",
@@ -882,11 +886,30 @@
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 9,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 6,
       "excluded": 4
+    },
+    {
+      "org": "충청남도 보령시청",
+      "source_org": "충청남도 보령시청",
+      "boards": [
+        {
+          "board": "새올 채용·일반공고",
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.brcn.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.brcn.go.kr', port=443) at 0x7b9cd2c41eb0>, 'Connection to eminwon.brcn.go.kr timed "
+        }
+      ],
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "충청남도 아산시청",
@@ -895,10 +918,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 10,
+          "matched": 9,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -906,7 +929,7 @@
       "requests": 13,
       "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 10,
       "excluded": 4
     },
     {
@@ -916,10 +939,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 7,
-          "excluded": 4,
+          "matched": 8,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -927,8 +950,8 @@
       "requests": 9,
       "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 7,
-      "excluded": 4
+      "kept": 8,
+      "excluded": 5
     },
     {
       "org": "충청남도 논산시청",
@@ -937,19 +960,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 4,
-          "excluded": 5,
+          "matched": 5,
+          "excluded": 6,
           "error": null,
           "newest": "",
-          "recheck": 2
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "requests": 7,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 5,
-      "excluded": 5
+      "kept": 6,
+      "excluded": 6
     },
     {
       "org": "충청남도 계룡시청",
@@ -978,20 +1001,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 90,
-          "matched": 19,
-          "excluded": 11,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.dangjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)')))"
         }
       ],
-      "ok": true,
-      "requests": 16,
-      "detail_ok": 10,
-      "detail_fail": 1,
-      "kept": 19,
-      "excluded": 11
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "충청남도 금산군청",
@@ -1003,12 +1024,12 @@
           "matched": 5,
           "excluded": 2,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 5,
-      "detail_ok": 2,
+      "requests": 4,
+      "detail_ok": 1,
       "detail_fail": 0,
       "kept": 5,
       "excluded": 2
@@ -1020,10 +1041,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 7,
-          "excluded": 6,
+          "matched": 5,
+          "excluded": 4,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1031,8 +1052,8 @@
       "requests": 8,
       "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 8,
-      "excluded": 6
+      "kept": 6,
+      "excluded": 4
     },
     {
       "org": "충청남도 서천군청",
@@ -1044,12 +1065,12 @@
           "matched": 12,
           "excluded": 7,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
+      "requests": 12,
       "detail_ok": 9,
       "detail_fail": 0,
       "kept": 12,
@@ -1063,18 +1084,18 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 10,
-          "excluded": 4,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 5
+          "newest": "2026-11-04",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 8,
+      "requests": 7,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 4
+      "kept": 10,
+      "excluded": 5
     },
     {
       "org": "충청남도 홍성군청",
@@ -1083,19 +1104,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 7,
-          "excluded": 3,
+          "matched": 5,
+          "excluded": 1,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 7,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 7,
-      "excluded": 3
+      "kept": 5,
+      "excluded": 1
     },
     {
       "org": "충청남도 예산군청",
@@ -1104,10 +1125,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 7,
-          "excluded": 5,
+          "matched": 5,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1115,8 +1136,8 @@
       "requests": 7,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 7,
-      "excluded": 5
+      "kept": 5,
+      "excluded": 3
     },
     {
       "org": "충청남도 태안군청",
@@ -1125,19 +1146,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 11,
-          "excluded": 7,
+          "matched": 9,
+          "excluded": 6,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 9,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 7
+      "kept": 9,
+      "excluded": 6
     },
     {
       "org": "대구광역시 중구청",
@@ -1164,18 +1185,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.dong.daegu.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.dong.daegu.kr', port=443) at 0x74ff0e4cdfa0>, 'Connection to eminwon.dong.daegu."
+          "listed": 60,
+          "matched": 9,
+          "excluded": 5,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 9,
+      "excluded": 5
     },
     {
       "org": "대구광역시 서구청",
@@ -1184,19 +1207,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 8,
-          "excluded": 5,
+          "matched": 10,
+          "excluded": 7,
           "error": null,
-          "newest": "",
-          "recheck": 3
+          "newest": ""
         }
       ],
       "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "requests": 2,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 8,
-      "excluded": 5
+      "kept": 10,
+      "excluded": 7
     },
     {
       "org": "대구광역시 남구청",
@@ -1208,13 +1230,13 @@
           "matched": 11,
           "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 1
+          "newest": "2026-11-04",
+          "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 6,
-      "detail_ok": 4,
+      "requests": 7,
+      "detail_ok": 5,
       "detail_fail": 0,
       "kept": 12,
       "excluded": 8
@@ -1225,20 +1247,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 90,
-          "matched": 8,
-          "excluded": 7,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.buk.daegu.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by NewConnectionError(\"HTTPSConnection(host='eminwon.buk.daegu.kr', port=443): Failed to establish a new connection: [Errno 111] Conne"
         }
       ],
-      "ok": true,
-      "requests": 8,
-      "detail_ok": 5,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 7
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "대구광역시 수성구청",
@@ -1247,7 +1267,7 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 6,
+          "matched": 5,
           "excluded": 3,
           "error": null,
           "newest": "2026-11-03",
@@ -1255,10 +1275,10 @@
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 6,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 6,
+      "kept": 5,
       "excluded": 3
     },
     {
@@ -1268,19 +1288,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 19,
-          "excluded": 7,
+          "matched": 15,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 10,
+      "requests": 18,
+      "detail_ok": 11,
       "detail_fail": 0,
-      "kept": 19,
-      "excluded": 7
+      "kept": 15,
+      "excluded": 3
     },
     {
       "org": "대구광역시 달성군청",
@@ -1289,7 +1309,7 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 2,
+          "matched": 4,
           "excluded": 1,
           "error": null,
           "newest": "2026-11-03",
@@ -1297,10 +1317,10 @@
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 6,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 2,
+      "kept": 4,
       "excluded": 1
     },
     {
@@ -1310,19 +1330,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 12,
-          "excluded": 5,
+          "matched": 9,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-10-30",
+          "newest": "2026-11-03",
           "recheck": 3
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 9,
+      "requests": 9,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 5
+      "kept": 9,
+      "excluded": 3
     },
     {
       "org": "대전광역시 동구청",
@@ -1331,10 +1351,10 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 13,
+          "matched": 14,
           "excluded": 10,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1342,7 +1362,7 @@
       "requests": 10,
       "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 13,
+      "kept": 14,
       "excluded": 10
     },
     {
@@ -1352,18 +1372,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 10,
+          "matched": 8,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 8,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 10,
       "excluded": 3
     },
     {
@@ -1375,7 +1395,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yuseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yuseong.go.kr', port=443) at 0x7cd1081df1d0>, 'Connection to eminwon.yuseong.go."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yuseong.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yuseong.go.kr', port=443) at 0x70302c309340>, 'Connection to eminwon.yuseong.go."
         }
       ],
       "ok": false,
@@ -1413,18 +1433,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 10,
+          "matched": 13,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 10,
+      "requests": 15,
+      "detail_ok": 12,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 13,
       "excluded": 6
     },
     {
@@ -1434,19 +1454,19 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 20,
-          "excluded": 12,
+          "matched": 17,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 15,
-      "detail_ok": 12,
+      "requests": 17,
+      "detail_ok": 13,
       "detail_fail": 0,
-      "kept": 20,
-      "excluded": 12
+      "kept": 17,
+      "excluded": 9
     },
     {
       "org": "강원특별자치도 동해시청",
@@ -1455,10 +1475,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 11,
-          "excluded": 4,
+          "matched": 12,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1466,8 +1486,8 @@
       "requests": 10,
       "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 4
+      "kept": 12,
+      "excluded": 5
     },
     {
       "org": "강원특별자치도 태백시청",
@@ -1538,7 +1558,7 @@
           "matched": 10,
           "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1576,18 +1596,18 @@
         {
           "board": "누리집 게시판",
           "listed": 30,
-          "matched": 1,
-          "excluded": 0,
+          "matched": 2,
+          "excluded": 1,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
       "requests": 4,
       "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 1,
-      "excluded": 0
+      "kept": 2,
+      "excluded": 1
     },
     {
       "org": "강원특별자치도 평창군청",
@@ -1596,19 +1616,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 3,
-          "excluded": 1,
+          "matched": 5,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
-      "detail_fail": 0,
-      "kept": 3,
-      "excluded": 1
+      "requests": 11,
+      "detail_ok": 6,
+      "detail_fail": 2,
+      "kept": 5,
+      "excluded": 2
     },
     {
       "org": "강원특별자치도 정선군청",
@@ -1620,12 +1640,12 @@
           "matched": 4,
           "excluded": 0,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
+      "requests": 10,
       "detail_ok": 7,
       "detail_fail": 0,
       "kept": 4,
@@ -1659,18 +1679,18 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 9,
-          "excluded": 3,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
       "ok": true,
       "requests": 15,
-      "detail_ok": 5,
-      "detail_fail": 4,
-      "kept": 10,
-      "excluded": 3
+      "detail_ok": 4,
+      "detail_fail": 5,
+      "kept": 9,
+      "excluded": 2
     },
     {
       "org": "강원특별자치도 양구군청",
@@ -1682,12 +1702,12 @@
           "matched": 5,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
+      "requests": 8,
       "detail_ok": 6,
       "detail_fail": 0,
       "kept": 5,
@@ -1700,19 +1720,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 6,
-          "excluded": 3,
+          "matched": 5,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 8,
+      "requests": 7,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 6,
-      "excluded": 3
+      "kept": 5,
+      "excluded": 2
     },
     {
       "org": "강원특별자치도 고성군청",
@@ -1724,7 +1744,7 @@
           "matched": 11,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
@@ -1744,7 +1764,7 @@
           "matched": 7,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
@@ -1761,19 +1781,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 5,
-          "excluded": 5,
+          "matched": 3,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 3
+          "newest": "2026-11-03",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 6,
-      "excluded": 5
+      "kept": 3,
+      "excluded": 2
     },
     {
       "org": "광주광역시 서구청",
@@ -1803,18 +1823,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 6,
+          "matched": 7,
           "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
       "requests": 10,
-      "detail_ok": 5,
-      "detail_fail": 1,
-      "kept": 6,
+      "detail_ok": 7,
+      "detail_fail": 0,
+      "kept": 7,
       "excluded": 5
     },
     {
@@ -1823,9 +1843,9 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 60,
-          "matched": 9,
-          "excluded": 4,
+          "listed": 90,
+          "matched": 11,
+          "excluded": 6,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
@@ -1835,8 +1855,8 @@
       "requests": 13,
       "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 4
+      "kept": 11,
+      "excluded": 6
     },
     {
       "org": "경상북도 포항시청",
@@ -1844,20 +1864,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 90,
-          "matched": 17,
-          "excluded": 7,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.pohang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
-      "requests": 19,
-      "detail_ok": 16,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 17,
-      "excluded": 7
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "경상북도 경주시청",
@@ -1868,7 +1886,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gyeongju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gyeongju.go.kr', port=443) at 0x7f5d420a0a40>, 'Connection to eminwon.gyeongju."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gyeongju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gyeongju.go.kr', port=443) at 0x70918e3ba360>, 'Connection to eminwon.gyeongju."
         }
       ],
       "ok": false,
@@ -1885,18 +1903,18 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 9,
+          "matched": 7,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 10,
+      "kept": 7,
       "excluded": 4
     },
     {
@@ -1906,19 +1924,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 11,
-          "excluded": 7,
+          "matched": 14,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 9,
+      "requests": 13,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 7
+      "kept": 15,
+      "excluded": 9
     },
     {
       "org": "경상북도 구미시청",
@@ -1929,7 +1947,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gumi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gumi.go.kr', port=443) at 0x7f5d41f8a210>, 'Connection to eminwon.gumi.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gumi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gumi.go.kr', port=443) at 0x70918e2d0110>, 'Connection to eminwon.gumi.go.kr timed "
         }
       ],
       "ok": false,
@@ -1946,10 +1964,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 7,
-          "excluded": 6,
+          "matched": 6,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -1957,8 +1975,8 @@
       "requests": 10,
       "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 6
+      "kept": 8,
+      "excluded": 5
     },
     {
       "org": "경상북도 영천시청",
@@ -1986,19 +2004,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 12,
-          "excluded": 2,
+          "matched": 14,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 8,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 2
+      "kept": 14,
+      "excluded": 3
     },
     {
       "org": "경상북도 문경시청",
@@ -2007,18 +2025,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 10,
+          "matched": 8,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 12,
+      "requests": 11,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 12,
+      "kept": 10,
       "excluded": 4
     },
     {
@@ -2028,18 +2046,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 13,
+          "matched": 12,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 17,
+      "requests": 19,
       "detail_ok": 10,
-      "detail_fail": 2,
-      "kept": 14,
+      "detail_fail": 1,
+      "kept": 13,
       "excluded": 6
     },
     {
@@ -2052,7 +2070,7 @@
           "matched": 8,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
@@ -2072,7 +2090,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.cs.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.cs.go.kr', port=443) at 0x7f5d41e2c8f0>, 'Connection to eminwon.cs.go.kr timed out. ("
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.cs.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.cs.go.kr', port=443) at 0x70918e2d1310>, 'Connection to eminwon.cs.go.kr timed out. ("
         }
       ],
       "ok": false,
@@ -2110,18 +2128,18 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 2,
+          "matched": 3,
           "excluded": 0,
           "error": null,
           "newest": "2026-11-03",
-          "recheck": 4
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 6,
-      "detail_ok": 5,
+      "requests": 8,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 2,
+      "kept": 3,
       "excluded": 0
     },
     {
@@ -2151,19 +2169,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 8,
-          "excluded": 3,
+          "matched": 7,
+          "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 6,
-      "detail_ok": 5,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 3
+      "kept": 8,
+      "excluded": 4
     },
     {
       "org": "경상북도 성주군청",
@@ -2173,9 +2191,9 @@
           "board": "새올 고시공고",
           "listed": 60,
           "matched": 9,
-          "excluded": 1,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2184,7 +2202,7 @@
       "detail_ok": 7,
       "detail_fail": 0,
       "kept": 9,
-      "excluded": 1
+      "excluded": 2
     },
     {
       "org": "경상북도 칠곡군청",
@@ -2193,19 +2211,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 3,
-          "excluded": 1,
+          "matched": 4,
+          "excluded": 2,
           "error": null,
           "newest": "2026-11-03",
-          "recheck": 2
+          "recheck": 1
         }
       ],
       "ok": true,
       "requests": 5,
-      "detail_ok": 3,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 3,
-      "excluded": 1
+      "kept": 4,
+      "excluded": 2
     },
     {
       "org": "경상북도 예천군청",
@@ -2217,7 +2235,7 @@
           "matched": 6,
           "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 3
         }
       ],
@@ -2238,7 +2256,7 @@
           "matched": 3,
           "excluded": 0,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 3
         }
       ],
@@ -2255,20 +2273,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 60,
-          "matched": 21,
-          "excluded": 1,
+          "listed": 30,
+          "matched": 10,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
       "ok": true,
-      "requests": 27,
-      "detail_ok": 25,
+      "requests": 12,
+      "detail_ok": 11,
       "detail_fail": 0,
-      "kept": 21,
-      "excluded": 1
+      "kept": 10,
+      "excluded": 2
     },
     {
       "org": "경상북도 울릉군청",
@@ -2300,12 +2318,12 @@
           "matched": 10,
           "excluded": 0,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 8,
+      "requests": 10,
+      "detail_ok": 9,
       "detail_fail": 0,
       "kept": 10,
       "excluded": 0
@@ -2336,19 +2354,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 13,
-          "excluded": 9,
+          "matched": 15,
+          "excluded": 10,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 8,
-      "detail_fail": 0,
-      "kept": 13,
-      "excluded": 9
+      "requests": 16,
+      "detail_ok": 9,
+      "detail_fail": 1,
+      "kept": 15,
+      "excluded": 10
     },
     {
       "org": "경기도 부천시청",
@@ -2357,19 +2375,19 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 5,
-          "excluded": 2,
+          "matched": 4,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
+      "requests": 10,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 5,
-      "excluded": 2
+      "kept": 4,
+      "excluded": 3
     },
     {
       "org": "경기도 광명시청",
@@ -2378,19 +2396,19 @@
         {
           "board": "새올 고시공고",
           "listed": 90,
-          "matched": 29,
-          "excluded": 8,
+          "matched": 27,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 23,
-      "detail_ok": 20,
+      "requests": 21,
+      "detail_ok": 18,
       "detail_fail": 0,
-      "kept": 29,
-      "excluded": 8
+      "kept": 27,
+      "excluded": 9
     },
     {
       "org": "경기도 평택시청",
@@ -2399,19 +2417,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 13,
-          "excluded": 9,
+          "matched": 9,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
+      "requests": 13,
       "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 13,
-      "excluded": 9
+      "kept": 9,
+      "excluded": 5
     },
     {
       "org": "경기도 동두천시청",
@@ -2419,18 +2437,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.ddc.go.kr', port=443): Read timed out. (read timeout=60)"
+          "listed": 60,
+          "matched": 14,
+          "excluded": 5,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "ok": true,
+      "requests": 16,
+      "detail_ok": 12,
+      "detail_fail": 1,
+      "kept": 14,
+      "excluded": 5
     },
     {
       "org": "경기도 안산시청",
@@ -2440,18 +2460,18 @@
           "board": "새올 채용·일반공고",
           "listed": 90,
           "matched": 14,
-          "excluded": 9,
+          "excluded": 10,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
       "requests": 13,
-      "detail_ok": 10,
+      "detail_ok": 9,
       "detail_fail": 0,
       "kept": 14,
-      "excluded": 9
+      "excluded": 10
     },
     {
       "org": "경기도 고양시청",
@@ -2459,18 +2479,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.goyang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)')))"
+          "listed": 90,
+          "matched": 9,
+          "excluded": 8,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 9,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 9,
+      "excluded": 8
     },
     {
       "org": "경기도 과천시청",
@@ -2479,10 +2501,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 7,
-          "excluded": 7,
+          "matched": 5,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2490,8 +2512,8 @@
       "requests": 7,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 7
+      "kept": 7,
+      "excluded": 5
     },
     {
       "org": "경기도 구리시청",
@@ -2503,7 +2525,7 @@
           "matched": 9,
           "excluded": 7,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2520,18 +2542,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Read timed out. (read timeout=60)"
+          "listed": 90,
+          "matched": 18,
+          "excluded": 11,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 5,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 18,
+      "excluded": 11
     },
     {
       "org": "경기도 오산시청",
@@ -2540,18 +2564,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 15,
+          "matched": 16,
           "excluded": 13,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 4,
-      "detail_fail": 2,
-      "kept": 15,
+      "requests": 10,
+      "detail_ok": 7,
+      "detail_fail": 0,
+      "kept": 16,
       "excluded": 13
     },
     {
@@ -2561,17 +2585,17 @@
         {
           "board": "누리집 게시판",
           "listed": 40,
-          "matched": 29,
+          "matched": 31,
           "excluded": 7,
           "error": null,
           "newest": ""
         }
       ],
       "ok": true,
-      "requests": 19,
-      "detail_ok": 17,
+      "requests": 21,
+      "detail_ok": 19,
       "detail_fail": 0,
-      "kept": 29,
+      "kept": 31,
       "excluded": 7
     },
     {
@@ -2581,19 +2605,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 7,
-          "excluded": 4,
+          "matched": 9,
+          "excluded": 6,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 7,
+      "requests": 13,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 8,
-      "excluded": 4
+      "kept": 10,
+      "excluded": 6
     },
     {
       "org": "경기도 의왕시청",
@@ -2602,10 +2626,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 12,
+          "matched": 13,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2613,7 +2637,7 @@
       "requests": 11,
       "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 12,
+      "kept": 13,
       "excluded": 4
     },
     {
@@ -2623,8 +2647,8 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 24,
-          "excluded": 14,
+          "matched": 25,
+          "excluded": 16,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
@@ -2634,8 +2658,8 @@
       "requests": 17,
       "detail_ok": 14,
       "detail_fail": 0,
-      "kept": 24,
-      "excluded": 14
+      "kept": 26,
+      "excluded": 16
     },
     {
       "org": "경기도 용인시청",
@@ -2664,19 +2688,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 22,
-          "excluded": 16,
+          "matched": 18,
+          "excluded": 13,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 15,
+      "requests": 18,
       "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 22,
-      "excluded": 16
+      "kept": 18,
+      "excluded": 13
     },
     {
       "org": "경기도 이천시청",
@@ -2685,7 +2709,7 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 23,
+          "matched": 21,
           "excluded": 10,
           "error": null,
           "newest": "2026-11-03",
@@ -2693,10 +2717,10 @@
         }
       ],
       "ok": true,
-      "requests": 20,
-      "detail_ok": 17,
+      "requests": 19,
+      "detail_ok": 16,
       "detail_fail": 0,
-      "kept": 23,
+      "kept": 22,
       "excluded": 10
     },
     {
@@ -2706,19 +2730,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 17,
-          "excluded": 7,
+          "matched": 15,
+          "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
+      "requests": 11,
       "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 17,
-      "excluded": 7
+      "kept": 15,
+      "excluded": 8
     },
     {
       "org": "경기도 김포시청",
@@ -2727,10 +2751,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 12,
-          "excluded": 4,
+          "matched": 13,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2738,8 +2762,8 @@
       "requests": 16,
       "detail_ok": 13,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 4
+      "kept": 13,
+      "excluded": 5
     },
     {
       "org": "경기도 화성시청",
@@ -2748,19 +2772,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 17,
-          "excluded": 12,
+          "matched": 15,
+          "excluded": 10,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 18,
-      "detail_ok": 8,
-      "detail_fail": 2,
-      "kept": 17,
-      "excluded": 12
+      "requests": 15,
+      "detail_ok": 9,
+      "detail_fail": 1,
+      "kept": 15,
+      "excluded": 10
     },
     {
       "org": "경기도 광주시청",
@@ -2772,7 +2796,7 @@
           "matched": 6,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2792,7 +2816,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangju.go.kr', port=443) at 0x797e56d44e60>, 'Connection to eminwon.yangju.go.kr "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangju.go.kr', port=443) at 0x71e21ca5b4d0>, 'Connection to eminwon.yangju.go.kr "
         }
       ],
       "ok": false,
@@ -2812,15 +2836,15 @@
           "matched": 6,
           "excluded": 1,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 8,
+      "requests": 10,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 6,
+      "kept": 7,
       "excluded": 1
     },
     {
@@ -2832,7 +2856,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeoju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeoju.go.kr', port=443) at 0x797e561f65d0>, 'Connection to eminwon.yeoju.go.kr tim"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yeoju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yeoju.go.kr', port=443) at 0x71e21c806540>, 'Connection to eminwon.yeoju.go.kr tim"
         }
       ],
       "ok": false,
@@ -2848,20 +2872,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 30,
-          "matched": 3,
-          "excluded": 1,
+          "listed": 60,
+          "matched": 8,
+          "excluded": 2,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 7,
+      "requests": 13,
+      "detail_ok": 11,
       "detail_fail": 0,
-      "kept": 3,
-      "excluded": 1
+      "kept": 8,
+      "excluded": 2
     },
     {
       "org": "경기도 가평군청",
@@ -2869,20 +2893,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 30,
-          "matched": 3,
-          "excluded": 3,
+          "listed": 60,
+          "matched": 9,
+          "excluded": 6,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 6,
-      "detail_ok": 5,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 3,
-      "excluded": 3
+      "kept": 9,
+      "excluded": 6
     },
     {
       "org": "경기도 양평군청",
@@ -2891,19 +2915,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 14,
-          "excluded": 7,
+          "matched": 13,
+          "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 9,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 14,
-      "excluded": 7
+      "kept": 13,
+      "excluded": 8
     },
     {
       "org": "창원시청",
@@ -2914,7 +2938,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.changwon.go.kr', port=443): Read timed out. (read timeout=60)"
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.changwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
       "ok": false,
@@ -2933,7 +2957,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jinju.go.kr', port=443) at 0x75059e40a0c0>, 'Connection to eminwon.jinju.go.kr tim"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.jinju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.jinju.go.kr', port=443) at 0x708132915fa0>, 'Connection to eminwon.jinju.go.kr tim"
         }
       ],
       "ok": false,
@@ -2950,10 +2974,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 12,
-          "excluded": 10,
+          "matched": 10,
+          "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -2961,8 +2985,8 @@
       "requests": 9,
       "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 10
+      "kept": 10,
+      "excluded": 8
     },
     {
       "org": "사천시청",
@@ -2971,19 +2995,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 11,
-          "excluded": 1,
+          "matched": 14,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 1
+      "kept": 14,
+      "excluded": 5
     },
     {
       "org": "김해시청",
@@ -2992,19 +3016,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 30,
-          "excluded": 13,
+          "matched": 27,
+          "excluded": 16,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 27,
-      "detail_ok": 13,
-      "detail_fail": 5,
-      "kept": 30,
-      "excluded": 13
+      "requests": 21,
+      "detail_ok": 10,
+      "detail_fail": 4,
+      "kept": 27,
+      "excluded": 16
     },
     {
       "org": "밀양시청",
@@ -3015,7 +3039,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.miryang.go.kr', port=443) at 0x75059e1be5a0>, 'Connection to eminwon.miryang.go."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.miryang.go.kr', port=443) at 0x708132716750>, 'Connection to eminwon.miryang.go."
         }
       ],
       "ok": false,
@@ -3032,10 +3056,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 11,
-          "excluded": 9,
+          "matched": 9,
+          "excluded": 7,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -3043,8 +3067,8 @@
       "requests": 10,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 9
+      "kept": 9,
+      "excluded": 7
     },
     {
       "org": "양산시청",
@@ -3055,7 +3079,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangsan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangsan.go.kr', port=443) at 0x7081326f6600>, 'Connection to eminwon.yangsan.go."
         }
       ],
       "ok": false,
@@ -3072,19 +3096,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 14,
-          "excluded": 8,
+          "matched": 15,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "newest": "2026-11-04",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 10,
+      "requests": 11,
+      "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 14,
-      "excluded": 8
+      "kept": 15,
+      "excluded": 9
     },
     {
       "org": "함안군청",
@@ -3112,19 +3136,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 19,
-          "excluded": 0,
+          "matched": 18,
+          "excluded": 1,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 21,
-      "detail_ok": 16,
+      "requests": 20,
+      "detail_ok": 14,
       "detail_fail": 0,
-      "kept": 19,
-      "excluded": 0
+      "kept": 18,
+      "excluded": 1
     },
     {
       "org": "고성군청",
@@ -3134,18 +3158,18 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 7,
-          "excluded": 4,
+          "excluded": 6,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 5
+          "newest": "2026-11-04",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 7,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
       "kept": 7,
-      "excluded": 4
+      "excluded": 6
     },
     {
       "org": "남해군청",
@@ -3153,18 +3177,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)')))"
+          "listed": 30,
+          "matched": 12,
+          "excluded": 10,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 7,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 13,
+      "excluded": 10
     },
     {
       "org": "하동군청",
@@ -3174,18 +3200,18 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 11,
-          "excluded": 4,
+          "excluded": 5,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 13,
+      "requests": 13,
+      "detail_ok": 12,
       "detail_fail": 0,
       "kept": 12,
-      "excluded": 4
+      "excluded": 5
     },
     {
       "org": "산청군청",
@@ -3194,18 +3220,18 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 10,
+          "matched": 7,
           "excluded": 6,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "requests": 3,
+      "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 12,
+      "kept": 9,
       "excluded": 6
     },
     {
@@ -3234,19 +3260,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 17,
-          "excluded": 16,
+          "matched": 19,
+          "excluded": 14,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 9,
+      "requests": 14,
+      "detail_ok": 12,
       "detail_fail": 0,
-      "kept": 20,
-      "excluded": 16
+      "kept": 21,
+      "excluded": 14
     },
     {
       "org": "합천군청",
@@ -3254,18 +3280,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.hc.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "listed": 30,
+          "matched": 5,
+          "excluded": 4,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
-      "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "ok": true,
+      "requests": 8,
+      "detail_ok": 3,
+      "detail_fail": 1,
+      "kept": 5,
+      "excluded": 4
     },
     {
       "org": "인천광역시 제물포구청",
@@ -3274,7 +3302,7 @@
         {
           "board": "누리집 게시판",
           "listed": 30,
-          "matched": 8,
+          "matched": 7,
           "excluded": 6,
           "error": null,
           "newest": ""
@@ -3284,7 +3312,7 @@
       "requests": 2,
       "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 8,
+      "kept": 7,
       "excluded": 6
     },
     {
@@ -3294,19 +3322,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 13,
-          "excluded": 12,
+          "matched": 15,
+          "excluded": 11,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 6,
+      "requests": 10,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 15,
-      "excluded": 12
+      "kept": 16,
+      "excluded": 11
     },
     {
       "org": "인천광역시 미추홀구청",
@@ -3315,19 +3343,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 11,
-          "excluded": 4,
+          "matched": 9,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 18,
-      "detail_ok": 10,
-      "detail_fail": 0,
-      "kept": 12,
-      "excluded": 4
+      "requests": 15,
+      "detail_ok": 6,
+      "detail_fail": 2,
+      "kept": 9,
+      "excluded": 3
     },
     {
       "org": "인천광역시 연수구청",
@@ -3339,7 +3367,7 @@
           "matched": 14,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
@@ -3356,19 +3384,19 @@
         {
           "board": "누리집 게시판",
           "listed": 30,
-          "matched": 1,
+          "matched": 2,
           "excluded": 0,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-03",
           "recheck": 1,
-          "old": 27
+          "old": 26
         }
       ],
       "ok": true,
       "requests": 1,
       "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 1,
+      "kept": 2,
       "excluded": 0
     },
     {
@@ -3380,7 +3408,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.icbp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.icbp.go.kr', port=443) at 0x7a7c8fa65d90>, 'Connection to eminwon.icbp.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.icbp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.icbp.go.kr', port=443) at 0x7d1e2e454530>, 'Connection to eminwon.icbp.go.kr timed "
         }
       ],
       "ok": false,
@@ -3399,7 +3427,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.gyeyang.go.kr', port=443): Max retries exceeded with url: /open_content/main/open_info/admin/job.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gyeyang.go.kr', port=443) at 0x7a7c8fa64d70>, 'Connection to www.gyeyang.go.kr timed out. (conn"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.gyeyang.go.kr', port=443): Max retries exceeded with url: /open_content/main/open_info/admin/job.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gyeyang.go.kr', port=443) at 0x7d1e2e60f6b0>, 'Connection to www.gyeyang.go.kr timed out. (conn"
         }
       ],
       "ok": false,
@@ -3415,20 +3443,18 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 60,
-          "matched": 9,
-          "excluded": 6,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.seo.incheon.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
-      "requests": 12,
-      "detail_ok": 6,
-      "detail_fail": 1,
-      "kept": 10,
-      "excluded": 6
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
+      "detail_fail": 0,
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "인천광역시 검단구청",
@@ -3437,18 +3463,18 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 18,
+          "matched": 15,
           "excluded": 8,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 12,
-      "detail_ok": 10,
+      "requests": 10,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 18,
+      "kept": 15,
       "excluded": 8
     },
     {
@@ -3477,19 +3503,19 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 30,
-          "matched": 7,
+          "listed": 60,
+          "matched": 10,
           "excluded": 2,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 7,
+      "requests": 12,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 7,
+      "kept": 10,
       "excluded": 2
     },
     {
@@ -3501,7 +3527,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "SSLError: HTTPSConnectionPool(host='eminwon.jejusi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.jejusi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)')))"
         }
       ],
       "ok": false,
@@ -3518,18 +3544,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 9,
+          "matched": 7,
           "excluded": 7,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 7,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 8,
       "excluded": 7
     },
     {
@@ -3541,7 +3567,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.jeonju.go.kr', port=443): Read timed out. (read timeout=60)"
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.jeonju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
       "ok": false,
@@ -3558,18 +3584,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 9,
+          "matched": 7,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 10,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 7,
       "excluded": 4
     },
     {
@@ -3579,19 +3605,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 13,
-          "excluded": 9,
+          "matched": 12,
+          "excluded": 11,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 3
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
+      "requests": 15,
       "detail_ok": 8,
       "detail_fail": 0,
       "kept": 14,
-      "excluded": 9
+      "excluded": 11
     },
     {
       "org": "전북특별자치도 정읍시청",
@@ -3623,7 +3649,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.namwon.go.kr', port=443) at 0x7068f3f5a510>, 'Connection to eminwon.namwon.go.kr "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.namwon.go.kr', port=443) at 0x776404107170>, 'Connection to eminwon.namwon.go.kr "
         }
       ],
       "ok": false,
@@ -3640,10 +3666,10 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 10,
-          "excluded": 8,
+          "matched": 11,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -3651,8 +3677,8 @@
       "requests": 8,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 11,
-      "excluded": 8
+      "kept": 12,
+      "excluded": 9
     },
     {
       "org": "전북특별자치도 완주군청",
@@ -3664,14 +3690,14 @@
           "matched": 7,
           "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
-      "detail_fail": 0,
+      "requests": 12,
+      "detail_ok": 6,
+      "detail_fail": 1,
       "kept": 7,
       "excluded": 5
     },
@@ -3702,7 +3728,7 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 9,
+          "matched": 7,
           "excluded": 2,
           "error": null,
           "newest": "2026-11-03",
@@ -3710,10 +3736,10 @@
         }
       ],
       "ok": true,
-      "requests": 15,
-      "detail_ok": 12,
+      "requests": 12,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 9,
+      "kept": 7,
       "excluded": 2
     },
     {
@@ -3724,18 +3750,18 @@
           "board": "새올 고시공고",
           "listed": 60,
           "matched": 12,
-          "excluded": 5,
+          "excluded": 6,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 14,
-      "detail_ok": 12,
+      "requests": 13,
+      "detail_ok": 11,
       "detail_fail": 0,
       "kept": 12,
-      "excluded": 5
+      "excluded": 6
     },
     {
       "org": "전북특별자치도 임실군청",
@@ -3744,19 +3770,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 11,
-          "excluded": 6,
+          "matched": 8,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 3
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 9,
+      "requests": 8,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 6
+      "kept": 9,
+      "excluded": 5
     },
     {
       "org": "전북특별자치도 순창군청",
@@ -3765,17 +3791,17 @@
         {
           "board": "새올 고시공고",
           "listed": 30,
-          "matched": 11,
+          "matched": 9,
           "excluded": 5,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
-      "requests": 6,
-      "detail_ok": 5,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
-      "kept": 11,
+      "kept": 9,
       "excluded": 5
     },
     {
@@ -3785,19 +3811,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 13,
-          "excluded": 6,
+          "matched": 11,
+          "excluded": 7,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 9,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 13,
-      "excluded": 6
+      "kept": 11,
+      "excluded": 7
     },
     {
       "org": "전북특별자치도 부안군청",
@@ -3808,7 +3834,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.buan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.buan.go.kr', port=443) at 0x7068f3e4ac90>, 'Connection to eminwon.buan.go.kr timed "
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.buan.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.buan.go.kr', port=443) at 0x776403cda360>, 'Connection to eminwon.buan.go.kr timed "
         }
       ],
       "ok": false,
@@ -3825,19 +3851,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 9,
-          "excluded": 7,
+          "matched": 8,
+          "excluded": 6,
           "error": null,
           "newest": "2026-11-03",
-          "recheck": 3
+          "recheck": 2
         }
       ],
       "ok": true,
       "requests": 4,
-      "detail_ok": 2,
+      "detail_ok": 1,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 7
+      "kept": 8,
+      "excluded": 6
     },
     {
       "org": "전라남도 여수시청",
@@ -3847,18 +3873,18 @@
           "board": "새올 채용·일반공고",
           "listed": 90,
           "matched": 15,
-          "excluded": 11,
+          "excluded": 13,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 8,
+      "requests": 10,
+      "detail_ok": 7,
       "detail_fail": 0,
       "kept": 15,
-      "excluded": 11
+      "excluded": 13
     },
     {
       "org": "전라남도 순천시청",
@@ -3869,7 +3895,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suncheon.go.kr', port=443) at 0x7eac3ba452b0>, 'Connection to eminwon.suncheon."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.suncheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.suncheon.go.kr', port=443) at 0x7cf65d286630>, 'Connection to eminwon.suncheon."
         }
       ],
       "ok": false,
@@ -3885,20 +3911,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 30,
-          "matched": 9,
-          "excluded": 9,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 2
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='eminwon.naju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 9
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "전라남도 광양시청",
@@ -3907,18 +3931,18 @@
         {
           "board": "누리집 게시판",
           "listed": 30,
-          "matched": 12,
-          "excluded": 7,
+          "matched": 13,
+          "excluded": 8,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
       "requests": 8,
       "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 7
+      "kept": 13,
+      "excluded": 8
     },
     {
       "org": "전라남도 담양군청",
@@ -3929,7 +3953,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.damyang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.damyang.jeonnam.kr', port=443) at 0x7eac3b00aa50>, 'Connection to eminwon.d"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.damyang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.damyang.jeonnam.kr', port=443) at 0x7cf65c74b4d0>, 'Connection to eminwon.d"
         }
       ],
       "ok": false,
@@ -3946,10 +3970,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 10,
-          "excluded": 5,
+          "matched": 8,
+          "excluded": 4,
           "error": null,
-          "newest": "2026-11-02",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -3957,8 +3981,8 @@
       "requests": 8,
       "detail_ok": 7,
       "detail_fail": 0,
-      "kept": 10,
-      "excluded": 5
+      "kept": 8,
+      "excluded": 4
     },
     {
       "org": "전라남도 구례군청",
@@ -3986,19 +4010,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 20,
-          "excluded": 16,
+          "matched": 22,
+          "excluded": 17,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 11,
-      "detail_ok": 6,
-      "detail_fail": 1,
-      "kept": 21,
-      "excluded": 16
+      "requests": 12,
+      "detail_ok": 7,
+      "detail_fail": 0,
+      "kept": 22,
+      "excluded": 17
     },
     {
       "org": "전라남도 보성군청",
@@ -4007,18 +4031,18 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 7,
+          "matched": 6,
           "excluded": 4,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 5
+          "newest": "2026-11-04",
+          "recheck": 4
         }
       ],
       "ok": true,
-      "requests": 15,
-      "detail_ok": 8,
+      "requests": 12,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 7,
+      "kept": 6,
       "excluded": 4
     },
     {
@@ -4031,13 +4055,13 @@
           "matched": 3,
           "excluded": 2,
           "error": null,
-          "newest": "2026-11-02",
-          "recheck": 1
+          "newest": "2026-11-04",
+          "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
       "kept": 3,
       "excluded": 2
@@ -4052,13 +4076,13 @@
           "matched": 8,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
       "ok": true,
-      "requests": 5,
-      "detail_ok": 4,
+      "requests": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
       "kept": 8,
       "excluded": 3
@@ -4072,7 +4096,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gangjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gangjin.go.kr', port=443) at 0x7eac3b918740>, 'Connection to eminwon.gangjin.go."
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gangjin.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.gangjin.go.kr', port=443) at 0x7cf65cd25610>, 'Connection to eminwon.gangjin.go."
         }
       ],
       "ok": false,
@@ -4090,18 +4114,18 @@
           "board": "새올 고시공고",
           "listed": 15,
           "matched": 2,
-          "excluded": 2,
+          "excluded": 1,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 2
         }
       ],
       "ok": true,
-      "requests": 3,
-      "detail_ok": 2,
+      "requests": 4,
+      "detail_ok": 3,
       "detail_fail": 0,
       "kept": 2,
-      "excluded": 2
+      "excluded": 1
     },
     {
       "org": "전라남도 영암군청",
@@ -4110,19 +4134,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 18,
-          "excluded": 5,
+          "matched": 17,
+          "excluded": 4,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 19,
-      "detail_ok": 17,
+      "requests": 22,
+      "detail_ok": 18,
       "detail_fail": 0,
-      "kept": 19,
-      "excluded": 5
+      "kept": 18,
+      "excluded": 4
     },
     {
       "org": "전라남도 무안군청",
@@ -4130,20 +4154,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 30,
-          "matched": 4,
-          "excluded": 5,
+          "listed": 60,
+          "matched": 13,
+          "excluded": 7,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 7,
-      "detail_ok": 4,
+      "requests": 14,
+      "detail_ok": 9,
       "detail_fail": 1,
-      "kept": 5,
-      "excluded": 5
+      "kept": 14,
+      "excluded": 7
     },
     {
       "org": "전라남도 함평군청",
@@ -4153,18 +4177,18 @@
           "board": "새올 고시공고",
           "listed": 60,
           "matched": 16,
-          "excluded": 8,
+          "excluded": 9,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 18,
-      "detail_ok": 10,
+      "requests": 16,
+      "detail_ok": 9,
       "detail_fail": 2,
       "kept": 16,
-      "excluded": 8
+      "excluded": 9
     },
     {
       "org": "전라남도 영광군청",
@@ -4173,18 +4197,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 30,
-          "matched": 10,
-          "excluded": 5,
+          "matched": 9,
+          "excluded": 4,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
       "requests": 3,
       "detail_ok": 2,
       "detail_fail": 0,
-      "kept": 10,
-      "excluded": 5
+      "kept": 9,
+      "excluded": 4
     },
     {
       "org": "전라남도 장성군청",
@@ -4201,7 +4225,7 @@
         }
       ],
       "ok": true,
-      "requests": 20,
+      "requests": 19,
       "detail_ok": 7,
       "detail_fail": 4,
       "kept": 14,
@@ -4235,10 +4259,10 @@
           "board": "새올 채용·일반공고",
           "listed": 30,
           "matched": 5,
-          "excluded": 4,
+          "excluded": 5,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 2
+          "newest": "2026-11-04",
+          "recheck": 3
         }
       ],
       "ok": true,
@@ -4246,7 +4270,7 @@
       "detail_ok": 3,
       "detail_fail": 0,
       "kept": 5,
-      "excluded": 4
+      "excluded": 5
     },
     {
       "org": "전라남도 신안군청",
@@ -4254,8 +4278,8 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 90,
-          "matched": 23,
+          "listed": 60,
+          "matched": 13,
           "excluded": 2,
           "error": null,
           "newest": "2026-11-03",
@@ -4263,10 +4287,10 @@
         }
       ],
       "ok": true,
-      "requests": 16,
-      "detail_ok": 13,
+      "requests": 12,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 23,
+      "kept": 13,
       "excluded": 2
     },
     {
@@ -4277,18 +4301,18 @@
           "board": "새올 고시공고",
           "listed": 60,
           "matched": 13,
-          "excluded": 7,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 8,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
       "kept": 13,
-      "excluded": 7
+      "excluded": 9
     },
     {
       "org": "서울특별시 중구청",
@@ -4300,7 +4324,7 @@
           "matched": 20,
           "excluded": 5,
           "error": null,
-          "newest": "2026-11-02"
+          "newest": "2026-11-03"
         }
       ],
       "ok": true,
@@ -4335,20 +4359,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 60,
-          "matched": 12,
-          "excluded": 10,
+          "listed": 90,
+          "matched": 19,
+          "excluded": 16,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
+      "requests": 12,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 12,
-      "excluded": 10
+      "kept": 19,
+      "excluded": 16
     },
     {
       "org": "서울특별시 광진구청",
@@ -4360,7 +4384,7 @@
           "matched": 9,
           "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 4
         }
       ],
@@ -4378,7 +4402,7 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 3,
+          "matched": 4,
           "excluded": 2,
           "error": null,
           "newest": "2026-11-03",
@@ -4386,10 +4410,10 @@
         }
       ],
       "ok": true,
-      "requests": 7,
-      "detail_ok": 5,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 3,
+      "kept": 4,
       "excluded": 2
     },
     {
@@ -4399,8 +4423,8 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 8,
-          "excluded": 4,
+          "matched": 6,
+          "excluded": 2,
           "error": null,
           "newest": "2026-11-03",
           "recheck": 5
@@ -4410,8 +4434,8 @@
       "requests": 11,
       "detail_ok": 9,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 4
+      "kept": 7,
+      "excluded": 2
     },
     {
       "org": "서울특별시 성북구청",
@@ -4440,19 +4464,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 18,
-          "excluded": 13,
+          "matched": 12,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
       "requests": 8,
-      "detail_ok": 6,
+      "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 18,
-      "excluded": 13
+      "kept": 12,
+      "excluded": 9
     },
     {
       "org": "서울특별시 도봉구청",
@@ -4461,10 +4485,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 20,
-          "excluded": 11,
+          "matched": 21,
+          "excluded": 13,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -4472,8 +4496,8 @@
       "requests": 12,
       "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 20,
-      "excluded": 11
+      "kept": 21,
+      "excluded": 13
     },
     {
       "org": "서울특별시 노원구청",
@@ -4482,19 +4506,19 @@
         {
           "board": "새올 고시공고",
           "listed": 60,
-          "matched": 21,
-          "excluded": 10,
+          "matched": 20,
+          "excluded": 9,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 16,
-      "detail_ok": 11,
+      "requests": 17,
+      "detail_ok": 12,
       "detail_fail": 0,
-      "kept": 24,
-      "excluded": 10
+      "kept": 23,
+      "excluded": 9
     },
     {
       "org": "서울특별시 은평구청",
@@ -4503,19 +4527,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 20,
-          "excluded": 18,
+          "matched": 23,
+          "excluded": 20,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 7,
+      "requests": 12,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 20,
-      "excluded": 18
+      "kept": 23,
+      "excluded": 20
     },
     {
       "org": "서울특별시 서대문구청",
@@ -4523,20 +4547,20 @@
       "boards": [
         {
           "board": "새올 고시공고",
-          "listed": 30,
-          "matched": 7,
-          "excluded": 5,
+          "listed": 60,
+          "matched": 18,
+          "excluded": 14,
           "error": null,
-          "newest": "2026-11-03",
-          "recheck": 4
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 6,
-      "detail_fail": 0,
-      "kept": 8,
-      "excluded": 5
+      "requests": 14,
+      "detail_ok": 7,
+      "detail_fail": 2,
+      "kept": 19,
+      "excluded": 14
     },
     {
       "org": "서울특별시 마포구청",
@@ -4545,19 +4569,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 60,
-          "matched": 9,
-          "excluded": 5,
+          "matched": 7,
+          "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 9,
-      "detail_ok": 7,
+      "requests": 8,
+      "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 9,
-      "excluded": 5
+      "kept": 7,
+      "excluded": 3
     },
     {
       "org": "서울특별시 양천구청",
@@ -4568,7 +4592,7 @@
           "listed": 0,
           "matched": 0,
           "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangcheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangcheon.go.kr', port=443) at 0x7361be51c3e0>, 'Connection to eminwon.yangche"
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangcheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.yangcheon.go.kr', port=443) at 0x7ca2839bdc70>, 'Connection to eminwon.yangche"
         }
       ],
       "ok": false,
@@ -4585,18 +4609,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 26,
+          "matched": 23,
           "excluded": 18,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 10,
+      "requests": 12,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 26,
+      "kept": 23,
       "excluded": 18
     },
     {
@@ -4606,10 +4630,10 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 31,
-          "excluded": 24,
+          "matched": 34,
+          "excluded": 28,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -4617,8 +4641,8 @@
       "requests": 8,
       "detail_ok": 5,
       "detail_fail": 0,
-      "kept": 31,
-      "excluded": 24
+      "kept": 34,
+      "excluded": 28
     },
     {
       "org": "서울특별시 금천구청",
@@ -4627,19 +4651,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 19,
-          "excluded": 17,
+          "matched": 18,
+          "excluded": 14,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 10,
-      "detail_ok": 7,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 19,
-      "excluded": 17
+      "kept": 18,
+      "excluded": 14
     },
     {
       "org": "서울특별시 영등포구청",
@@ -4647,18 +4671,20 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 0,
-          "matched": 0,
-          "excluded": 0,
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ydp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by ConnectTimeoutError(<HTTPSConnection(host='eminwon.ydp.go.kr', port=443) at 0x7361bebfb9b0>, 'Connection to eminwon.ydp.go.kr timed out"
+          "listed": 90,
+          "matched": 21,
+          "excluded": 13,
+          "error": null,
+          "newest": "2026-11-04",
+          "recheck": 5
         }
       ],
-      "ok": false,
-      "requests": 2,
-      "detail_ok": 0,
+      "ok": true,
+      "requests": 13,
+      "detail_ok": 10,
       "detail_fail": 0,
-      "kept": 0,
-      "excluded": 0
+      "kept": 21,
+      "excluded": 13
     },
     {
       "org": "서울특별시 동작구청",
@@ -4667,19 +4693,19 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 26,
-          "excluded": 18,
+          "matched": 30,
+          "excluded": 24,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 13,
-      "detail_ok": 10,
+      "requests": 11,
+      "detail_ok": 8,
       "detail_fail": 0,
-      "kept": 26,
-      "excluded": 18
+      "kept": 31,
+      "excluded": 24
     },
     {
       "org": "서울특별시 관악구청",
@@ -4691,13 +4717,13 @@
           "matched": 11,
           "excluded": 3,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
       "ok": true,
-      "requests": 8,
-      "detail_ok": 6,
+      "requests": 9,
+      "detail_ok": 7,
       "detail_fail": 0,
       "kept": 12,
       "excluded": 3
@@ -4709,18 +4735,18 @@
         {
           "board": "새올 채용·일반공고",
           "listed": 90,
-          "matched": 18,
-          "excluded": 6,
+          "matched": 16,
+          "excluded": 7,
           "error": null,
-          "newest": "2026-11-03"
+          "newest": "2026-11-04"
         }
       ],
       "ok": true,
       "requests": 9,
       "detail_ok": 6,
       "detail_fail": 0,
-      "kept": 18,
-      "excluded": 6
+      "kept": 16,
+      "excluded": 7
     },
     {
       "org": "서울특별시 강남구청",
@@ -4728,20 +4754,18 @@
       "boards": [
         {
           "board": "새올 채용·일반공고",
-          "listed": 90,
-          "matched": 13,
-          "excluded": 13,
-          "error": null,
-          "newest": "2026-11-03",
-          "recheck": 5
+          "listed": 0,
+          "matched": 0,
+          "excluded": 0,
+          "error": "SSLError: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
         }
       ],
-      "ok": true,
-      "requests": 11,
-      "detail_ok": 7,
+      "ok": false,
+      "requests": 2,
+      "detail_ok": 0,
       "detail_fail": 0,
-      "kept": 14,
-      "excluded": 13
+      "kept": 0,
+      "excluded": 0
     },
     {
       "org": "서울특별시 송파구청",
@@ -4753,7 +4777,7 @@
           "matched": 10,
           "excluded": 8,
           "error": null,
-          "newest": "2026-11-03",
+          "newest": "2026-11-04",
           "recheck": 5
         }
       ],
@@ -4778,23 +4802,23 @@
         }
       ],
       "ok": true,
-      "requests": 2,
-      "detail_ok": 1,
+      "requests": 3,
+      "detail_ok": 2,
       "detail_fail": 0,
       "kept": 7,
       "excluded": 3
     }
   ],
   "attach": {
-    "targets": 657,
-    "reused": 480,
-    "notices_ok": 622,
-    "notices_partial": 21,
-    "notices_failed": 8,
-    "notices_skipped": 6,
-    "files_ok": 830,
-    "files_error": 32,
-    "files_skipped": 119,
-    "requests": 247
+    "targets": 662,
+    "reused": 494,
+    "notices_ok": 625,
+    "notices_partial": 25,
+    "notices_failed": 9,
+    "notices_skipped": 3,
+    "files_ok": 865,
+    "files_error": 37,
+    "files_skipped": 120,
+    "requests": 243
   }
 }
