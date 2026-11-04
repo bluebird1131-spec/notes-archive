@@ -26,6 +26,9 @@ BARE = re.compile(r"(?<![\d.])(\d{2})" + SP + r"\." + SP + r"(\d{1,2})" + SP + r
 SHORT = re.compile(r"(?<![\d.])(\d{1,2})" + SP + r"[.월]" + SP + r"(\d{1,2})(?!\d)")
 # 시각("~ 18:00")은 날짜가 아님 → 뒤에 콜론이 오면 제외
 DAY_ONLY = re.compile(r"[~∼～]" + SP + r"(\d{1,2})" + SP + r"[.일]?(?!" + SP + r"[\d.월:])")
+# 날짜 바로 뒤 요일 '(월)' — 괄호 안에 요일 하나만 ('(월~금)' 같은 근무 요일은 아님)
+WEEKDAY = re.compile(SP + r"[.일]?" + SP + r"[(（]" + SP + r"([월화수목금토일])" + SP + r"(?:요일)?" + SP + r"[)）]")
+DAYS = '월화수목금토일'
 
 
 def dates_in(text, base_year):
@@ -58,9 +61,20 @@ def dates_in(text, base_year):
         elif month is not None and mo < month:
             year += 1  # '2026. 12. 30. ~ 1. 2.' 처럼 연도 없이 해가 바뀜
         try:
-            date(year, mo, d)  # 2월 30일 같은 없는 날짜는 버림
+            day = date(year, mo, d)  # 2월 30일 같은 없는 날짜는 버림
         except ValueError:
             continue
+        # 적힌 요일과 맞지 않으면 앞 날짜와 같은 달을 잘못 적은 것인지 봄
+        # (11-05 울산 동구 '2026. 11. 5.(목) ~ 10. 9.(월) 3일간' → 해를 넘긴 2027-10-09 가 아니라 11. 9.(월))
+        w = WEEKDAY.match(text, e)
+        if w and out and day.weekday() != DAYS.index(w.group(1)):
+            prev = date.fromisoformat(out[-1])
+            try:
+                alt = date(prev.year, prev.month, d)
+            except ValueError:
+                alt = None
+            if alt and alt.weekday() == DAYS.index(w.group(1)) and 0 <= (alt - prev).days <= 31:
+                year, mo = alt.year, alt.month
         month = mo
         out.append(f'{year:04d}-{mo:02d}-{d:02d}')
     return out

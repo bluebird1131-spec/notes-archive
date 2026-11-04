@@ -48,13 +48,15 @@ def _date(text: str) -> str:
     return "" if d > datetime.now(KST).strftime("%Y-%m-%d") else d
 
 
-# 제목 앞뒤에 붙는 게시판 표시 ('제목 :', '새글', 'new', '핫이슈', '첨부파일') (10-28 점검: 13건)
-TITLE_NOISE_HEAD = re.compile(r"^\s*제\s*목\s*[:：]\s*")
+# 제목 앞뒤에 붙는 게시판 표시 ('제목 :', '새글', 'new', '핫이슈', '첨부파일') (10-28 점검: 13건, 11-05 앞에 붙은 '새글')
+TITLE_NOISE_HEAD = re.compile(r"^\s*(제\s*목\s*[:：]|새\s*글|new(?![A-Za-z])|핫\s*이슈)\s*", re.I)
 TITLE_NOISE_TAIL = re.compile(r"\s*(새\s*글|(?<![A-Za-z])new|핫\s*이슈|첨부\s*파일|파일\s*있음)\s*$", re.I)
 
 
 def clean_title(t: str) -> str:
-    t = TITLE_NOISE_HEAD.sub("", t or "")
+    t = t or ""
+    while TITLE_NOISE_HEAD.search(t):
+        t = TITLE_NOISE_HEAD.sub("", t, count=1)
     while TITLE_NOISE_TAIL.search(t):
         t = TITLE_NOISE_TAIL.sub("", t)
     return t.strip()
