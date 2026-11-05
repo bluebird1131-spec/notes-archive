@@ -1,14 +1,18 @@
 {
- "at": "2026-11-05T03:49:03+09:00",
+ "at": "2026-11-05T09:15:33+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "서울특별시 양천구청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.yangcheon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/"
+   "org": "충청북도 옥천군청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.oc.go.kr', port=443): Read timed out. (read timeout=60)"
   },
   {
-   "org": "서울특별시 영등포구청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.ydp.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha"
+   "org": "양산시청",
+   "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  },
+  {
+   "org": "인천광역시 서해구청",
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.seo.incheon.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/"
   }
  ],
  "stale": [],
