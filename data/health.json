@@ -1,14 +1,42 @@
 {
- "at": "2026-11-06T03:54:53+09:00",
+ "at": "2026-11-07T00:45:13+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "경상북도 경주시청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.gyeongju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/m"
+   "org": "경기도 수원시청",
+   "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.suwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
   },
   {
    "org": "경기도 안양시청",
-   "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.anyang.go.kr', port=443): Read timed out. (read timeout=60)"
+  },
+  {
+   "org": "경기도 부천시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.bucheon.go.kr', port=443): Read timed out. (read timeout=60)"
+  },
+  {
+   "org": "경기도 평택시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.pyeongtaek.go.kr', port=443): Read timed out. (read timeout=60)"
+  },
+  {
+   "org": "창원시청",
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.changwon.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/"
+  },
+  {
+   "org": "김해시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.gimhae.go.kr', port=443): Read timed out. (read timeout=60)"
+  },
+  {
+   "org": "인천광역시 강화군청",
+   "error": "HTTPError: 404 Client Error: 404 for url: https://www.ganghwa.go.kr/open_content/main/eminwon/announce/eminwonList.do?pg"
+  },
+  {
+   "org": "제주시청",
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.jejusi.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/nt"
+  },
+  {
+   "org": "전라남도 담양군청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.damyang.jeonnam.kr', port=443): Max retries exceeded with url: /emwp/g"
   }
  ],
  "stale": [],
@@ -32,6 +60,10 @@
   {
    "org": "전북특별자치도 진안군청",
    "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "전라남도 완도군청",
+   "board": "새올 고시공고"
   }
  ]
 }
