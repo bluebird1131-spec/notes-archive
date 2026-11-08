@@ -159,6 +159,10 @@ def _file_name(a, groups, clean):
     cands = [clean(a.get_text(" ")), clean(a.get("title"))] + [clean(up.unquote(g or "")) for g in groups]
     if a.parent is not None:
         cands.append(clean(a.parent.get_text(" ")))
+    # 첨부 단추는 파일 이름이 같은 li 의 다른 칸에 있음 (강화군 새 누리집: <p class="tit">이름</p> + <button>다운로드</button>)
+    li = a.find_parent("li") if a.name == "button" else None
+    if li is not None:
+        cands.append(clean(li.get_text(" ")))
     for c in cands:
         m = FILE_EXT.search(c or "")
         if m:
@@ -170,8 +174,14 @@ def parse_web_detail(html, rec, host, *, board, page_text, clean):
     cfg = board["web"]
     soup = BeautifulSoup(html, "html.parser")
     atts, seen = [], set()
-    for a in soup.find_all("a"):
+    for a in soup.find_all(["a", "button"]):
         href = (a.get("href") or "").strip()
+        if a.name == "button":
+            # 링크 대신 단추로 받는 첨부: <button onclick="location.href='…FileDownNew.jsp?…'"> (강화군 새 누리집, 11-08)
+            m = re.search(r"location\.href\s*=\s*['\"]([^'\"]+)", a.get("onclick") or "")
+            if not m:
+                continue
+            href = m.group(1).strip()
         js = href + " " + (a.get("onclick") or "")
         fm = re.search(cfg["file_re"], js) if cfg.get("file_re") else None
         groups = fm.groups() if fm else ()
