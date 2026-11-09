@@ -145,8 +145,9 @@ def extract(n):
     r, ev = {}, {}
 
     # 접수기간: '공고기간'은 빼고 접수·모집 기간 우선. '공고(접수)기간'·'접수(취소)기간'·'원 서 접 수'도 봄 (10-27)
-    for pat in [r'접\s*수\s*\)?\s*(?:\([^)]{1,6}\)\s*)?기\s*간', r'원\s*서\s*접\s*수', r'서\s*류\s*접\s*수',
-                r'모\s*집\s*기\s*간', r'접\s*수\s*일\s*시', r'신\s*청\s*기\s*간']:
+    # '기간' 바로 뒤 '제'는 기간제근로자 (11-10 울산 중구 '민원 접수 기간제근로자 채용계획을…' 줄을 접수기간으로 읽음)
+    for pat in [r'접\s*수\s*\)?\s*(?:\([^)]{1,6}\)\s*)?기\s*간(?!제)', r'원\s*서\s*접\s*수', r'서\s*류\s*접\s*수',
+                r'모\s*집\s*기\s*간(?!제)', r'접\s*수\s*일\s*시', r'신\s*청\s*기\s*간(?!제)']:
         rx = re.compile(pat)
         # '채용서류는 2027. 2. 1.까지 채용서류 반환청구서를 응시원서 접수처에 제출' 같은 서류 반환 안내는 접수기간이 아님 (10-24 영도구청)
         hits = [(i, m.start()) for i, l in enumerate(lines) if (m := rx.search(l)) and not re.search(r'반환\s*청구', l)]
@@ -174,7 +175,7 @@ def extract(n):
     if 'apply_start' not in r and 'apply_end' not in r and JOB_TITLE.search(n.get('title') or '') \
             and not NOT_JOB_TITLE.search(n.get('title') or ''):
         for i, l in enumerate(lines):
-            m = re.search(r'공\s*고\s*기\s*간', l)
+            m = re.search(r'공\s*고\s*기\s*간(?!제)', l)
             got = m and period_of(lines, i, year, m.start())
             if got and got[0] and got[1]:
                 r['apply_start'], r['apply_end'], ev['period'] = got
