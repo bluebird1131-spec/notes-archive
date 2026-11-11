@@ -1,10 +1,18 @@
 {
- "at": "2026-11-11T03:47:32+09:00",
+ "at": "2026-11-11T10:07:12+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "통영시청",
-   "error": "ConnectionError: HTTPSConnectionPool(host='eminwon.tongyeong.go.kr', port=443): Max retries exceeded with url: /emwp/gov"
+   "org": "광주광역시 동구청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.donggu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/go"
+  },
+  {
+   "org": "밀양시청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mo"
+  },
+  {
+   "org": "남해군청",
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/nt"
   },
   {
    "org": "전북특별자치도 김제시청",
@@ -32,6 +40,10 @@
   {
    "org": "전북특별자치도 진안군청",
    "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "전라남도 완도군청",
+   "board": "새올 고시공고"
   }
  ]
 }
