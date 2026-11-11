@@ -1,25 +1,23 @@
 {
- "at": "2026-11-11T10:07:12+09:00",
+ "at": "2026-11-12T03:46:31+09:00",
  "orgs": 231,
  "failed": [
-  {
-   "org": "광주광역시 동구청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.donggu.gwangju.kr', port=443): Max retries exceeded with url: /emwp/go"
-  },
   {
    "org": "밀양시청",
    "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mo"
   },
   {
    "org": "남해군청",
-   "error": "SSLError: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/nt"
-  },
-  {
-   "org": "전북특별자치도 김제시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.gimje.go.kr', port=443): Read timed out. (read timeout=60)"
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
   }
  ],
- "stale": [],
+ "stale": [
+  {
+   "org": "광주광역시 서구청",
+   "board": "새올 채용공고",
+   "newest": "2026-10-12"
+  }
+ ],
  "empty": [
   {
    "org": "강원특별자치도 속초시청",
