@@ -1,16 +1,7 @@
 {
- "at": "2026-11-12T11:08:39+09:00",
+ "at": "2026-11-13T01:09:12+09:00",
  "orgs": 231,
- "failed": [
-  {
-   "org": "강원특별자치도 철원군청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.cwg.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttLis"
-  },
-  {
-   "org": "서울특별시 광진구청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='gwangjin.eminwon.seoul.kr', port=443): Read timed out. (read timeout=60)"
-  }
- ],
+ "failed": [],
  "stale": [
   {
    "org": "광주광역시 서구청",
