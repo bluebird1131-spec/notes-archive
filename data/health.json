@@ -1,14 +1,14 @@
 {
- "at": "2026-11-12T03:46:31+09:00",
+ "at": "2026-11-12T11:08:39+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "밀양시청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.miryang.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mo"
+   "org": "강원특별자치도 철원군청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.cwg.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttLis"
   },
   {
-   "org": "남해군청",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.namhae.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mog"
+   "org": "서울특별시 광진구청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='gwangjin.eminwon.seoul.kr', port=443): Read timed out. (read timeout=60)"
   }
  ],
  "stale": [
