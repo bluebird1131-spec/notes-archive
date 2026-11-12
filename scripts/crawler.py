@@ -113,8 +113,16 @@ def match_keywords(title: str) -> list[str]:
 AGENCY_RE = re.compile(r"(수행|위탁|운영|제공|전담|배치)\s*기관|민간\s*위탁|위탁\s*운영\s*(모집|기관|법인|단체|사업자)|수요처|참여\s*기업")
 AGENCY_JOB_RE = re.compile(r"근로자|직원|채용|참여자|참여\s*청년|인력")  # '참여기업 및 참여청년 모집'은 청년 일자리라 남김
 
+# 11-12: 공사·토지 보상 절차 공고는 '환경정비' 같은 일자리 낱말이 걸려도 뺌 (그 사업의 기간제근로자 채용 등은 남김)
+# ('평강천 하리지구 하천환경정비사업' 의견 청취, '남강 산청지구 하천환경정비사업 보상계획 열람', 영월 보상협의통지 공시송달 —
+#  제목에 일자리 말이 없어 사이트에서 끝에 '채용'이 붙어 일자리처럼 보였음)
+WORKS_RE = re.compile(r"하천\s*환경\s*정비\s*사업|보상\s*계획|의견\s*청취")
+WORKS_JOB_RE = re.compile(r"채용|근로자|참여자|인력|요원|모집")
+
 
 def excluded_reason(title: str, matched: list[str]) -> str | None:
+    if WORKS_RE.search(title) and not WORKS_JOB_RE.search(title):
+        return "공사·보상 절차 공고 (일자리 아님)"
     if matched and AGENCY_RE.search(title) and not AGENCY_JOB_RE.search(title):
         return "사업 참여·위탁기관 모집 (일자리 아님)"
     if not matched or not set(matched) <= GENERIC_KEYWORDS:
