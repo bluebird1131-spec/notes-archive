@@ -1,7 +1,12 @@
 {
- "at": "2026-11-13T01:09:12+09:00",
+ "at": "2026-11-13T04:02:52+09:00",
  "orgs": 231,
- "failed": [],
+ "failed": [
+  {
+   "org": "경기도 안양시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.anyang.go.kr', port=443): Read timed out. (read timeout=60)"
+  }
+ ],
  "stale": [
   {
    "org": "광주광역시 서구청",
