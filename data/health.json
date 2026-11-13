@@ -1,10 +1,18 @@
 {
- "at": "2026-11-13T04:02:52+09:00",
+ "at": "2026-11-14T03:44:01+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "경기도 안양시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.anyang.go.kr', port=443): Read timed out. (read timeout=60)"
+   "org": "대구광역시 동구청",
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='eminwon.dong.daegu.kr', port=443): Max retries exceeded with url: /emwp/gov/mo"
+  },
+  {
+   "org": "경기도 남양주시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Read timed out. (read timeout=60)"
+  },
+  {
+   "org": "전북특별자치도 무주군청",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='27.101.159.63', port=80): Max retries exceeded with url: /ntis/errorpage.html ("
   }
  ],
  "stale": [
