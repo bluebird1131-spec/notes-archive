@@ -1,19 +1,13 @@
 {
- "at": "2026-11-16T03:32:51+09:00",
+ "at": "2026-11-17T06:06:39+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "전북특별자치도 무주군청",
-   "error": "SSLError: HTTPSConnectionPool(host='eminwon.muju.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis"
+   "org": "서울특별시 광진구청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='gwangjin.eminwon.seoul.kr', port=443): Read timed out. (read timeout=60)"
   }
  ],
- "stale": [
-  {
-   "org": "광주광역시 서구청",
-   "board": "새올 채용공고",
-   "newest": "2026-10-12"
-  }
- ],
+ "stale": [],
  "empty": [
   {
    "org": "강원특별자치도 속초시청",
