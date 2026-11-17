@@ -1,28 +1,37 @@
 {
- "at": "2026-11-17T18:31:31+09:00",
+ "at": "2026-11-17T22:34:08+09:00",
  "orgs": 231,
  "failed": [
   {
-   "org": "충청남도 부여군청",
-   "error": "group job produced no output"
-  },
-  {
-   "org": "강원특별자치도 철원군청",
-   "error": "group job produced no output"
-  },
-  {
-   "org": "경상북도 상주시청",
-   "error": "group job produced no output"
-  },
-  {
-   "org": "경상북도 문경시청",
-   "error": "group job produced no output"
-  },
-  {
-   "org": "경상북도 성주군청",
-   "error": "group job produced no output"
+   "org": "경기도 남양주시청",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Read timed out. (read timeout=60)"
   }
  ],
  "stale": [],
- "empty": []
+ "empty": [
+  {
+   "org": "강원특별자치도 속초시청",
+   "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "강원특별자치도 삼척시청",
+   "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "경상북도 청도군청",
+   "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "경상북도 울릉군청",
+   "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "전북특별자치도 진안군청",
+   "board": "새올 채용·일반공고"
+  },
+  {
+   "org": "전라남도 완도군청",
+   "board": "새올 고시공고"
+  }
+ ]
 }
