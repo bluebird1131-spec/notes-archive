@@ -1,10 +1,10 @@
 {
- "at": "2026-11-17T22:34:08+09:00",
+ "at": "2026-11-18T05:15:36+09:00",
  "orgs": 231,
  "failed": [
   {
    "org": "경기도 남양주시청",
-   "error": "ReadTimeout: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Read timed out. (read timeout=60)"
+   "error": "SSLError: HTTPSConnectionPool(host='eminwon.nyj.go.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/"
   }
  ],
  "stale": [],

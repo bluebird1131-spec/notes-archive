@@ -18,7 +18,7 @@
   "sigungu": "동구",
   "name": "울산광역시 동구청",
   "url": "https://eminwon.donggu.ulsan.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "울산광역시",
@@ -46,7 +46,7 @@
   "sigungu": "해운대구",
   "name": "부산광역시 해운대구청",
   "url": "https://eminwon.haeundae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "광주광역시",
@@ -319,7 +319,7 @@
   "sigungu": "당진시",
   "name": "충청남도 당진시청",
   "url": "https://eminwon.dangjin.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "충청남도",
@@ -382,7 +382,7 @@
   "sigungu": "동구",
   "name": "대구광역시 동구청",
   "url": "https://eminwon.dong.daegu.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "대구광역시",
@@ -452,7 +452,7 @@
   "sigungu": "유성구",
   "name": "대전광역시 유성구청",
   "url": "https://eminwon.yuseong.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "대전광역시",
@@ -655,7 +655,7 @@
   "sigungu": "영천시",
   "name": "경상북도 영천시청",
   "url": "https://eminwon.yc.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경상북도",
@@ -676,7 +676,7 @@
   "sigungu": "경산시",
   "name": "경상북도 경산시청",
   "url": "https://eminwon.gbgs.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경상북도",
@@ -893,7 +893,7 @@
   "sigungu": "파주시",
   "name": "경기도 파주시청",
   "url": "https://eminwon.paju.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경기도",
@@ -921,7 +921,7 @@
   "sigungu": "화성시",
   "name": "경기도 화성시청",
   "url": "https://eminwon.hscity.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경기도",
@@ -935,7 +935,7 @@
   "sigungu": "양주시",
   "name": "경기도 양주시청",
   "url": "https://eminwon.yangju.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경기도",
@@ -949,7 +949,7 @@
   "sigungu": "여주시",
   "name": "경기도 여주시청",
   "url": "https://eminwon.yeoju.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경기도",
@@ -977,7 +977,7 @@
   "sigungu": "창원시",
   "name": "창원시청",
   "url": "https://eminwon.changwon.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "경상남도",
@@ -1005,7 +1005,7 @@
   "sigungu": "김해시",
   "name": "김해시청",
   "url": "https://eminwon.gimhae.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경상남도",
@@ -1019,14 +1019,14 @@
   "sigungu": "거제시",
   "name": "거제시청",
   "url": "https://eminwon.geoje.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "경상남도",
   "sigungu": "양산시",
   "name": "양산시청",
   "url": "https://eminwon.yangsan.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "경상남도",
@@ -1117,7 +1117,7 @@
   "sigungu": "미추홀구",
   "name": "인천광역시 미추홀구청",
   "url": "https://eminwon.michuhol.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "인천광역시",
@@ -1215,7 +1215,7 @@
   "sigungu": "정읍시",
   "name": "전북특별자치도 정읍시청",
   "url": "https://eminwon.jeongeup.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "전북특별자치도",
@@ -1229,7 +1229,7 @@
   "sigungu": "김제시",
   "name": "전북특별자치도 김제시청",
   "url": "https://eminwon.gimje.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "전북특별자치도",
@@ -1250,14 +1250,14 @@
   "sigungu": "무주군",
   "name": "전북특별자치도 무주군청",
   "url": "https://eminwon.muju.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "전북특별자치도",
   "sigungu": "장수군",
   "name": "전북특별자치도 장수군청",
   "url": "https://eminwon.jangsu.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "전북특별자치도",
@@ -1278,7 +1278,7 @@
   "sigungu": "고창군",
   "name": "전북특별자치도 고창군청",
   "url": "https://eminwon.gochang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=01,02,03,04,06",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "전북특별자치도",
@@ -1544,7 +1544,7 @@
   "sigungu": "양천구",
   "name": "서울특별시 양천구청",
   "url": "https://eminwon.yangcheon.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": true
+  "ok": false
  },
  {
   "sido": "서울특별시",
@@ -1600,7 +1600,7 @@
   "sigungu": "강남구",
   "name": "서울특별시 강남구청",
   "url": "https://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?not_ancmt_se_code=04,05",
-  "ok": false
+  "ok": true
  },
  {
   "sido": "서울특별시",
