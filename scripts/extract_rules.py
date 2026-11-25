@@ -89,17 +89,33 @@ OPEN_END = re.compile(TILDE + r'\s*(채용|충원|선발|모집\s*(완료|시)|�
 STARTS_DATE = re.compile(r"^\s*(?:" + TILDE + r"|(?:20\d{2}|[’‘'`＇]\d{2})" + SP + r"[.년]|\d{1,2}" + SP + r"[.월]" + SP + r"\d)")
 
 
+# 옛 기간과 바뀐 기간이 같이 적힌 재공고·수정 공고는 바뀐 쪽을 읽음 (11-25)
+#  표 칸: '(당초) 접수기간' / '2026. 11. 3.(화)' / '~ 11. 17.(화)' … '(재공고) 접수기간' / '2026. 11. 18.(수)' / '~11.25.(수)' (평창 미탄면)
+#  한 줄: '접수기간 : (당초)2026. 11. 18.(수) ~ 11. 25(수) → (변경)2026. 11. 20.(금) ~ 2026. 11. 30.(월)' (영동 자원순환센터)
+ORIGINAL = re.compile(r'당\s*초\s*[)）]?\s*$')  # 접수 낱말 바로 앞의 '(당초)'
+CHANGED = re.compile(r"당\s*초\s*[)）]?(.*?)([(（]?\s*(?:변\s*경|정\s*정|수\s*정|연\s*장|재\s*공\s*고)\s*[)）]?\s*[:：]?\s*(?=[\d’‘'`＇]))")
+
+
+def changed_part(line, year):
+    """'(당초) 날짜 → (변경) 날짜' 줄이면 '(변경)'부터. 양쪽에 날짜가 다 있을 때만('당초 일정은 변경될 수 있음' 같은 문장은 그대로)"""
+    m = CHANGED.search(line)
+    if m and dates_in(m.group(1), year) and dates_in(line[m.start(2):], year):
+        return line[m.start(2):]
+    return line
+
+
 def period_of(lines, i, year, at=0):
     """접수 낱말(at 글자 위치) 뒤에서 두 날짜를 먼저 찾고, 모자라면 다음 줄을 세 줄까지 이어 봄
     (표 칸이 '2026. 10. 23.(금)' / '~' / '10. 27.(화)'처럼 줄마다 나뉨). 종료일이 시작일보다 앞이면 버림"""
-    line = lines[i][at:]
+    line = changed_part(lines[i][at:], year)
     ds = dates_in(line, year)
     used = [line]  # 근거도 낱말부터 (검수가 근거 줄의 날짜로 다시 대조함)
     j = i + 1
     while len(ds) < 2 and j < len(lines) and j <= i + 3 and (STARTS_DATE.match(lines[j]) or re.search(TILDE + r'\s*$', line)):
-        line = line + ' ' + lines[j]
+        joined = line + ' ' + lines[j]
+        line = changed_part(joined, year)
         ds = dates_in(line, year)
-        used.append(lines[j])
+        used = used + [lines[j]] if line == joined else [line]
         j += 1
     if len(used) > 1 and not re.search(TILDE, line):
         ds = ds[:1]  # 줄을 이었는데 '~'가 없으면 둘째 날짜는 다른 칸(면접일 등)일 수 있음
@@ -152,10 +168,13 @@ def extract(n):
         # '채용서류는 2027. 2. 1.까지 채용서류 반환청구서를 응시원서 접수처에 제출' 같은 서류 반환 안내는 접수기간이 아님 (10-24 영도구청)
         hits = [(i, m.start()) for i, l in enumerate(lines) if (m := rx.search(l)) and not re.search(r'반환\s*청구', l)]
         got = None
+        first = hits[0] if hits else None
+        # '(당초) 접수기간'은 뒤로 미룸 — 같은 낱말의 다른 줄('(재공고) 접수기간')을 먼저 보고, 없을 때만 씀 (11-25 평창)
+        hits.sort(key=lambda h: bool(ORIGINAL.search(lines[h[0]][:h[1]])))
         # 낱말 뒤의 날짜만 봄('1. 1차 서류접수 2026. 10. 12.'의 '1. 1'은 날짜 아님). 처음 걸린 줄은 날짜가 낱말 앞에만 있으면
         # 줄 전체를 봄('나. 2026. 10. 22. ~ 10. 23. : 응시원서 접수'). 날짜가 없으면('4. 접수기간 및 방법' 같은 머리 줄) 다음에 걸린 줄들을 봄
-        for k, (i, at) in enumerate(hits):
-            front_only = k == 0 and not dates_in(lines[i][at:], year) and dates_in(lines[i], year)
+        for i, at in hits:
+            front_only = (i, at) == first and not dates_in(lines[i][at:], year) and dates_in(lines[i], year)
             got = period_of(lines, i, year, 0 if front_only else at)
             if got:
                 break
