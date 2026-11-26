@@ -1,7 +1,12 @@
 {
- "at": "2026-11-26T05:56:24+09:00",
+ "at": "2026-11-26T10:40:42+09:00",
  "orgs": 231,
- "failed": [],
+ "failed": [
+  {
+   "org": "인천광역시 남동구청",
+   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.namdong.go.kr/main/eminwon/eminwonJobList.do?pgno=1&listsz=3"
+  }
+ ],
  "stale": [],
  "empty": [
   {
